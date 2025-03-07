@@ -1,0 +1,130 @@
+/* I think this * selects all and should be here..
+its in the code pen example.  I don't know if it 
+makes some of the other rules need modification */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+/* At some point I need to figure out fonts */
+
+
+
+
+body {
+    /* box size and space around*/
+    width: 800px;
+    margin: 0 auto;
+    padding: 0 20px 20px 20px;
+    /* style */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* examples selected header and h1 elements seperately */
+header {
+    /* box size and space around*/
+    padding: 1rem;
+    /* style */
+    background-color: beige;
+    border: 1px solid teal;
+}
+
+h1 {
+    /* box size and space around*/
+    margin: 0;
+    padding: 20px 0;
+    border: 2px solid green;
+    text-align: center;
+    /* style */ /*this may need changed depending on font*/
+    font-size: 2rem;
+    /* text-shadow: 3px 3px 1px black; */
+}
+
+nav {
+    /* box size and space around*/
+    margin: 0 auto;
+    max-width: 800px;
+    /* colors */
+    background-color: gray;
+    border: 2px solid black;
+}
+
+/* currently my unorder list is stacked like a list */
+nav ul {
+    /* box size and space around*/
+    display: flex; /*tell all the children in parent container
+    to dispay as flex...in a row is default*/
+    justify-content: space-around;/*tell all the children in parent
+    container to spread out with even spacing...in a row is default*/
+    /* style */
+    list-style-type: none; /*This removes the bullets*/
+}
+/* Another way to use flex in byui code pen example
+nav ul {
+    display: flex;
+}
+nav ul li {
+    flex: 1 1 100%;
+}.....this approach tells the child items to flex(in nav ul)
+and tells the children How to flex (in nav ul li)*/
+
+nav a {
+    display: block;
+    padding: 1rem; /*gives space all around each <a> element*/
+    text-align: center;
+    /* style */
+    text-decoration: none; /*this removes underlines*/
+    /* color: ? */
+
+}
+/* I think I need my a:hover in this section too */
+nav a:hover {
+    /* style */
+    text-decoration: underline;
+    color: darkblue;
+}
+
+/* BODY-------------------------------------------------------- */
+/* Grid out Main with 2 section class="card" (personal(2/3 wide/webResources1/3 wide)*/
+main {
+    /* box size and space around */
+    width: 800px;
+    display: flex; /*is this flex or grid here?*/
+    border: 2px solid red;
+}
+
+
+.card {
+    flex: 2 1 100%;
+    border: 2px solid blue;
+}
+
+img {
+    /* box size and space around*/
+     
+    width: 200px;
+    height: auto;
+    padding: 2px;
+    float: right;
+    /* style */
+    box-shadow: 0 0 30px gray;
+
+}
+p {
+    /* box size and space around*/
+    padding: 10px;
+    border: 2px solid orange;
+}
+footer {
+    /* box size and space around*/
+    text-align: center;
+    /* style */
+    background-color: grey;
+    border: 2px solid purple;
+}
