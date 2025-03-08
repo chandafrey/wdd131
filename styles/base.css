@@ -2,67 +2,63 @@
 its in the code pen example.  I don't know if it 
 makes some of the other rules need modification */
 * {
+    /* box size, space and placement*/
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
-
-
-
-
-
-
-/* At some point I need to figure out fonts */
-
 
 
 
 body {
-    /* box size and space around*/
-    width: 800px;
-    margin: 0 auto;
-    padding: 0 20px 20px 20px;
-    /* style */
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* box size, space and placement*/
+    /* margin: 0;
+    padding: 0;  */
+    /* width: 1500px; */
+    /* style (border-color-font)*/
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
 }
-
-/* examples selected header and h1 elements seperately */
-header {
-    /* box size and space around*/
+/* HEADER - child(h1), child(nav)------------------------------- */
+/* the examples I saw selected header and h1 elements seperately */
+header, footer{
+    /* box size, space and placement*/
+    width: 1500px;
+    margin: 0 auto;
     padding: 1rem;
-    /* style */
-    background-color: beige;
-    border: 1px solid teal;
+    /* style (border-color-font)*/
+    border: 3px solid black;    
+    background-color: rgb(72, 72, 4);
 }
 
 h1 {
-    /* box size and space around*/
-    margin: 0;
+    /* box size, space and placement*/
     padding: 20px 0;
-    border: 2px solid green;
     text-align: center;
-    /* style */ /*this may need changed depending on font*/
-    font-size: 2rem;
-    /* text-shadow: 3px 3px 1px black; */
+    /* style (border-color-font)*/
+    border: 3px solid black;
+    color: #eee;
+    font-weight: 200;
+    text-shadow: 3px 3px 1px black;
 }
 
 nav {
-    /* box size and space around*/
-    margin: 0 auto;
-    max-width: 800px;
-    /* colors */
-    background-color: gray;
-    border: 2px solid black;
+    /* box size, space and placement*/
+    /* style (border-color-font)*/
+    border: 3px solid black;   
+    border-top: 0px; 
+    background-color: rgb(202, 202, 199);
 }
 
 /* currently my unorder list is stacked like a list */
 nav ul {
-    /* box size and space around*/
+    /* box size, space and placement*/
     display: flex; /*tell all the children in parent container
     to dispay as flex...in a row is default*/
     justify-content: space-around;/*tell all the children in parent
     container to spread out with even spacing...in a row is default*/
-    /* style */
+    /* style (border-color-font)*/
     list-style-type: none; /*This removes the bullets*/
 }
 /* Another way to use flex in byui code pen example
@@ -75,56 +71,120 @@ nav ul li {
 and tells the children How to flex (in nav ul li)*/
 
 nav a {
+    /* box size, space and placement*/
     display: block;
     padding: 1rem; /*gives space all around each <a> element*/
     text-align: center;
-    /* style */
+    /* style (border-color-font)*/
+    color: rgb(16, 16, 1);
     text-decoration: none; /*this removes underlines*/
-    /* color: ? */
-
 }
-/* I think I need my a:hover in this section too */
+
 nav a:hover {
-    /* style */
+    /* style (border-color-font)*/
+    color: rgb(72, 4, 57);
+    font-weight: bold;
     text-decoration: underline;
-    color: darkblue;
 }
+/* End HEADER Section-------------------------------------------------------- */
 
-/* BODY-------------------------------------------------------- */
+
+/* MAIN - child(section class="card-profile"), child(section class="card-home")--- */
 /* Grid out Main with 2 section class="card" (personal(2/3 wide/webResources1/3 wide)*/
 main {
-    /* box size and space around */
-    width: 800px;
-    display: flex; /*is this flex or grid here?*/
-    border: 2px solid red;
+    /* box size, space and placement*/
+    display: grid; 
+    grid-gap: 2rem;
+    grid-template-columns: 4fr 2fr;
+    /* align-items: center; */
+    margin: 0 auto;
+    padding: 2rem;
+    width: 1000px;
+    /* style (border-color-font)*/
+    /* border: 3px solid black; */
 }
 
-
 .card {
-    flex: 2 1 100%;
-    border: 2px solid blue;
+    display: flex;
+    flex-direction: column;
+    /* style (border-color-font)*/
+    border: 3px solid black;
+    border-radius: 6px;
+}
+
+h2 {
+    /* box size, space and placement*/
+    text-align: center;
+    /* style (border-color-font)*/
+    background-color: rgb(72, 72, 4);
+    font-weight: 400;
+}
+
+.profile {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 2rem;
+    /*style (border-color-font)*/
+}
+.profile p {
+    padding: 1rem;
+}
+.home p {
+    padding: 1rem;
 }
 
 img {
-    /* box size and space around*/
-     
-    width: 200px;
-    height: auto;
-    padding: 2px;
-    float: right;
-    /* style */
+    /* box size, space and placement*/
+    /* width: 200px; */
+    /* display: block; */
+    /* height: auto; */
+    
+    /* style (border-color-font)*/
     box-shadow: 0 0 30px gray;
+}
 
-}
-p {
-    /* box size and space around*/
-    padding: 10px;
-    border: 2px solid orange;
-}
-footer {
-    /* box size and space around*/
+
+
+
+h3 {
+    width: 85%;
+    margin: 1rem auto;
+    padding: .1rem;
+    /* style (border-color-font)*/
+    border-bottom: 1px solid black;
     text-align: center;
-    /* style */
+}
+
+.home {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 2rem;
+}
+
+
+.resources  {
+    display: grid;
+    place-items: center;
+    /* padding-left: 2rem; */
+    /* padding-top: 6rem; */
+    /* style (border-color-font)*/
+}
+
+/* Not sure what this link clicked on should be..example shows blue */
+.resources a:hover {
+    /* style (border-color-font)*/
+    color: rgb(72, 4, 57);
+    font-weight: bold;
+}
+
+footer {
+    /* box size, space and placement*/
+    text-align: center;
+    /* style (border-color-font)*/
     background-color: grey;
-    border: 2px solid purple;
+    border: 3px solid black;    
+}
+
+#lastModified {
+    color: rgb(72, 4, 57);
 }
