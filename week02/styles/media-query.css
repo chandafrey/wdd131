@@ -1,0 +1,44 @@
+body {
+    /* style (border-color-font)*/
+    font-family: "Roboto", sans-serif;
+}
+
+header, main, footer {
+    /*The header, main, and footer
+    Each have a maximum width of 640 pixels
+    are centered on the page using margin: 1rem auto
+    include a faint border
+    use appropriate padding
+    have a blueish background color of your choice*/
+    
+    /* Remember that you can combine these three selectors into one rule or create a class that contains these common CSS declarations. */
+
+    /* box size, space and placement*/
+    max-width: 640px;
+    margin: 1rem auto;
+    padding: 1rem;
+    /* style (border-color-font)*/
+    border: 1px solid #bbb;
+    background-color: #e6f2ff;
+}
+
+main {
+    /* Declare the main element to be a CSS grid with a 
+    grid template of only one column, and a equal gap of 1rem. */
+
+    /* box size, space and placement*/
+    display: grid;
+    grid-template-columns: 1fr; /*creates a single column*/
+    gap: 1rem;
+}
+
+section {
+    /* Declare the section elements to also have padding and a 
+    lighter or white background. */
+
+    /* box size, space and placement*/
+    padding: 1rem;
+    /* style (border-color-font)*/
+    background-color: #fff;
+
+}

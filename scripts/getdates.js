@@ -1,4 +1,5 @@
 
+// This is a Date file with different option outputs...PICK Which line you want to have Active
 // select the DOM elements for output
 // const full = document.querySelector("#full");
 // const worldfull = document.querySelector("#world-full");
