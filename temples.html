@@ -3,13 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Temple Album</title>
+    <meta name="description" content="Temple album page">
+    <meta name="author" content="Chanda Frey">
 
     <!-- LINKS -->
-    <link rel="stylesheet" href="">
+     <!-- still need fonts here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
     <script src="scripts/temples.js" defer></script>
-
 </head>
+
 <body>
     <header>
         <!-- If the main needs an h1 then how do I get words here?
@@ -17,7 +24,7 @@
         <p>Temple Album</p> 
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="#" class="active">Home</a></li>
                 <li><a href="#">Old</a></li>
                 <li><a href="#">New</a></li>
                 <li><a href="#">Large</a></li>
@@ -28,11 +35,56 @@
     
     <main>
         <h1>Home</h1>
-        <figure>Temple</figure>
+        <section>
+            <figure class="temples">
+                <img src="images/saratoga-temple-sunset1.jpg" alt="Temple 1">
+                <figcaption>Temple</figcaption>
+            </figure>
+        
+            <figure>
+                <img src="images/saratoga-temple-sunset1.jpg" alt="Temple 1">
+                <figcaption>Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/saratoga-temple-sunset1.jpg" alt="Temple 1">
+                <figcaption>Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/saratoga-temple-sunset1.jpg" alt="Temple 1">
+                <figcaption>Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/saratoga-temple-sunset1.jpg" alt="Temple 1">
+                <figcaption>Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/saratoga-temple-sunset1.jpg" alt="Temple 1">
+                <figcaption>Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/saratoga-temple-sunset1.jpg" alt="Temple 1">
+                <figcaption>Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/saratoga-temple-sunset1.jpg" alt="Temple 1">
+                <figcaption>Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/saratoga-temple-sunset1.jpg" alt="Temple 1">
+                <figcaption>Temple</figcaption>
+            </figure>
+
+
+        </section>
+      
+
+
     </main>
+
     <footer>
         <p>&copy;<span id="currentYear"></span> ~ Chanda Frey ~ Utah</p>
         <p><span id="lastModified"></span></p>
-    </footer>    
+    </footer> 
+
 </body>
 </html>

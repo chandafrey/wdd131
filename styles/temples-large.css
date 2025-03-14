@@ -1,0 +1,21 @@
+/* @media (min-width: 740px) { */
+@media screen and (min-width: 500px) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    nav ul {
+        justify-content: flex-end;
+        flex-direction: row;  /*this is for larger screen viewing*/   
+    }
+    nav a {
+		flex: 1 1 100%;
+    }
+    section {
+        grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); 
+        grid-gap: 25px;
+        place-items: center;
+    }
+}
+

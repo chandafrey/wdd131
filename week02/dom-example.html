@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Simple DOM example</title>
+  </head>
+  <body>
+    <section>
+      <img
+        src="images/dinosaur.png"
+        alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth." />
+      <p>
+        Here we will add a link to the
+        <a href="https://www.mozilla.org/">Mozilla homepage</a>
+      </p>
+    </section>
+
+    <script>
+        // to manipulate an element inside the DOM, you first need
+        // to select it(document.querySelector("a")) and store a 
+        // reference to it inside a variable(const link)
+        const link = document.querySelector("a");
+        // Now we have the element reference stored in a variable
+        // we can manipulate it using properties and methods.
+        // Change the text inside the link by updating the value
+        // of the Node.textContent property like this.  Now the
+        // "Mozilla homepage" will be "Mozilla Developer Network"
+        link.textContent = "Mozilla Developer Network";
+        // change the URL the link is pointing to, so that it 
+        // doesn't go to the wrong place when it is clicked on.
+        link.href = "https://developer.mozilla.org";
+        // Grab a reference to our <section> element — add the 
+        // following code at the bottom of your existing script 
+        const sect = document.querySelector("section");
+        // Now let's CREATE a new paragraph using Document.createElement() 
+        // and give it some text content in the same way as before:
+        const para = document.createElement("p");
+        para.textContent = "We hope you enjoyed the ride.";
+        // You can Now APPEND the new paragraph at the end of the section 
+        // using Node.appendChild():
+        sect.appendChild(para);
+        // Finally for this part, let's add a text node to the paragraph 
+        // the link sits inside, to round off the sentence nicely. 
+        // First we will CREATE the text node using Document.createTextNode():
+        const text = document.createTextNode(
+            " - the premier source for web develepment knowledge.",
+        );
+        // Now we'll grab a reference to the paragraph the link is inside, 
+        // and APPEND the text node to it:
+        const linkPara = document.querySelector("p");
+        linkPara.appendChild(text);
+
+        // to continue following their example go to this link
+        //https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting
+
+    </script>
+  </body>
+</html>

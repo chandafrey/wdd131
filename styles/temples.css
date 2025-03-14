@@ -1,0 +1,87 @@
+/* Use your own color schema */
+/* Use your own typography choice by using the Google Fonts API service to select one or two fonts to use on the page. */
+/* Use CSS Flex on the navigation nav. */
+/* The navigation must employ a hover affect. */
+/* The main element has a limited width and is centered on the screen horizontally. */
+/* Consider using the max-width property to limit the width and margin property to center the main element on the screen. */
+/* Layout the main column figure elements using CSS Grid. In the mobile view, there should only be one (1) column. */
+/* Your design must support a responsive view in mobile and larger views. */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* style (border-color-font)*/
+    font-family: "Roboto", sans-serif;
+}
+
+header, main, footer { /*can I have all three here or just main?*/
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+header {
+    /* box size, space and placement*/
+    display: grid;
+    grid-gap: 1rem;
+    padding: 20px;
+    /* style (border-color-font)*/
+    border: 1px solid rgba(0, 0, 0, 0,1);
+    background-color: #bbb;
+    box-shadow: 0 0 30px #333;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+nav {
+    background-color: #36454f;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column; /*this is for mobile viewing to have the list stacked like a hamburger*/ 
+}
+
+nav a {
+    /* box size, space and placement*/
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    /* style (border-color-font)*/
+    color: #fff;
+    font-size: larger;
+    text-decoration: none;
+}
+
+nav a:hover {
+    /* style (border-color-font)*/
+    background-color: #eee;
+    color: #000;
+    text-decoration: underline double;
+}
+
+.active {
+    color: yellow;
+}
+
+/* MAIN section - child(h1, figures)---------------------------- */
+section {
+    /* Layout the main column figure elements using CSS Grid. 
+    There should only be 1 column for mobile view*/
+    display: grid;
+    grid-template-columns: 1fr; /*create a single column for mobile*/
+    gap: 1rem;
+}
+
+
+img {
+    width: 100%;
+    max-width: 300px;
+}
