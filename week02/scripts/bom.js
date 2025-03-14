@@ -1,3 +1,30 @@
+// Short version - just code - see below for full breakdown
+       
+// const input = document.querySelector('#favchap');
+// const button = document.querySelector('button');
+// const list = document.querySelector('#list');
+
+
+// button.addEventListener('click', function() {
+// 	if (input.value.trim !== '') {
+// 		input.focus();
+// 		const li = document.createElement('li');
+// 		const deleteButton = document.createElement('button');
+// 		li.textContent = input.value;
+// 		deleteButton.textContent = '❌';
+// 		li.append(deleteButton);
+// 		list.append(li);
+	
+// 		deleteButton.addEventListener('click', function() {
+// 			list.removeChild(li);
+// 			input.focus();
+// 			input.value = '';
+// 		});
+// 	};
+// });
+
+
+
 // In your blank js file, declare three (3) variables that
 //  HOLD REFERENCE to the input, button, and list elements.
 const input = document.querySelector('#favchap'); //you need to use # because it's an id
