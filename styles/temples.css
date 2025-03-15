@@ -7,51 +7,99 @@
 /* Layout the main column figure elements using CSS Grid. In the mobile view, there should only be one (1) column. */
 /* Your design must support a responsive view in mobile and larger views. */
 
+/* This CSS Rule should be default for probably all CSS files */
 * {
+    /* box size, space and placement*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
+
+
 body {
     /* style (border-color-font)*/
     font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
 }
 
-header, main, footer { /*can I have all three here or just main?*/
-    max-width: 800px;
+header, main, footer { /*should I have main here too?*/
+    /* box size, space and placement*/
+    max-width: 700px;
     margin: 0 auto;
     padding: 1rem;
+    /* style (border-color-font) */
+    /* border: 3px solid black; */
+    background-color: rgba(9, 144, 248, 0);
+
 }
 
+/* MOBILE************************************************************************************* */
+ /* HEADER - child(p), child(button?), child(nav)--------------- */
 header {
     /* box size, space and placement*/
     display: grid;
     grid-gap: 1rem;
     padding: 20px;
     /* style (border-color-font)*/
-    border: 1px solid rgba(0, 0, 0, 0,1);
-    background-color: #bbb;
+    background-color: rgb(2, 56, 97);
+    color: #eee;
     box-shadow: 0 0 30px #333;
 }
 
 h1 {
-    font-size: 2rem;
+    /* box size, space and placement*/
+    text-align: left;
+    /* style (border-color-font)*/
+    font-size: 1.5rem;
 }
 
+/* NAVIGATION----------------------------------------------- */
 nav {
-    background-color: #36454f;
+    /* box size, space and placement*/
+    max-width: 700px;
+    /* margin: 1rem auto; */
+    /* style (border-color-font)*/
+    background-color: hsla(204, 72%, 23%, 0.89);
 }
 
-nav ul {
-    list-style: none;
+
+#menu {
+    /* box size, space and placement*/
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    /* style (border-color-font)*/
+    border: 0;
+    background: none;
+    color: #000;
+    font-size: 1.5rem;
+}
+
+#menu::before {
+    content: '☰';
+}
+#menu.open::before {
+	content: "❌";
+}
+
+.navigation {
+    /* box size, space and placement*/
     display: flex;
     flex-direction: column; /*this is for mobile viewing to have the list stacked like a hamburger*/ 
+    justify-content: space-around;
+    /* style (border-color-font)*/
+    background-color: #333;
+    color: #fff;    
+    list-style: none;
+
 }
 
-nav a {
+.navigation a {
     /* box size, space and placement*/
-    display: block;
+    display: none; /*it needs to be none instead of block for mobile*/
     padding: 1rem;
     text-align: center;
     /* style (border-color-font)*/
@@ -60,28 +108,78 @@ nav a {
     text-decoration: none;
 }
 
-nav a:hover {
+.navigation a:hover {
     /* style (border-color-font)*/
     background-color: #eee;
     color: #000;
-    text-decoration: underline double;
+    font-weight: 700;
 }
 
-.active {
-    color: yellow;
+.open a {
+    display: block;
 }
 
-/* MAIN section - child(h1, figures)---------------------------- */
-section {
+
+/* End NAVIGATION Section----------------- */
+/* End HEADER Section------------------------------------------ */
+
+
+
+/* MAIN - child(h1), child(div- does .temples count?--------- */
+/* Not sure if I need a main {} here for margin/padding/max-width? */
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* DIV class="temples"- child(figure) times 9------------- */
+.temples {
     /* Layout the main column figure elements using CSS Grid. 
     There should only be 1 column for mobile view*/
+    /* box size, space and placement*/
     display: grid;
     grid-template-columns: 1fr; /*create a single column for mobile*/
     gap: 1rem;
+    /* style (border-color-font)*/
+
 }
 
 
+
 img {
-    width: 100%;
-    max-width: 300px;
+    /* box size, space and placement*/
+
+    /* not sure which is better? */
+    /* width: 100%;
+    max-width: 300px; */
+    /* OR this? */
+    max-width: 100%;
+    height:  auto;
+    display: block;
+    /* style (border-color-font)*/
+    box-shadow: 0 0 30px gray;
+
+
+}
+
+
+
+/* FOOTER - child(p), child(p)----------------------------------- */
+footer {
+    /* box size, space and placement*/
+    text-align: center;
+    /* style (border-color-font)*/
+    border: 3px solid black;    
+    background-color: rgb(2, 56, 97);
+    color: #eee;
+}
+footer p {
+    text-align: center;
+}
+
+#lastModified {
+    /* style (border-color-font)*/
+    color: #eee;
+    font-size: 1rem;
 }

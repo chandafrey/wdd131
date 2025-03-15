@@ -45,4 +45,4 @@ year.innerHTML = `<span class="highlight">${today.getFullYear()}</span>`;
 
 
 let lastModified = document.lastModified;
-document.getElementById("lastModified").innerText = "Last Modified: " + document.lastModified
+document.getElementById("lastModified").innerText = "Last Modified: " + document.lastModified;
