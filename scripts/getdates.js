@@ -5,7 +5,8 @@
 // const worldfull = document.querySelector("#world-full");
 // const short = document.querySelector("#short");
 // const medium = document.querySelector("#medium");
-const year = document.querySelector("#currentyear");
+const year = document.getElementById("currentYear");
+console.log(year);
 // const month = document.querySelector("#month");
 // const day = document.querySelector("#day");
 // const dayofweek = document.querySelector("#dayofweek");
@@ -45,4 +46,6 @@ year.innerHTML = `<span class="highlight">${today.getFullYear()}</span>`;
 
 
 let lastModified = document.lastModified;
-document.getElementById("lastModified").innerText = "Last Modified: " + document.lastModified;
+// document.getElementById("lastModified").innerText = "Last Modified: " + document.lastModified;
+
+document.getElementById('lastModified').textContent = `Last modified: ${lastModified}`;
