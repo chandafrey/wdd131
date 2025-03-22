@@ -1,0 +1,31 @@
+@media screen and (min-width: 37.5em) { /*16 *37.5 = 600px)*/
+
+.hero {
+    position: relative;
+}
+.hero img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.data {
+    position: absolute;
+    top: 130px;
+    left: 25px;
+    background-color: var(--accent-color-white); 
+    padding: 1rem;
+    box-shadow: 0 0 30px #111;
+    opacity: 0.8;
+}
+
+.weather {
+    position: absolute;
+    top: 20em;
+    right: 25px;
+    background-color: var(--accent-color-white); 
+    padding: 1rem;
+    box-shadow: 0 0 30px #111;
+    opacity: 0.8;
+}
+}

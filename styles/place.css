@@ -46,7 +46,7 @@ footer {
 }
 
 
-picture img {
+.hero img {
     /* box size, space and placement*/
     max-width: 100%;
     height: auto; 
