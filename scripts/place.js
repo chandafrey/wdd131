@@ -7,3 +7,5 @@ document.getElementById('lastModified').textContent = `Last modified: ${lastModi
 // To get "currentYear"
 let currentYear = new Date().getFullYear();
 document.getElementById('currentYear').textContent = currentYear;
+
+

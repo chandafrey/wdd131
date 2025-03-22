@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Chanda Frey"> 
     <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Chanda Frey, Place of interest that I've lived in, visited, or wish to visit.">  
-    <title>Place</title>
+    <title>Place: Logan, Utah</title>
    
     <!-- LINKS -->
     <link rel="stylesheet" href="styles/place.css">
     <link rel="stylesheet" href="styles/place-large.css">
     <script src="scripts/place.js" defer></script>
+    <script src="scripts/windchill.js" defer></script>
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +31,7 @@
                 <img src="images/logan-landscape-pxlr-squoosh.webp" alt="Place of Interest I've lived, visted or wish to visit">	
             </picture>	
         </div>
-        <div class="facts">
+        <div class="data">
             <h2>Data</h2>
             <section class="left-column">
                 <p>Area: </p>
@@ -41,27 +43,35 @@
                 <p>Calling Code: </p>
             </section> 
             <section= class="right-column">
-                <p>AREA info here</p>   
-                <p>POPULATION info here</p> 
-                <p>info here</p>   
-                <p>info here</p>   
-                <p>info here</p>   
-                <p>info here</p>   
-                <p>info here</p>
+                <p>18.5 sqare miles</p>   
+                <p>56,860</p> 
+                <p>Utah</p>   
+                <p>English, Spanish</p>   
+                <p>United States Dollar</p>   
+                <p>GMT-6</p>   
+                <p>(435)</p>
             </section>
         </div>
         <div class="weather">
             <h2>Weather</h2>
-            <section>
-                <img src="images/cloud-sun-fill-bootstrap.svg" alt-"weather icon">
-            </section>
+            <!-- <section> -->
+            <img src="images/cloud-sun-fill-bootstrap.svg" alt="weather icon">
+            <!-- </section> -->
+             <!-- <p class="image">weather image should go here</p> -->
             <span style='font-size:100px;'>&#9925;</span>
-            <p>do i need this line? change font-size &#9925;</p>
-            <p>Temperature: Table Here?</p>
-            <p>Conditions: Table Here?</p>
-            <p>Wind: Table Here?</p>
-            <p>Wind Chill: Table Here?</p>
-            <p>The formula for wind chill is generally only valid for temperatures at or below 50°F and wind speeds above 3 mph.</p>
+            <section class="left-column">
+                <p>Temperature: </p>
+                <p>Condition: </p>
+                <p>Wind: </p>
+                <p>Wind Chill: </p>
+            </section>
+            <section class="right-column">
+                <p id="temp">45 °F:</p>
+                <p>Partly Cloudy</p>
+                <p id="speed">5 mph:</p> 
+                <p id="windchillResult">Calculating Windchill...</p>
+            </section>
+        </div>
 
     </main>
     <footer>
