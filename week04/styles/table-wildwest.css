@@ -1,0 +1,73 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+   padding: 5%;
+}
+
+/* Table Styling */
+table {
+    width: 400px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-collapse: collapse; /* remove space between cells */
+}
+
+/* Display the caption at the bottom of the table in smaller font */
+caption {
+    caption-side: bottom;
+    font-size: smaller;
+    padding: .2rem;
+}
+
+/* Give you cells some border, padding and some white space */
+th, 
+td {
+    border: 1px solid rgba(0, 0, 0, 0.1);   
+    padding: .5em, 1rem;
+    white-space: pre;/* preserve white space;*/
+}
+
+/* Center the header in the thead and all the data cells in tbody */
+thead th, /*don't forget comma here*/
+tbody td {
+    text-align: center;
+}
+
+/* Make the Header background all black, white letters */
+thead {
+    background: #000;
+    color: #fff;
+}
+
+/* Make the Header row and font larger */
+thead th {
+    padding: 1rem;
+    font-size: larger;
+}
+
+/* Make the last child of thead(tr) have a gray background */
+thead tr:nth-last-child(1) {
+    background-color: #333;
+}
+
+/* Make the child of tbody(tr) as rows - change background
+color be light gray as ZEBRA STRIPING starting with EVEN
+numbered rows..(start with row 2 in this section  */
+tbody tr:nth-child(even) {
+    background-color: #eee;
+}
+
+/* Make the empty data cell(class="blank") have
+a black background */
+.blank {
+    background-color: #000;
+  }
+
+
+
+

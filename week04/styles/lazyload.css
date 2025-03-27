@@ -1,0 +1,33 @@
+
+h1 {
+    text-align: center;
+}
+
+main {
+    margin: 0 auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    display: block;
+    width: 100%;
+    
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    background: black;
+    animation: fade 15s;
+
+}
+
+/* This does a fade from 0-100% */
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}   
