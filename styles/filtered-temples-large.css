@@ -1,0 +1,35 @@
+/* Media Query for wider than mobile viewports. 
+Breakpoint should be based upon the design and 
+content and use em units to be relative to the user's font size versus fixed with pixels.  
+
+
+/* @media (min-width: 740px) { */
+@media screen and (min-width: 37.5em) { /*16 *37.5 = 600px)*/
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    header, main, footer {
+        max-width: 1500px;
+    }
+    #menu {
+        display: none; /*hide hamburger button*/
+    }
+    .navigation {
+        justify-content: flex-end;
+        flex-direction: row;  /*this is for larger screen viewing*/   
+    }
+    .navigation a {
+        display: block;
+		flex: 1 1 100%;
+    }
+
+    /* Temple Images Grid------------ */
+    .temples {
+        grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); 
+        gap: 25px;
+        place-items: center;
+    }
+}
+
