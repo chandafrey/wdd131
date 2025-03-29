@@ -112,32 +112,76 @@ const temples = [
     },
   ];
 
-  //Temple Card Creation
 //   Call the Function to get the temple cards
-//   createTempleCard(temples); //does temples need to be in the ()?
+ //USE THIS LINE OR THE LAST LINE(event listenter)
+createTempleCard(temples);
+
+// Function to filter temple list NONUTAH:---------------------------------
+// const nonutahLink = document.querySelector('#nonutah');
+// nonutahLink.addEventListener("click", () => {
+//     // document.querySelector("#templeContainer").innerHTML = "";
+//     createTempleCard(temples.filter(temple => !temple.location.includes("Utah")));
+// });
+
+// Function to Display temple list ALL TEMPLES:---------------------------------
+const allTemplesLink = document.querySelector('#allTemples');
+allTemplesLink.addEventListener("click", () => {
+    document.querySelector("#templeContainer").innerHTML = "";
+    createTempleCard(temples);
+});
+
+// Function to filter temple list OLD:---------------------------------
+const oldLink = document.querySelector('#old');
+oldLink.addEventListener("click", () => {
+    document.querySelector("#templeContainer").innerHTML = "";
+    createTempleCard(temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) < 1900));
+});
+
+// Function to filter temple list NEW:---------------------------------
+const newLink = document.querySelector('#new');
+newLink.addEventListener("click", () => {
+    document.querySelector("#templeContainer").innerHTML = "";
+    createTempleCard(temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) > 2000));
+});
+
+// Function to filter temple list LARGE:---------------------------------
+const largeLink = document.querySelector('#large');
+largeLink.addEventListener("click", () => {
+    document.querySelector("#templeContainer").innerHTML = "";
+    createTempleCard(temples.filter(temple => temple.area > 90000));
+});
+
+// Function to filter temple list SMALL:---------------------------------
+const smallLink = document.querySelector('#small');
+smallLink.addEventListener("click", () => {
+    document.querySelector("#templeContainer").innerHTML = "";
+    createTempleCard(temples.filter(temple => temple.area < 10000));
+});
+
 
   //   FUNCTION TO CREATE TEMPLE CARDS--------------------------------------
 //Start with the word function, then name of the function, then the parameters
-function createTempleCard() {
+function createTempleCard(filteredTemples) {
     const container = document.querySelector('#templeContainer'); //this is the container for the temple cards
     
     //   Clear the container
-    // container.innerHTML = ''; //this clears the container so it doesn't duplicate the cards
-    
+    templeContainer.innerHTML = ''; //this clears the container so it doesn't duplicate the cards
+    // document.querySelector("#templeContainer").innerHTML = "";
+
     //   Loop through the temples array using a forEach method
     //Remember the format is name of the object(origional array)
     //and then .forEach(singular name of the object) => {
-    temples.forEach((temple) => {
+    filteredTemples.forEach((temple) => {
 
         // create a card to put into a div for each temple card 
-        const card = document.createElement('div');
+        const card = document.createElement('section');
         card.classList.add('temple-card');
 
         // create the elements to go into the temple card
         // for example we are saying create a variable
         // called name and make it a new element('h2') to go 
         // inside the templeCard div in the HTML
-        const name = document.createElement('h2');
+        const name = document.createElement('h3');
         const location = document.createElement('p');
         const dedicated = document.createElement('p');
         const area = document.createElement('p');       
@@ -198,6 +242,9 @@ function createTempleCard() {
 
       
     });
-}
+
 // Add this line to DISPLAY the temple cards
-document.addEventListener("DOMContentLoaded", createTempleCard)
+// document.addEventListener("DOMContentLoaded", createTempleCard)
+
+
+}
