@@ -125,10 +125,11 @@ createTempleCard(temples);
 
 // Function to Display temple list ALL TEMPLES:---------------------------------
 const allTemplesLink = document.querySelector('#allTemples');
-allTemplesLink.addEventListener("click", () => {
+allTemplesLinkLink.addEventListener("click", () => {
     document.querySelector("#templeContainer").innerHTML = "";
     createTempleCard(temples);
 });
+
 
 // Function to filter temple list OLD:---------------------------------
 const oldLink = document.querySelector('#old');
@@ -155,10 +156,8 @@ largeLink.addEventListener("click", () => {
 const smallLink = document.querySelector('#small');
 smallLink.addEventListener("click", () => {
     document.querySelector("#templeContainer").innerHTML = "";
-    createTempleCard(temples.filter(temple => temple.area < 10000));
+    createTempleCard(temples.filter(temple => temple.area > 10000));
 });
-
-
   //   FUNCTION TO CREATE TEMPLE CARDS--------------------------------------
 //Start with the word function, then name of the function, then the parameters
 function createTempleCard(filteredTemples) {
@@ -174,14 +173,14 @@ function createTempleCard(filteredTemples) {
     filteredTemples.forEach((temple) => {
 
         // create a card to put into a div for each temple card 
-        const card = document.createElement('section');
+        const card = document.createElement('div');
         card.classList.add('temple-card');
 
         // create the elements to go into the temple card
         // for example we are saying create a variable
         // called name and make it a new element('h2') to go 
         // inside the templeCard div in the HTML
-        const name = document.createElement('h3');
+        const name = document.createElement('h2');
         const location = document.createElement('p');
         const dedicated = document.createElement('p');
         const area = document.createElement('p');       

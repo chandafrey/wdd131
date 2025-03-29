@@ -139,14 +139,14 @@ div {
 
 
 /* DIV class="templeContainer"- child(figure) times 10------------- */
-.templeContainer {
+.temples {
     /* Layout the main column figure elements using CSS Grid. 
     There should only be 1 column for mobile view*/
     /* box size, space and placement*/
     display: grid;
-    /* grid-template-columns: 1fr; create a single column for mobile */
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    /* gap: 5rem; */
+    grid-template-columns: 1fr;/* create a single column for mobile*/
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    gap: 5rem;
     place-items: center;
     /* style (border-color-font)*/
 
@@ -172,9 +172,10 @@ section {
 section img {
     /* box size, space and placement*/
     max-width: 100%;
+    width: 100%;
     height:  auto;
-    display: block;
-    margin-top: 1em;
+    object-fit: cover;
+    margin-top: 2em;
     /* style (border-color-font)*/
     box-shadow: 0 0 30px gray;
 }

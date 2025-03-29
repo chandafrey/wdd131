@@ -137,7 +137,7 @@ div {
 
 
 /* DIV class="temples"- child(figure) times 9------------- */
-.temples {
+.templesContainer {
     /* Layout the main column figure elements using CSS Grid. 
     There should only be 1 column for mobile view*/
     /* box size, space and placement*/

@@ -12,7 +12,7 @@ content and use em units to be relative to the user's font size versus fixed wit
         align-items: center;
         justify-content: space-between;
     }
-    
+
     header, main, footer {
         max-width: 1500px;
     }
@@ -29,9 +29,9 @@ content and use em units to be relative to the user's font size versus fixed wit
     }
 
     /* Temple Images Grid------------ */
-    .templeContainer {
+    .temples {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 25px;
-        place-items: center;
     }
 }
 
