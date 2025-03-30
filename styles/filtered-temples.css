@@ -159,11 +159,11 @@ section {
     align-items: center;
     gap: 10px;
     padding: 1rem;
-    min-width: 0;  /* Prevents overflow by allowing it to shrink */
+    min-width: 300px;
+    /* min-width: 0;  Prevents overflow by allowing it to shrink */
     /* width: max-content;  /* Ensures container only grows as needed */
-    /*max-width: 100%; */    /* Prevents overflowing on small screens */
+    max-width: 100%;   /* Prevents overflowing on small screens */
     width: 100%;  /*Ensures full width on small screens*/
-    max-width: 700px; /*Matches main's max width */
     flex-wrap: wrap;      /* Allows wrapping on smaller screens */
     border: 1px solid black;
     background-color: rgba(87, 97, 104, 0.192);
@@ -185,10 +185,15 @@ section p {
 
 section img {
     /* box size, space and placement*/
-    width:  auto;
-    max-width: 100%;      /* Makes sure image resizes if needed */
+    /* width:  auto; */
+    /* max-width: 100%; /*     Makes sure image resizes if needed */
+    /* width: 100%; */
+    /* max-width: 400px; /*Prevents it from exceeding natural size */
+    /* height: auto; */
+    /* object-fit: cover;  */
+    width: 280px;
+    min-height: 157.5px;
     height: auto;
-    object-fit: cover; 
     /* style (border-color-font)*/
     box-shadow: 0 0 30px gray;
 }

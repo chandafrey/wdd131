@@ -108,7 +108,7 @@ const temples = [
         dedicated: "2002, March, 3",
         area: 116642,
         imageUrl:
-        "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/snowflake-arizona/400x250/snowflake-temple-lds-845142-wallpaper.jpg"
+        "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/snowflake-arizona/400x250/snowflake-temple-lds-845142-wallpaper.jpg" 
     },
   ];
 
@@ -224,6 +224,7 @@ function createTempleCard(filteredTemples) {
         image.src = temple.imageUrl;
         image.alt = `Image of ${temple.templeName}`;
         image.loading = 'lazy'; //this is for lazy loading
+        image.referrerPolicy = "no-referrer"; // Prevents sending cookies
 
         // Append the elements to the card
         card.appendChild(name);

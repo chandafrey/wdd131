@@ -11,10 +11,12 @@ content and use em units to be relative to the user's font size versus fixed wit
         display: flex;
         align-items: center;
         justify-content: space-between;
+        /* flex-wrap: wrap; */
     }
 
     header, main, footer {
         max-width: 1500px;
+        margin: 0 auto;
     }
     #menu {
         display: none; /*hide hamburger button*/
@@ -26,12 +28,16 @@ content and use em units to be relative to the user's font size versus fixed wit
     .navigation a {
         display: block;
 		flex: 1 1 100%;
+        /* flex: 1 1 auto; */
+
     }
 
     /* Temple Images Grid------------ */
     #templesContainer {
-        grid-template-columns: repeat(3, minmax(500px, 1fr));
+        /* grid-template-columns: repeat(3, minmax(500px, 1fr)); */
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
         gap: 25px;
+        max-width: 1500px;
     }
 }
 
