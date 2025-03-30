@@ -33,3 +33,6 @@ content and use em units to be relative to the user's font size versus fixed wit
     }
 }
 
+section {
+    min-width: 600px;
+}

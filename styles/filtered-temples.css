@@ -20,12 +20,13 @@ body {
     font-family: "Lato", sans-serif;
     font-size: 16px;
     font-weight: 400;
+    
 }
 
 header, main, footer { /*should I have main here too?*/
     /* box size, space and placement*/
-    /* max-width: 700px; */
-    max-width: 900px;
+    max-width: 700px;
+    /* max-width: 900x; */
     margin: 0 auto;
     padding: 1rem;
     /* style (border-color-font) */
@@ -114,7 +115,7 @@ nav {
 }
 
 /* does this even exist? */
-.open a {
+.navigation.open a {
     display: block;
 }
 
@@ -133,49 +134,61 @@ h2 {
     text-align: center;
 }
 
-div {
-    padding: 1rem;
-}
-
-
-/* DIV class="templeContainer"- child(figure) times 10------------- */
-.temples {
+/* DIV id="templeContainer"- child(figure) times 10------------- */
+#templesContainer {
     /* Layout the main column figure elements using CSS Grid. 
     There should only be 1 column for mobile view*/
     /* box size, space and placement*/
     display: grid;
-    grid-template-columns: 1fr;/* create a single column for mobile*/
-    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
-    gap: 5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* 250px is a good px for smaller screens */
+    /* auto-fit, minmax(250px, 1fr) → Ensures a responsive grid that adjusts based on available space. */
+    /* On mobile, it will stack into a single column. */
+    /* On larger screens, it expands into multiple columns automatically. */
+    gap: 1rem;
+    padding: 1rem;
     place-items: center;
     /* style (border-color-font)*/
 
 }
 
 section {
+    box-sizing: border-box; /* Ensures padding and border don't affect the width */
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 2rem;
-    padding: 2rem;
+    gap: 10px;
+    padding: 1rem;
+    min-width: 0;  /* Prevents overflow by allowing it to shrink */
+    /* width: max-content;  /* Ensures container only grows as needed */
+    /*max-width: 100%; */    /* Prevents overflowing on small screens */
+    width: 100%;  /*Ensures full width on small screens*/
+    max-width: 700px; /*Matches main's max width */
+    flex-wrap: wrap;      /* Allows wrapping on smaller screens */
     border: 1px solid black;
-    background-color: lightblue;
+    background-color: rgba(87, 97, 104, 0.192);
     color:  rgb(2, 56, 97);
-
+/* ***the min-width seemed to really help my section card to not have a <p> overflow */
 }
+
 
 .label {
     color:  rgb(0, 4, 7);
     font-weight: bold;
+    
+}
+section p {
+    max-width: 100%;
+    white-space: nowrap;   
+    font-size: clamp(14px, 2vw, 18px); /* Makes text size responsive */
 }
 
 section img {
     /* box size, space and placement*/
-    max-width: 100%;
-    width: 100%;
-    height:  auto;
-    object-fit: cover;
-    margin-top: 2em;
+    width:  auto;
+    max-width: 100%;      /* Makes sure image resizes if needed */
+    height: auto;
+    object-fit: cover; 
     /* style (border-color-font)*/
     box-shadow: 0 0 30px gray;
 }

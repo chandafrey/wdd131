@@ -125,8 +125,8 @@ createTempleCard(temples);
 
 // Function to Display temple list ALL TEMPLES:---------------------------------
 const allTemplesLink = document.querySelector('#allTemples');
-allTemplesLinkLink.addEventListener("click", () => {
-    document.querySelector("#templeContainer").innerHTML = "";
+allTemplesLink.addEventListener("click", () => {
+    document.querySelector("#templesContainer").innerHTML = "";
     createTempleCard(temples);
 });
 
@@ -134,37 +134,37 @@ allTemplesLinkLink.addEventListener("click", () => {
 // Function to filter temple list OLD:---------------------------------
 const oldLink = document.querySelector('#old');
 oldLink.addEventListener("click", () => {
-    document.querySelector("#templeContainer").innerHTML = "";
+    document.querySelector("#templesContainer").innerHTML = "";
     createTempleCard(temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) < 1900));
 });
 
 // Function to filter temple list NEW:---------------------------------
 const newLink = document.querySelector('#new');
 newLink.addEventListener("click", () => {
-    document.querySelector("#templeContainer").innerHTML = "";
+    document.querySelector("#templesContainer").innerHTML = "";
     createTempleCard(temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) > 2000));
 });
 
 // Function to filter temple list LARGE:---------------------------------
 const largeLink = document.querySelector('#large');
 largeLink.addEventListener("click", () => {
-    document.querySelector("#templeContainer").innerHTML = "";
+    document.querySelector("#templesContainer").innerHTML = "";
     createTempleCard(temples.filter(temple => temple.area > 90000));
 });
 
 // Function to filter temple list SMALL:---------------------------------
 const smallLink = document.querySelector('#small');
 smallLink.addEventListener("click", () => {
-    document.querySelector("#templeContainer").innerHTML = "";
+    document.querySelector("#templesContainer").innerHTML = "";
     createTempleCard(temples.filter(temple => temple.area > 10000));
 });
   //   FUNCTION TO CREATE TEMPLE CARDS--------------------------------------
 //Start with the word function, then name of the function, then the parameters
 function createTempleCard(filteredTemples) {
-    const container = document.querySelector('#templeContainer'); //this is the container for the temple cards
+    const container = document.getElementById('templesContainer'); //this is the container for the temple cards
     
     //   Clear the container
-    templeContainer.innerHTML = ''; //this clears the container so it doesn't duplicate the cards
+    templesContainer.innerHTML = ''; //this clears the container so it doesn't duplicate the cards
     // document.querySelector("#templeContainer").innerHTML = "";
 
     //   Loop through the temples array using a forEach method
@@ -173,14 +173,14 @@ function createTempleCard(filteredTemples) {
     filteredTemples.forEach((temple) => {
 
         // create a card to put into a div for each temple card 
-        const card = document.createElement('div');
+        const card = document.createElement('section');
         card.classList.add('temple-card');
 
         // create the elements to go into the temple card
         // for example we are saying create a variable
         // called name and make it a new element('h2') to go 
         // inside the templeCard div in the HTML
-        const name = document.createElement('h2');
+        const name = document.createElement('h3');
         const location = document.createElement('p');
         const dedicated = document.createElement('p');
         const area = document.createElement('p');       
@@ -232,8 +232,8 @@ function createTempleCard(filteredTemples) {
         card.appendChild(area);
         card.appendChild(image); 
 
-        // Append the card to the templeCards container
-        templeContainer.appendChild(card); //this appends the card to the container
+        // Append the card to the templesContainer
+        templesContainer.appendChild(card); //this appends the card to the container
         
         // Or you could say it like this:
         // document.querySelector("#templeContainer").appendChild(card)

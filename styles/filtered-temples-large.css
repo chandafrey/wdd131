@@ -29,8 +29,8 @@ content and use em units to be relative to the user's font size versus fixed wit
     }
 
     /* Temple Images Grid------------ */
-    .temples {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    #templesContainer {
+        grid-template-columns: repeat(3, minmax(500px, 1fr));
         gap: 25px;
     }
 }
