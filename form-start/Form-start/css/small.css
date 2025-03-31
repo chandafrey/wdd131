@@ -102,7 +102,8 @@ so it is easy to see that we are not missing any*/
     fill the whole screen on a larger screen */
     appearance: none; /*this will override the browser styling DropArrow
     and allow us to use our Drop Arrow added in HTML &#9662 - A mobile Device Issue */
-
+    /* And ACTUALLY - it shows correctly on Safari, but not on Chrome on my phone */
+    
     /* Finally go back and TURN OFF background color pink 
     and Change it to a light gray #eee */
     /* This was for ease of seeing all the boxes, you may not need to 
