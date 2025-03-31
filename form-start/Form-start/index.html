@@ -49,15 +49,18 @@
 <main>
     <h1>Course Proposal Application</h1>
        <form method="get" action="thanks.html">
+        <!-- fieldset will CHUNK your form into sections -->
+         <!-- type="text" will pull up a keyboard on a mobile device for user to use -->
+          <!-- type"tel" will pull up a phone key-pad on a mobile device for a user to use -->
+           <!-- type="email" will pull up an @ and . symbols at bottom of keyboard -->
+            <!-- type="url" will -->
         <fieldset>
             <legend>Applicant Information</legend>
             <label>First Name* <input type="text" name="fname" required></label>
             <label>Last Name* <input type="text" name="lname" required></label>
             <label>Phone <input type="tel" name="phone" placeholder="1235551234"></label>
             <label>Email* <input type="email" name="email" placeholder="someone@gmail.com"></label>
-            <label>Website <input type="url" name="url" placeholder="http://" required></label>
-
-
+            <label>Website <input type="url" name="url" placeholder="http://"></label>
         </fieldset>
 
        </form> 
