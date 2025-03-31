@@ -100,6 +100,8 @@ so it is easy to see that we are not missing any*/
     width: 100%; /*This is ideal for phones */
     max-width: 400px; /*Restrict the max-width so that it will not
     fill the whole screen on a larger screen */
+    appearance: none; /*this will override the browser styling DropArrow
+    and allow us to use our Drop Arrow added in HTML &#9662 - A mobile Device Issue */
 
     /* Finally go back and TURN OFF background color pink 
     and Change it to a light gray #eee */

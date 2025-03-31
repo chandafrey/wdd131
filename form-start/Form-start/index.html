@@ -78,10 +78,11 @@
 
             <div>Softward Needed</div>
             <!-- Purpose of CHECKBOX button: Choose Multiple options -->
-            <label><input type="checkbox" name="editing" value="yes">Photo Editing</label>
+             <!-- Don't forget to put these in ABC order unless there is an Intuitive order like sun, mon, tue -->
             <label><input type="checkbox" name="code" value="yes">Coding</label>
-            <label><input type="checkbox" name="process" value="yes">Preprocessor</label>
             <label><input type="checkbox" name="client" value="yes">FTP Client</label>
+            <label><input type="checkbox" name="editing" value="yes">Photo Editing</label>
+            <label><input type="checkbox" name="process" value="yes">Preprocessor</label>
         </fieldset>
 
         <fieldset>
@@ -91,7 +92,8 @@
                     <select name="subject">
                         <!-- Add this line so that incase the user does not click on an option
                          it will not return Software Development as a choice they selected -->
-                        <option value="">Please Select</option>
+                        <option value="">Please Select &#9662;</option> 
+                        <!-- &#9662; will display a DROP ARROW  -->
                         <!-- Remember only do a DROP DOWN if there are 5 or more options -->
                     <option value="software">Software Development</option>
                     <option value="creative">Creative Professional</option>
