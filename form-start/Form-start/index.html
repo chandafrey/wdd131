@@ -48,12 +48,15 @@
 <!-- CONTENT HERE -->
 <main>
     <h1>Course Proposal Application</h1>
-       <form method="get" action="thanks.html">
+    <!-- add a class="wf1" for WebForm1 -->
+       <form method="get" action="thanks.html" class="wf1">
         <!-- fieldset will CHUNK your form into sections -->
          <!-- type="text" will pull up a keyboard on a mobile device for user to use -->
           <!-- type"tel" will pull up a phone key-pad on a mobile device for a user to use -->
            <!-- type="email" will pull up an @ and . symbols at bottom of keyboard -->
-            <!-- type="url" will -->
+            <!-- type="url" will remove space bar and pull up a . / .com -->
+             <!-- add:  required  on labels if required input from user -->
+              <!-- use:  placeholder  on labels if user needs an example prompt -->
         <fieldset>
             <legend>Applicant Information</legend>
             <label>First Name* <input type="text" name="fname" required></label>
@@ -62,6 +65,49 @@
             <label>Email* <input type="email" name="email" placeholder="someone@gmail.com"></label>
             <label>Website <input type="url" name="url" placeholder="http://"></label>
         </fieldset>
+
+        <fieldset>
+            <legend>Course Information</legend>
+            <div>Audience</div>
+            <!-- keep the name="audience" the same on all the options so the user can click
+             on one or the other of the radio buttons... -->
+             <!-- Purpose of RADIO button: Choose 1 option -->
+            <label><input type="radio" name="audience" value="beginner">Beginner</label>
+            <label><input type="radio" name="audience" value="intermediate">Intermediate</label>
+            <label><input type="radio" name="audience" value="advanced">Advanced</label>
+
+            <div>Softward Needed</div>
+            <!-- Purpose of CHECKBOX button: Choose Multiple options -->
+            <label><input type="checkbox" name="editing" value="yes">Photo Editing</label>
+            <label><input type="checkbox" name="code" value="yes">Coding</label>
+            <label><input type="checkbox" name="process" value="yes">Preprocessor</label>
+            <label><input type="checkbox" name="client" value="yes">FTP Client</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Funding</legend>
+                <label>Anticipated Completion Date <input type="date" name="completeDate"></label>
+                <label>Course Subject
+                    <select name="subject">
+                        <!-- Add this line so that incase the user does not click on an option
+                         it will not return Software Development as a choice they selected -->
+                        <option value="">Please Select</option>
+                        <!-- Remember only do a DROP DOWN if there are 5 or more options -->
+                    <option value="software">Software Development</option>
+                    <option value="creative">Creative Professional</option>
+                    <option value="info">Information Technology</option>
+                    <option value="data">Data Professional</option>
+                    <option value="construction">Construction</option>
+                    <option value="manufacturing">Manufacturing</option>
+                    <option value="business">Business Professional</option>
+                    <option value="security">Cyber Security</option>
+                    </select>
+                </label>
+
+                <label>How Many Authors <input type="number" name="author"></label>
+        </fieldset>
+
+        <input type="submit" value="Propose My Course" >
 
        </form> 
 
