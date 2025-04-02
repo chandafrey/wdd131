@@ -1,0 +1,105 @@
+:root {
+    --primary-color-gold: #bb934d; /*Different Gold SW6396 */
+    --accent-color-greekVilla: #f0ece1; /*Greek Villa SW7551 */
+    --secondary-color-black: black; /*Black (with any of my colors except Black Fox */
+    --accent-color-cadet: #91999c; /*Cadet SW9143 */
+    --accent-color-rockCandy: #dfe1e0; /*Rock Candy SW6231 */
+    --accent-color-blackFox:#4f4842; /*Black Fox SW7020 (with Greek Villa, Rock Candy) */
+}
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set default font and background for the body */
+body {
+    /* style (border-color-font)*/
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6; /*this gives more breathing space between each line*/
+    background-color: #f0ece14f;
+}
+ /* HEADER - child(h1)--------------- */
+ header,
+ footer {
+    /* box size, space and placement*/
+    text-align: center;
+    /* style (border-color-font)*/
+    border: 1px solid black;    
+    background-color: var(--primary-color-gold);
+    color: black;
+    box-shadow: 0 0 30px #333;
+}
+/* FORM STYLING------------------------ */
+.wf1 fieldset {
+    margin: 2rem 0; /*OUTSIDE BOX Top/Bottom 2rem, Left/Right 0*/
+    border: 1px solid #ddd; /*changes border to light gray*/
+    border-radius: 6px; /*rounds the corners of the box*/
+    padding: .5rem 2%; /*INSIDE BOX Top/Bottom .5rem, Left/Right 2%*/
+    background-color: var(--accent-color-rockCandy .1);
+}
+/* Choose Product */
+.optional {
+color: var(--primary-color-gold)}
+
+
+
+/* Star Rating */
+.stars {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    gap: 5px;
+}
+
+.rating input {
+    display: none; /*hide the radio buttons*/
+}
+
+.rating label { /*This targets all the stars (stars1-stars5)*/
+    font-size: 30px;
+    /* cursor: pointer; */
+    color: gray;
+    transition: color 0.3s ease;
+}
+/* Change color when Hover and Clicked */
+/* you need both these lines to hover all the stars you want */
+/*if you only do the first line you can only select 1 star at a time*/
+/*if you only have the second line you can only select all stars minus the last one you hover over*/
+.rating label:hover, 
+.rating label:hover ~ label,
+.rating input:checked ~ label {
+    color: var(--primary-color-gold);
+}
+/* SUBMIT BUTTON */
+.wf1 input[type="submit"] {
+    width: 96%;
+    max-width: 400px;
+    margin: -1rem, 2% 2rem 2%;
+    padding: .8rem;
+    border: none;
+    border-radius: 6px;
+    background-image: linear-gradient(#bb934d, #4f4842);
+    color: white;
+    box-shadow: 1px 1px 4px #999;
+    font-size: 1rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/* FOOTER - child(p), child(p) */
+
+#lastModified {
+    /* style (border-color-font)*/
+    color: black;
+    font-size: 1rem;
+}

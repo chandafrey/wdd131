@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging when a phone is turned sideways-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Product Review Form page">
+    <meta name="author" content="Chanda Frey">    
+    <title>Product Review Form</title>
+    <!-- LINKS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+    <!-- <link rel="stylesheet" href="styles/form-medium.css">  @media only screen and (min-width: 35rem) {} this is 560px -->
+    <!-- <link rel="stylesheet" href="styles/form-large.css">  @media only screen and (min-width: 64rem) {} this is 1028px -->
+    <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+<!-- HEADER HERE -->
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    
+<!-- CONTENT HERE -->
+    <main>
+        <!-- add a class="wf1" for WebForm1 -->
+        <form method="get" action="review.html" class="wf1">
+        <!-- fieldset will CHUNK your form into sections -->
+        <fieldset>
+            <legend>Product</legend>
+            <label for="productChoice">Product Name</label>
+            <select id="productChoice" name="product" required>
+                <option value="" disabled selected>Choose a Product ...</option>
+                    <!-- Adding 'disabled' and 'selected': 
+                     When users open the dropdown, "Choose a Product ..." is displayed 
+                     but cannot be selected. They must choose one of the actual products. -->
+                
+        <!-- Dynamically created options will replace these static ones -->
+                <!-- The remaining options are created dynamically using a provided product array. -->
+                <!-- Each option must have a value attribute that is the product name -->
+                <option value="software">Software Development</option>
+                <option value="creative">Creative Professional</option>
+                <option value="info">Information Technology</option>
+                <option value="data">Data Professional</option>
+                <option value="construction">Construction</option>
+                <option value="manufacturing">Manufacturing</option>
+                <option value="business">Business Professional</option>
+                <option value="security">Cyber Security</option>       
+            </select>
+        </fieldset>
+            
+            <!-- <div class="stars">Overall Rating</div>
+            <div class="rating">
+                If you want a quick and simple solution with a visible star → Use Option 1 &star; or &#9733;-->
+                <!-- <label><input type="radio" id="onestar" name="stars" value="1" required>&star;</label>
+                <label><input type="radio" id="twostars" name="stars" value="2" required>&star;&star;</label>
+                <label><input type="radio" id="threestars" name="stars" value="3" required>&star;&star;&star;</label>
+                <label><input type="radio" id="fourstars" name="stars" value="4" required>&star;&star;&star;&star;</label>
+                <label><input type="radio" id="fivestars" name="stars" value="5" required>&star;&star;&star;&star;&star;</label>
+            </div> -->
+        
+
+        <!-- If you want custom styling (e.g., hiding radio buttons and showing styled stars) → Use Option 2 with CSS. -->
+        <fieldset>
+            <legend>Rating</legend>
+            <label class="stars">Overall Rating</label>
+            <div class="rating">
+                <input type="radio" name="stars" id="star5" value="5" required>
+                <label for="star5">&#9733;</label>
+            
+                <input type="radio" name="stars" id="star4" value="4" required>
+                <label for="star4">&#9733;</label>
+            
+                <input type="radio" name="stars" id="star3" value="3" required>
+                <label for="star3">&#9733;</label>
+            
+                <input type="radio" name="stars" id="star2" value="2" required>
+                <label for="star2">&#9733;</label>
+            
+                <input type="radio" name="stars" id="star1" value="1" required>
+                <label for="star1">&#9733;</label>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Installation</legend>
+            <label>Date of Installation <input type="date" name="installation" required></label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Which features did you find useful in the product?</legend>
+            <p>(Check all that apply)</p>
+            <label><input type="checkbox" name="features[]" id="durability" value="yes">Durability</label>
+            <label><input type="checkbox" name="features[]" id="ease" value="yes">Ease of Use</label>
+            <label><input type="checkbox" name="features[]" id="performance" value="yes">Performance</label>
+            <label><input type="checkbox" name="features[]" id="design" value="yes">Design</label>
+            <!-- Used name="features[]" for all checkboxes -->
+            <!-- The [] makes it an array, so when submitted in a form, all selected values will be grouped together. -->
+            <!-- Replace <label> for instructions with <p> → The instruction "(Check all that apply)" isn't a label for a form field, so <p> is better. -->
+        </fieldset>
+
+        <fieldset>
+            <label for="feedback">
+                Written Review <span class="optional">(Optional)</span>
+                <textarea name="feedback" id="feedback" rows="4"></textarea>
+            </label>
+
+            <label for="fullname">
+                Your Name <span class="optional">(Optional)</span>
+                <input type="text" name="fullname" id="fullname">
+            </label>
+        </fieldset>
+
+        <input type="submit" value="Post Review">
+
+        </form>   
+    </main>
+
+    
+    <footer>
+        <p>&copy;<span id="currentYear"></span> ~ Chanda Frey ~ Utah</p>
+        <p><span id="lastModified"></span></p>
+    </footer> 
+
+</body>
+</html>

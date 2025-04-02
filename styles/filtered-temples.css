@@ -26,7 +26,7 @@ body {
 header, main, footer { /*should I have main here too?*/
     /* box size, space and placement*/
     /* max-width: 700px; */
-    max-width: 900x;
+    max-width: 900px;
     margin: 0 auto;
     padding: 1rem;
     /* style (border-color-font) */
