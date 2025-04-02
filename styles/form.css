@@ -27,7 +27,7 @@ body {
     font-size: 16px;
     font-weight: 400;
     /* line-height: 1.6; this gives more breathing space between each line */
-    background-color: #f0ece14f;
+    /* background-color: #f0ece14f; */
 }
 
  /* HEADER - child(h1)--------------- */
@@ -58,7 +58,7 @@ main {
 
 
 .wf1 legend {
-    color: #445ba9; 
+    color: #1c3897; 
     padding: 0 .5rem; /*Top/Bottom 0, Left/Right .5rem(gives breathing
     space on either side of the legend name like "Applicant Information */
 }
@@ -67,7 +67,7 @@ main {
 .wf1 label {
     display: block; /*STACKS all the elements */
     padding-top: 1rem; /*Gives elements BREATHING Room */
-    color: #9c2c13; /*Change label color: */
+    color: #5f3007; /*Change label color: */
     font-size: .9rem; /*Change Font-size a bit SMALLER */
 }
 .wf1 .features,
@@ -75,16 +75,17 @@ main {
     font-weight: 400;
     /* font-size: 1.05rem; */
     margin-bottom: -1rem;
-    color: #445ba9;
+    color: #1c3897;
 }
 
 .wf1 .feature-options p {
     font-size: .9rem;
-    color: #445ba9;
-    color: #cc8202;
+    color: #1c3897;
+    color: #864304;
+    /* color: #4f4842; */
 }
 .wf1 .optional {
-color: #cc8202;
+color: #864304;
 }
 
 .wf1 .options {
@@ -164,7 +165,7 @@ color: #cc8202;
     padding: .8rem;
     border: none;
     border-radius: 6px;
-    background-image: linear-gradient(#bb934d, #4f4842);
+    background-color: #976b21;
     color: white;
     box-shadow: 1px 1px 4px #999;
     font-size: 1.3rem;
@@ -179,7 +180,7 @@ color: #cc8202;
 /* add :valid and change the color status when the box is filled correctly */
 .wf1 select:required:valid,
 .wf1 input:required:valid {
-    border-bottom: solid 8px green;
+    border-bottom: solid 8px #526911;
 }
 
 /* -------------------------------------------------------------------------- */
