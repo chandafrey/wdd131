@@ -75,14 +75,16 @@ main {
     font-weight: 400;
     /* font-size: 1.05rem; */
     margin-bottom: -1rem;
+    color: #445ba9;
 }
 
 .wf1 .feature-options p {
     font-size: .9rem;
     color: #445ba9;
+    color: #cc8202;
 }
 .wf1 .optional {
-color: var(--primary-color-gold)
+color: #cc8202;
 }
 
 .wf1 .options {
@@ -147,7 +149,7 @@ color: var(--primary-color-gold)
 .rating label:hover, 
 .rating label:hover ~ label,
 .rating input:checked ~ label {
-    color: var(--primary-color-gold);
+    color: #cc8202;
 }
 
 /* .wf1 input[type="radio"],  */

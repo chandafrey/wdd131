@@ -11,19 +11,11 @@
     
     
     /*----------- NAVIGATION --------------*/
-        nav ul {
-            display: flex;
-            margin-left: 2%;
-        }
-        nav ul li {border: none;}
-        nav ul li a{padding: .5rem 2rem;}
-        nav ul li a:hover {background-color: firebrick;}
-    
-    
+ 
     /*----------- MAIN --------------*/
     
     
     
     /*----------- FOOTER --------------*/
         
-    } /* end of media query */
+    }/* end of media query */
