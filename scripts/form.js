@@ -37,4 +37,18 @@ const products = [
     }
   ];
 
-  
+  // Populate Dropdown //
+const selectElement = document.getElementById("productChoice");
+products.forEach(product => {
+  let option = document.createElement("option");
+  option.value = product.id;
+  option.textContent = product.name;
+  selectElement.appendChild(option);
+});
+
+// LocalStorage tracking //
+document.addEventListener("DOMContentLoaded", () => {
+  let reviewCount = localStorage.getItem("reviewCount") || 0;
+  reviewCount = parseInt(reviewCount);
+  localStorage.setItem("reviewCount", reviewCount);
+});
