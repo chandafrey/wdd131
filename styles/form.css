@@ -70,6 +70,7 @@ main {
     color: #5f3007; /*Change label color: */
     font-size: .9rem; /*Change Font-size a bit SMALLER */
 }
+
 .wf1 .features,
 .wf1 .stars {
     font-weight: 400;
@@ -80,17 +81,17 @@ main {
 
 .wf1 .feature-options p {
     font-size: .9rem;
-    color: #1c3897;
+    /* color: #1c3897; */
     color: #864304;
-    /* color: #4f4842; */
 }
+
 .wf1 .optional {
 color: #864304;
 }
 
 .wf1 .options {
-    margin-top: -1rem;
-    margin-bottom: 1rem;
+    margin-top: -1rem; /*scooched checkbox list closer to it's label heading*/
+    margin-bottom: 1rem; /*scooched checkbox list farther away from next category*/
 }
 
 
@@ -125,22 +126,18 @@ color: #864304;
 
 /* Star Rating */
 
-.wf1 .rating-section .rating {
+.wf1 .rating {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: start;
+    justify-content: start; /*or start if you want left justify*/
     gap: 10px;
-
 }
 
-.wf1 .rating input {
-    display: none; /*hide the radio buttons*/
-}
 
 .wf1 .rating label { /*This targets all the STARS(stars1-stars5)*/
-    font-size: 30px;
+    font-size: 44px;
     cursor: pointer;
-    color: gray;
+    color: lightgray;
 }
 
 /* Change color when Hover and Clicked */
@@ -149,6 +146,7 @@ color: #864304;
 /*if you only have the second line you can only select all stars minus the last one you hover over*/
 .rating label:hover, 
 .rating label:hover ~ label,
+
 .rating input:checked ~ label {
     color: #cc8202;
 }
@@ -175,12 +173,12 @@ color: #864304;
 /* this is how you target the pseudo class "required"  */
 .wf1 select:required,
 .wf1 input:required {
-    border-bottom: solid 8px #9c2c13;
+    border-bottom: solid 4px #9c2c13;
 }
 /* add :valid and change the color status when the box is filled correctly */
 .wf1 select:required:valid,
 .wf1 input:required:valid {
-    border-bottom: solid 8px #526911;
+    border-bottom: solid 4px #526911;
 }
 
 /* -------------------------------------------------------------------------- */
