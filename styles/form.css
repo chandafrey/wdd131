@@ -125,12 +125,12 @@ color: #864304;
 
 
 /* Star Rating */
-
 .wf1 .rating {
     display: flex;
     flex-direction: row-reverse;
     justify-content: start; /*or start if you want left justify*/
     gap: 10px;
+   
 }
 
 
