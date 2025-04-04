@@ -106,6 +106,7 @@ nav { /*not sure if this is needed*/
     max-width: 700px;
 }
 .navigation {
+    
     list-style: none;
     margin: 0 auto;
     max-width: 760px;
@@ -115,11 +116,16 @@ nav { /*not sure if this is needed*/
 }
 .navigation a { 
     display: block;
-    padding: .75rem;
+    padding: 1rem;
     text-decoration: none;
     color: #eeece0;
-    transition: .5s;
-    font-size: clamp(1rem, 2vmin, 1.5rem);
+    transition: .5s; /*USE THIS IF YOU HOVER over a link: Background color changes and Font Size increases
+    The transition: .5s; makes that happen gradually, giving a smooth, polished effect*/
+    font-size: clamp(1rem, 3vmin, 1.5rem); /*This is a responsive font size rule using clamp(). It's super handy and flexible.
+    clamp(min, preferred, max) means:
+    min: the smallest allowed size
+    preferred: the flexible size based on the screen (like viewport width)
+    max: the largest allowed size */
 }
 .navigation a:hover,
 .navigation a:active {
