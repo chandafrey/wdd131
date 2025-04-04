@@ -1,81 +1,130 @@
-<!-- Content
-Include the following content and use appropriate HTML elements to outline these sections with descriptions in the site plan document:
-
-Site Name: The site or domain name (along with a logo) is the primary identifier and is critical for branding, visibility, and recognition. Securing a domain name that is available to purchase is normally important but not required in this class. You will need to provide a valid site name relevant to your project, along with a short description of why you chose it.
-
-Example: Bay Area eBiking Club
-• This name represents a club that is focused on electric biking in the San Francisco Bay Area.
-Optional domain availability: bay-ebike.org
--->
-
+<!-- WDD 131 Site Plan Project -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Chanda Frey, Cakes for every occasion">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Site Plan Project - Chanda Frey, Cakes for every occasion">
     <meta name="author" content="Chanda Frey"> 
     <title>Cakelicious</title>
 
-    <!-- LINKS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>        
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap" rel="stylesheet">
+    <!-- LINKS: FONTS -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,300;1,400&display=swap" rel="stylesheet"> -->
+    <!-- Lato    font-family: "Lato", sans-serif;   font-weight/style: 300(italic) & 400(normal & italic) -->
+
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,300;1,400&family=Merriweather:opsz,wght@18..144,700&display=swap" rel="stylesheet"> -->
    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lato:ital,wght@0,400;1,300;1,400&family=Merriweather:opsz,wght@18..144,700&display=swap" rel="stylesheet">
+   
+    <!--  LINKS: OTHER FILES-->
     <link rel="stylesheet" href="styles/siteplan.css">
-    <link rel="stylesheet" href="styles/siteplan-large.css>
+    <link rel="stylesheet" href="styles/siteplan-large.css">
     <script src="scripts/siteplan.js" defer></script>
+
 </head>
 
 <body>
-    <main>
-        <header>
-            <h1>Cakelicious</h1>
-            <div class=" logo-box">
-                <img src="images/cake-logo.png" alt="Cakelicious logo">
-            </div>
-            <button type="button" id="menu"></button> <!--this line is for the "hamburger button"...use the id  #menu in css and js-->
-        </header>
+    <header>
+        <h1>Cakelicious</h1>
+        <div class="logo-box">
+            <img src="images/cakeslice-iconfinder-whitecherryonly.svg" alt="Cakelicious logo" class="logo"> <!--this is the icon for the logo-->
+        </div>
+
+        <button type="button" id="menu" aria-label="Open menu"></button>  <!--this line is for the 
+        "hamburger button"...use the id  #menu in css an js-
+        ALSO use aria-label="Open menu" for accessibility-->
         
-            <nav>
-                <ul class="navigation"> <!--I don't know if these navigation names need changed-->
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">Weddings</a></li>
-                    <li><a href="#">Special Occasions</a></li>
-                    <li><a href="#">Catered Events</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-    </main>    
+        <nav>
+            <ul class="navigation"> <!--I don't know if these navigation names need changed-->
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Cakes</a></li>
+                <li><a href="#">Order</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>   
+        <section>
+            <h2>Site Name: Cakelicious</h2>
+            <p>This name reflects a possible business my sister in law could do because she likes to make yummy cakes.</p>
+        </section>
+
+        <section>
+            <h2>Site Purpose:</h2>
+            <p>The site provides a place for her to share her specialty cake options and sell them.</p>
+        </section>
+
+        <section>
+            <h2>Scenarios:</h2>
+            <ul>
+                <li>How many servings in a cake?</li>
+                <li>How long will my cake last?</li>
+                <li>How many days in advance do I need to make an order?</li>
+                <li>What is your cake of the week?</li>
+                <li>Do you deliver?</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Color Schema: </h2>
+            <ul>
+                <li>Headings: background-color: #525a49, rgb(82,90,73) darkGreenRetreat; color: #fefffd, rgb(254,255,253), white-cream;</li>
+                <li>Body:  background-color: #fefffd, rgb(254,255,253), white-cream; color: #303030, rgb(48,48,48), darkCaviar;</li>
+                <li>Accents: </l>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Typography:</h2>
+            <ul>
+                <li>Fonts: Lato- font-family: "Lato", sans-serif; font-weight/style: 300(italic) & 400(normal & italic); font-family: "DM Serif Display", serif; font-family: "Merriweather", serif;
+
+                </li>
+                <li>Headings: font-family: "Lato", sans-serif; font-size: 4rem; font-weight:lighter; font-style: italic; letter-spacing: .75rem;</li>
+                <li>Body:</li>font-family: "Lato", sans-serif;
+                <li>Form:</li>font-family: "DM Serif Display", serif;
+
+            </ul>
+        </section>
+
+        <section>
+            <h2>Wireframe:</h2>
+            <ul>
+                <li>Home page Mobile:</li>
+                <li>Home page Desktop:</li>
+            </ul>
+        </section>
+            <form method="get" action="thanks.html" class="wf1">
+              
+            <fieldset>
+                <div>Form DEMO Color</div>
+                <label><input type="radio" name="audience" value="beginner">Beginner</label>
+                <label><input type="radio" name="audience" value="intermediate">Intermediate</label>
+                <label><input type="radio" name="audience" value="advanced">Advanced</label>
+
+                <div>Customer Relations</div>
+                <!-- Purpose of CHECKBOX button: Choose Multiple options -->
+                <!-- Don't forget to put these in ABC order unless there is an Intuitive order like sun, mon, tue -->
+                <label><input type="checkbox" name="code" value="yes">Coding</label>
+                <label><input type="checkbox" name="client" value="yes">FTP Client</label>
+                <label><input type="checkbox" name="editing" value="yes">Photo Editing</label>
+            </fieldset>
+        </form>
+
+
+
+    </main>  
+
+    <footer>
+        <p>&copy;<span id="currentYear"></span> ~ Chanda Frey ~ Utah</p>
+        <p><span id="lastModified"></span></p>
+    </footer> 
 </body>
 </html>
-
-
-
-Site Purpose: The site purpose describes your site's scope as well as the services and information that will be provided.
-Example: for the Bay Area eBiking Club
-• The site provides a hub for regional e-biking by providing trail and e-bike recommendation information along with a membership information form.
-
-Scenarios: Scenarios are questions asked by a site visitor who represents the organization's target audience. The questions will help you drive the content of the website as it provides answers to the questions. Again, much of the content specifications will actually be provided but start thinking about the target audience of the site. Include at least two scenarios.
-Example: for the Bay Area eBiking Club
-• What is the best e-bike to get for mountainous areas?
-• Where can I find contact information for the club's directors?
-
-Color Schema: The color schema refers to the carefully selected site colors. Define at least two colors and show where each color selected will be used, such as headings, paragraphs, background colors, accents, and so on.
-! Use your selected color schema on this document.
-How to Choose Good Website Color Schemes – websitebuilderexpert.com
-
-Typography: The typography section of the planning document provides examples of the fonts to be used and where they are to be applied. You should select no less than one font and no more than three fonts. Indicate where each font will be used (such as headings, body, and so on). Other fonts can be used for special circumstances or sections as needed.
-Choosing Web Fonts Beginners Guide – Google Design
-
-Wireframe: Design a wireframe of your project's home page layout. Wireframe diagrams can be simple and do not need to have actual content, just representations of content and their layout relationship. Provide a sketch of the home page for the mobile view and for a larger view (wide desktop).
-What is a Wireframe? – evolve
-Remember that earlier in the course you worked with a given wireframe. Country/Place Page
-CSS
-Add supporting CSS files as needed. The styling can be basic.
-Be sure to use your selected color schema and typography listed in this plan on your site plan document.
-Testing
-Self check and evaluate your own work on this page through the common tools used throughout the class for validation, accessibility, best practices, color contrast, SEO, and performance.
-Submission
-Commit and push your work up to your course repository.
-Return to Canvas and submit the URL. -->

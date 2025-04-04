@@ -1,0 +1,15 @@
+@media (min-width: 37.5em) { /* 600px */
+    #menu {
+        display: none; /* Hide the menu button on larger screens */
+    }
+    .navigation {
+        display: flex; /* Use flexbox for the navigation on larger screens */
+        justify-content: center; /* Center the navigation items */
+    }
+ 
+    .navigation li {
+        display: block;
+        flex: 1 1 100%; /* Allow items to grow and shrink, taking full width */
+        text-align: center; /* Center the text in each item */
+    }
+}
