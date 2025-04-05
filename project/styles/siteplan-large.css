@@ -2,19 +2,63 @@
     #menu {
         display: none; /* Hide the menu button on larger screens */
     }
-    .navigation {
-        display: flex; /* Use flexbox for the navigation on larger screens */
-        justify-content: center; /* Center the navigation items */
+
+    /* HEADER CONTAINER GRID  */
+    header {
+        display: grid; /* Use grid layout for header */
+        grid-template-columns: 1fr 3fr; /* Two equal columns */
+    
     }
  
-    .navigation li {
-        display: block;
-        flex: 1 1 100%; /* Allow items to grow and shrink, taking full width */
-        text-align: center; /* Center the text in each item */
+    header .logo-box {
+        grid-column: 1/2;
+        grid-row: 1/3;
+        display: flex;
+        align-items: center; /* Center logo vertically */
+        justify-self: center;
+        max-width: 2000px;
+        width: 100%; /* Make the image responsive*/
+        padding: 1rem; /* Add padding to the logo box */
+        padding-left: 1.5rem;
     }
-    .navigation a {
-        padding: 1rem; /* Add padding to the links */
-        font-size: 1.5rem; /* Increase font size for larger screens */
+    header .logo-box img {
+        display: block; /* Ensure the image is a block element */
+        width: 100%; /* Make the image responsive */
+        height: auto; /* Maintain aspect ratio */
     }
 
-    /* HEADER Container for Desktop */
+    header h1 {
+        grid-column: 2/3; /* Span both columns */
+        grid-row: 1/2;
+        text-align: center; /* Center the title */
+        flex: 1; /* Allow the title to grow and take available space */
+        margin: 0; /* Remove default margin */
+        padding-top: 2rem;
+        letter-spacing: .5em; /* Add letter spacing*/
+        transform: scaleY(2);
+        /* transform: scaleX(1.2); */
+        transform-origin: center;
+        font-size: clamp(1.5rem, 5vw, 2.5rem); /*Responsive font size*/
+    }
+    @media(min-width: 56.25rem) { /*(900px)*/ 
+        header h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem); /* Larger font size for larger screens */
+        }
+    }
+    nav {
+        grid-column: 2/3; /* Span both columns */
+        grid-row: 2/3; /* Position below the title */
+        display: flex; /* Use flexbox for navigation */
+        justify-content: space-around; /* Space items evenly */
+        align-items: center; /* Center items vertically */
+        /* padding: 1rem 0; Add padding to the navigation */
+        padding-top: 2rem;
+    }
+    .navigation li {
+        display: flex; /* Show the navigation items on larger screens */
+    }
+    .navigation {
+      flex-direction: row; /* horizontal on tablet+ */
+      justify-content: space-around;
+    }
+}

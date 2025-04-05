@@ -18,10 +18,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,300;1,400&family=Merriweather:opsz,wght@18..144,700&display=swap" rel="stylesheet"> -->
    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lato:ital,wght@0,400;1,300;1,400&family=Merriweather:opsz,wght@18..144,700&display=swap" rel="stylesheet">
-   
+    -->
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,600&family=DM+Serif+Display:ital@0;1&family=Lato:ital,wght@0,400;1,300;1,400&family=Merriweather:opsz,wght@18..144,700&display=swap" rel="stylesheet">
+    
     <!--  LINKS: OTHER FILES-->
     <link rel="stylesheet" href="styles/siteplan.css">
     <link rel="stylesheet" href="styles/siteplan-large.css">
@@ -32,14 +37,15 @@
 <body>
     <div class="wrapper">
         <header>
-            <div class="left-gorup">
+            <div class="button">
                <button type="button" id="menu" aria-label="Open menu"></button>  <!--this line is for the 
                 "hamburger button"...use the id  #menu in css an js-
                 ALSO use aria-label="Open menu" for accessibility--> 
-                <div class="logo-box">
-                    <img src="images/cakeslice-iconfinder-whitecherryonly.svg" alt="Cakelicious logo" class="logo"> <!--this is the icon for the logo-->
-                </div>
-            </div> <!-- end left-group -->
+            </div>
+
+            <div class="logo-box">
+                <img src="images/cakeslice-iconfinder-whitecherryonly.svg" alt="Cakelicious logo" class="logo"> <!--this is the icon for the logo-->
+            </div>
             
             <h1>Cakelicious</h1>
 
@@ -53,27 +59,29 @@
             </nav>
         </header>
 
-        <main>   
-            <section>
-                <h2>Site Name: Cakelicious</h2>
-                <p>This name reflects a possible business my sister in law could do because she likes to make yummy cakes.</p>
-            </section>
+        <main> 
+            <section class ="name-purpose-scenarios">  
+                <section class="name">
+                    <h2>Site Name: Cakelicious</h2>
+                    <p>This name reflects a possible business my sister in law could do because she likes to make yummy cakes.</p>
+                </section>
 
-            <section>
-                <h2>Site Purpose:</h2>
-                <p>The site provides a place for her to share her specialty cake options and sell them.</p>
-            </section>
+                <section class ="purpose">
+                    <h2>Site Purpose:</h2>
+                    <p>The site provides a place for her to share her specialty cake options and sell them.</p>
+                </section>
 
-            <section>
-                <h2>Scenarios:</h2>
-                <ul>
-                    <li>How many servings in a cake?</li>
-                    <li>How long will my cake last?</li>
-                    <li>How many days in advance do I need to make an order?</li>
-                    <li>What is your cake of the week?</li>
-                    <li>Do you deliver?</li>
-                </ul>
-            </section>
+                <section class="scenarios">
+                    <h2>Scenarios:</h2>
+                    <ul>
+                        <li>How many servings in a cake?</li>
+                        <li>How long will my cake last?</li>
+                        <li>How many days in advance do I need to make an order?</li>
+                        <li>What is your cake of the week?</li>
+                        <li>Do you deliver?</li>
+                    </ul>
+                </section>
+            </section> <!-- end namePurposeScenarios -->
             
             <section class="color-fonts">
                 <section class="color">
@@ -121,14 +129,16 @@
                 </section>
 
             </section> <!-- end color section-->
-            <section>
+            <section class="wireframe">
                 <h2>Wireframe:</h2>
-                <ul class="wireframe">
-                    <li>Home page Mobile:</li>
+                <div class="mobile">
+                    <h3>Home page Mobile:</h3>
                     <img src="images/CakeHomePageMobile-Mobile Home Page.jpg">
-                    <li>Home page Desktop:</li>
-                    <img class="desktop" src="images/CakeHomePageMobile-Desktop Home Page.jpg">
-                </ul>
+                </div>
+                <div class="desktop">
+                    <h3>Home page Desktop:</h3>
+                    <img src="images/CakeHomePageMobile-Desktop Home Page.jpg">
+                </div>
             </section>
         </main>  
 
