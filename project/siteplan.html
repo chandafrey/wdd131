@@ -30,101 +30,112 @@
 </head>
 
 <body>
-    <header>
-        <h1>Cakelicious</h1>
-        <div class="logo-box">
-            <img src="images/cakeslice-iconfinder-whitecherryonly.svg" alt="Cakelicious logo" class="logo"> <!--this is the icon for the logo-->
-        </div>
+    <div class="wrapper">
+        <header>
+            <div class="left-gorup">
+               <button type="button" id="menu" aria-label="Open menu"></button>  <!--this line is for the 
+                "hamburger button"...use the id  #menu in css an js-
+                ALSO use aria-label="Open menu" for accessibility--> 
+                <div class="logo-box">
+                    <img src="images/cakeslice-iconfinder-whitecherryonly.svg" alt="Cakelicious logo" class="logo"> <!--this is the icon for the logo-->
+                </div>
+            </div> <!-- end left-group -->
+            
+            <h1>Cakelicious</h1>
 
-        <button type="button" id="menu" aria-label="Open menu"></button>  <!--this line is for the 
-        "hamburger button"...use the id  #menu in css an js-
-        ALSO use aria-label="Open menu" for accessibility-->
-        
-        <nav>
-            <ul class="navigation"> <!--I don't know if these navigation names need changed-->
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Cakes</a></li>
-                <li><a href="#">Order</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+            <nav>
+                <ul class="navigation"> <!--I don't know if these navigation names need changed-->
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Cakes</a></li>
+                    <li><a href="#">Order</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <main>   
-        <section>
-            <h2>Site Name: Cakelicious</h2>
-            <p>This name reflects a possible business my sister in law could do because she likes to make yummy cakes.</p>
-        </section>
+        <main>   
+            <section>
+                <h2>Site Name: Cakelicious</h2>
+                <p>This name reflects a possible business my sister in law could do because she likes to make yummy cakes.</p>
+            </section>
 
-        <section>
-            <h2>Site Purpose:</h2>
-            <p>The site provides a place for her to share her specialty cake options and sell them.</p>
-        </section>
+            <section>
+                <h2>Site Purpose:</h2>
+                <p>The site provides a place for her to share her specialty cake options and sell them.</p>
+            </section>
 
-        <section>
-            <h2>Scenarios:</h2>
-            <ul>
-                <li>How many servings in a cake?</li>
-                <li>How long will my cake last?</li>
-                <li>How many days in advance do I need to make an order?</li>
-                <li>What is your cake of the week?</li>
-                <li>Do you deliver?</li>
-            </ul>
-        </section>
+            <section>
+                <h2>Scenarios:</h2>
+                <ul>
+                    <li>How many servings in a cake?</li>
+                    <li>How long will my cake last?</li>
+                    <li>How many days in advance do I need to make an order?</li>
+                    <li>What is your cake of the week?</li>
+                    <li>Do you deliver?</li>
+                </ul>
+            </section>
+            
+            <section class="color-fonts">
+                <section class="color">
+                    <h2>Color Schema: </h2>
+                    <ul>
+                        <!-- <li>Headings: background-color: #525a49, rgb(82,90,73) darkGreenRetreat; color: #fefffd, rgb(254,255,253), white-cream;</li>
+                        <li>Body:  background-color: #fefffd, rgb(254,255,253), white-cream; color: #303030, rgb(48,48,48), darkCaviar;</li>
+                        <li>Accents: </l> -->
+                        <li>Headings: background-color: #525a49; color: #fefffd</li>
+                        <li>Body:  background-color: #fefffd; color: #303030</li>
+                        <li>Accents: #e5e7eb, #3d403b</l>
+                    </ul>
+                </section>
 
-        <section>
-            <h2>Color Schema: </h2>
-            <ul>
-                <li>Headings: background-color: #525a49, rgb(82,90,73) darkGreenRetreat; color: #fefffd, rgb(254,255,253), white-cream;</li>
-                <li>Body:  background-color: #fefffd, rgb(254,255,253), white-cream; color: #303030, rgb(48,48,48), darkCaviar;</li>
-                <li>Accents: </l>
-            </ul>
-        </section>
+                <section class="fonts">
+                    <h2>Typography:</h2>
+                    <ul>
+                        <!-- <li>Fonts: Lato- font-family: "Lato", sans-serif; font-weight/style: 300(italic) & 400(normal & italic); font-family: "DM Serif Display", serif; font-family: "Merriweather", serif;</li>
+                        <li>Headings: font-family: "Lato", sans-serif; font-size: 4rem; font-weight:lighter; font-style: italic; letter-spacing: .75rem;</li>
+                        <li>Body:</li>font-family: "Lato", sans-serif;
+                        <li>Form:</li>font-family: "DM Serif Display", serif; -->
+                        <li>Fonts: font-families: "Lato", sans-serif; "DM Serif Display", serif; "Merriweather", serif;</li>
+                        <li>Headings:  "Lato", sans-serif; "DM Serif Display", serif;</li>
+                        <li>Body: "Lato", sans-serif;</li>
+                        <li>Form: "DM Serif Display", serif;</li>
+                    </ul>
+                </section>
 
-        <section>
-            <h2>Typography:</h2>
-            <ul>
-                <li>Fonts: Lato- font-family: "Lato", sans-serif; font-weight/style: 300(italic) & 400(normal & italic); font-family: "DM Serif Display", serif; font-family: "Merriweather", serif;
+                <section class="form-demo">
+                    <form method="get" action="thanks.html" class="wf1">
+                        <fieldset>
+                            <div>Form DEMO Color</div>
+                            <label><input type="radio" name="audience" value="beginner">Beginner</label>
+                            <label><input type="radio" name="audience" value="intermediate">Intermediate</label>
+                            <label><input type="radio" name="audience" value="advanced">Advanced</label>
 
-                </li>
-                <li>Headings: font-family: "Lato", sans-serif; font-size: 4rem; font-weight:lighter; font-style: italic; letter-spacing: .75rem;</li>
-                <li>Body:</li>font-family: "Lato", sans-serif;
-                <li>Form:</li>font-family: "DM Serif Display", serif;
+                            <div>Customer Relations</div>
+                            <!-- Purpose of CHECKBOX button: Choose Multiple options -->
+                            <!-- Don't forget to put these in ABC order unless there is an Intuitive order like sun, mon, tue -->
+                            <label><input type="checkbox" name="code" value="yes">Coding</label>
+                            <label><input type="checkbox" name="client" value="yes">FTP Client</label>
+                            <label><input type="checkbox" name="editing" value="yes">Photo Editing</label>
+                        </fieldset>
+                    </form>     
+                </section>
 
-            </ul>
-        </section>
+            </section> <!-- end color section-->
+            <section>
+                <h2>Wireframe:</h2>
+                <ul class="wireframe">
+                    <li>Home page Mobile:</li>
+                    <img src="images/CakeHomePageMobile-Mobile Home Page.jpg">
+                    <li>Home page Desktop:</li>
+                    <img class="desktop" src="images/CakeHomePageMobile-Desktop Home Page.jpg">
+                </ul>
+            </section>
+        </main>  
 
-        <section>
-            <h2>Wireframe:</h2>
-            <ul>
-                <li>Home page Mobile:</li>
-                <li>Home page Desktop:</li>
-            </ul>
-        </section>
-            <form method="get" action="thanks.html" class="wf1">
-              
-            <fieldset>
-                <div>Form DEMO Color</div>
-                <label><input type="radio" name="audience" value="beginner">Beginner</label>
-                <label><input type="radio" name="audience" value="intermediate">Intermediate</label>
-                <label><input type="radio" name="audience" value="advanced">Advanced</label>
-
-                <div>Customer Relations</div>
-                <!-- Purpose of CHECKBOX button: Choose Multiple options -->
-                <!-- Don't forget to put these in ABC order unless there is an Intuitive order like sun, mon, tue -->
-                <label><input type="checkbox" name="code" value="yes">Coding</label>
-                <label><input type="checkbox" name="client" value="yes">FTP Client</label>
-                <label><input type="checkbox" name="editing" value="yes">Photo Editing</label>
-            </fieldset>
-        </form>
-
-
-
-    </main>  
-
-    <footer>
-        <p>&copy;<span id="currentYear"></span> ~ Chanda Frey ~ Utah</p>
-        <p><span id="lastModified"></span></p>
-    </footer> 
+        <footer>
+            <p>&copy;<span id="currentYear"></span> ~ Chanda Frey ~ Utah</p>
+            <p><span id="lastModified"></span></p>
+        </footer>
+    </div> 
 </body>
-</html>
+</html> 

@@ -1,12 +1,27 @@
+/* MOBILE VIEWS */
+
+/* MARGINS/PADDING/WIDTHS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+/* wrapper limits content width and centers it */
+.wrapper {
+    /* max-width: 90%; */
+    max-width: 95%;
+    margin: 0 auto; 
+    padding: 1rem;
+}
 
+header, 
+main,
+footer {
+   padding: 1rem;
+}
 
 /* -------------------------------------------------------------------------- */
-/* Color Schema */
+/* COLOR SCHEMA */
 /* dark-green #3d403b rgb(61,64,59), alabaster-cream #eeece0 rgb(238,236,224)
 lightBlue #c4c6ca rgb(196,198,202), x-lightBlue #e5e7eb rgb(229,231,235) */
 header, footer {
@@ -24,24 +39,19 @@ body {
 a .navigation{
     color: #eeece0;
 }
-fieldset {
-    background-color: #c4c6ca;
-    background-color: #e5e7eb;
-    /* background-color: #3d403b; */
-    color: #3d403b;
-    /* color: #eeece0; */
-    border: 1px solid #3d403b;
-    box-shadow: 0 0 30px #333;
-    max-width: 400px;
-
-    margin: 0 auto;
-    font-family: "DM Serif Display", serif;
-    /* font-family: "Merriweather", serif; */
-}
-
 
 /* ---------------------------------------------------------------------------------- */
+
 /* Typography */
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+p {
+    line-height: 1.5;
+}
+
+/* Business Name - Cakelicious */
 h1 {
     font-family: "Lato", sans-serif;
     /* font-family: "DM Sans", sans-serif; */
@@ -70,26 +80,22 @@ main {
     /* font-family: "DM Sans", sans-serif; */
     /* font-family: "DM Serif Display", serif; */
     /* font-family: "Merriweather", serif; */
-
     font-weight: 400;
     font-style: normal;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
     font-size: 16px;
 }
-
-
-
 /* ------------------------------------------------------------------------------- */
-/* Hamburger Menu Button MOBILE */
+
+/* HAMBURGER MENU BUTTON - MOBILE ONLY */
 #menu {
-    /* display: block; */
-    font-size: 3rem;
+    display: block;
+    font-size: 2rem;
     font-weight: 700;
+    margin-right: .5rem;    
+    background: none;
     border: none;
     text-decoration: none;
-    padding: 0.5rem .75rem;
-    background: none;
-    /* background-color: red; */
     color: #eeece0;
     cursor: pointer;
 }
@@ -100,24 +106,20 @@ main {
     content: "✖";
     font-size: 24px;
 }
+
 /* Navigation */
-nav { /*not sure if this is needed*/
-    margin: 1rem auto;
-    max-width: 700px;
-}
-.navigation {
-    
-    list-style: none;
-    margin: 0 auto;
-    max-width: 760px;
-}
+/* The navigation menu is hidden by default on mobile screens and shown when the button is clicked */
 .navigation li {
     display: none;
 }
-.navigation a { 
+.open li {
     display: block;
-    padding: 1rem;
+} 
+
+.navigation a { 
+    display: block; /* block makes the link take up the whole line */
     text-decoration: none;
+    padding: 1rem; /* padding makes the link area larger and easier to click */
     color: #eeece0;
     transition: .5s; /*USE THIS IF YOU HOVER over a link: Background color changes and Font Size increases
     The transition: .5s; makes that happen gradually, giving a smooth, polished effect*/
@@ -134,59 +136,127 @@ nav { /*not sure if this is needed*/
     /* text-decoration: none; */
     font-size: 1.2rem;
 }
-.open li {
-    display: block;
-} 
+
+/* Navigation Example  - Not sure if I need this yet*/
+.navigation {
+    display: flex;
+    flex-direction: column; /* stack on mobile */
+ }
+  
+  /* @media (min-width: 600px) {
+    .wrapper {
+      max-width: 600px;
+    } */
+  
+    /* .navigation {
+      flex-direction: row; /* horizontal on tablet+ */
+      /* justify-content: space-around; */
+    /* }
+  }
+  
+  @media (min-width: 900px) {
+    .wrapper {
+      max-width: 1000px;
+    }
+  }*/
 /* -------------------------------------------------------------------------------------- */
-/* HEADER CONTAINER child(h1, .logo-box, button(menu), **ADD in Desktop - nav*/
+
+/* HEADER CONTAINER - MOBILE VIEW */
 header {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: .5fr 2.5fr;
-    /* justify-content: space-between; */
+    display: flex;
     align-items: center;
-    padding: 1rem;
-    max-width: 1200px; /*do i need this or change size*/
-    /* margin: 0 auto; */
+    justify-content: space-between;
+    padding: .5rem 1rem;
+    position: relative;
 }
-
-/* Hamburger Button Top Left */
-header button {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    justify-self: start;
-}
-
-/* Header Logo - Left or Right?*/   
-header .logo-box{
-    /* display: block; */
-    grid-column: 1/2;
-    grid-row: 1/3;
+/* .left-group {
+    display: flex;
     align-items: center;
-    justify-self: left;
-    margin: 0 auto;
-    width: 8rem;
-    /* max-width: 700px; */
+    justify-content: flex-start;
+    flex: 1; /* Allow the logo to grow and take available space */
+/* }  */
+
+
+.logo-box {
+    max-width: 50px;
+    height: auto;
 }
 
-
-/* Header Logo Image (does this get to sit in header grid?) */     
-/* header .logo-box img {
+.logo-box img {
+    display: block;
     width: 100%;
     height: auto;
-    max-width: 200px;
-    max-height: 200px;
-} */
-
-
-/* Header Text */  
+}
 header h1 {
-    grid-column: 2/4;
-    grid-row: 2/3;
+    flex: 1; /* Allow the title to grow and take available space */
     text-align: center;
-    margin-left: 1rem;
-} 
+    margin: 0;
+    font-size: clamp(1.5rem, 5vw, 2.5rem); /* Responsive font size */
+}
+
+.color-fonts {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   padding: 1.3rem;
+   gap: 5px;
+   /* justify-self: center; */
+   /* background-color: #3d403b; */
+   /* color: #eeece0; */
+   box-shadow: 0 0 30px #333;
+}
+.color-fonts .color {
+    /* grid-column: 1/3; */
+    grid-row: 1/2;
+}
+.color-fonts .fonts {
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+.color-fonts .form-demo {
+    grid-column: 2/3;
+    grid-row: 1/4;
+}
+
+fieldset {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    display: block;/*Change ths later*/
+    background-color: #c4c6ca;
+    background-color: #e5e7eb;
+    /* background-color: #3d403b; */
+    color: #3d403b;
+    /* color: #eeece0; */
+    border: 1px solid #3d403b;
+    box-shadow: 0 0 30px #333;
+    max-width: 200px;
+    padding: 5px;
+    margin: 0 auto;
+    font-family: "DM Serif Display", serif;
+    /* font-family: "Merriweather", serif; */
+}
 
 
+.wireframe {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    justify-items: center;
+    background-color: #3d403b;
+    color: #eeece0;
+    box-shadow: 0 0 30px #333;
+}
+.wireframe h2 {
+  grid-row: 1/2;
+}
+.wireframe img {
+    grid-row: 2/3;
+    width: 150px;
+    height: auto;
+}
 
+.wireframe .desktop {
+    height: 150px;
+    width: auto;
+}
 

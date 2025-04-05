@@ -12,4 +12,9 @@
         flex: 1 1 100%; /* Allow items to grow and shrink, taking full width */
         text-align: center; /* Center the text in each item */
     }
-}
+    .navigation a {
+        padding: 1rem; /* Add padding to the links */
+        font-size: 1.5rem; /* Increase font size for larger screens */
+    }
+
+    /* HEADER Container for Desktop */
