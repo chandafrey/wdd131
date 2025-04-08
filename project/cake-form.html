@@ -1,0 +1,70 @@
+<!-- This file is a FORM to get FEEDBACK on Cakelicous Cakes and Service -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake and Service Review Form</title>
+    <meta name="description" content="Cake and Service Review Form page">
+    <meta name="author" content="Chanda Frey">
+        <!-- FONT LINKS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,600&family=DM+Serif+Display:ital@0;1&family=Lato:ital,wght@0,400;1,300;1,400&family=Merriweather:opsz,wght@18..144,700&display=swap" rel="stylesheet">
+        
+        <!--  LINKS: OTHER FILES-->
+        <link rel="stylesheet" href="styles/cake-form.css">
+        <link rel="stylesheet" href="styles/cake-form-medium.css">  <!-- @media only screen and (min-width: 35rem) {} this is 560px -->
+        <link rel="stylesheet" href="styles/cake-form-large.css"> <!-- @media only screen and (min-width: 64rem) {} this is 1028px -->
+        <!-- another js file if needed -->
+        <script src="scripts/cake-dates.js" defer></script> <!--Dates for Footer-->
+    </head>
+</head>
+<body>
+
+    <!-- HEADER HERE -->
+    <header>
+        <h1>Cakelicous Review</h1>
+    </header>
+
+    <main>
+    <!-- CONTENT HERE -->
+     <!-- action="file that you want to come as a result of hitting submit button" -->
+    <!-- add a class="wf1" for WebForm1 -->
+    <form method="get" action="cake-form-review.html" class="wf1">
+        <!-- fieldset will CHUNK your form into sections -->
+        <fieldset>
+            <legend>Product Review</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name here">
+            <br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email here">
+            <br><br>
+            <label for="product">Product:</label>
+            <select id="product" name="product" required>
+                <option value="">Select a product</option>
+                <option value="cake">Cake</option>
+                <option value="cupcake">Cupcake</option>
+                <option value="cookie">Cookie</option>
+                <option value="brownie">Brownie</option>
+            </select>
+            <br><br>
+            <label for="rating">Rating:</label>
+            <input type="number" id="rating" name="rating" min="1" max="5" required placeholder="Rate from 1 to 5">
+            <br><br>
+            <label for="comments">Comments:</label><br>
+            <textarea id="comments" name="comments" rows="4" cols="50" required placeholder="Enter your comments here"></textarea>
+
+
+    </main>
+
+  
+   
+<footer>
+    <p>&copy;<span id="currentYear"></span> ~ Chanda Frey ~ Utah</p>
+    <p><span id="lastModified"></span></p>
+</footer> 
+
+</body>
+</html>

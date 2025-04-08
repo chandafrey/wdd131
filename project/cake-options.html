@@ -1,0 +1,133 @@
+<!-- This file is my CAKE OPTIONS page -->
+<!-- This page is linked to the HOME PAGE and the CAKE FORM PAGE  -->
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Week 6 Project(Build a Website for a Cake business) - Chanda Frey, Cakes for every occasion">
+    <meta name="author" content="Chanda Frey"> 
+    <title>Cakelicious</title>
+
+    <!-- FONT LINKS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,600&family=DM+Serif+Display:ital@0;1&family=Lato:ital,wght@0,400;1,300;1,400&family=Merriweather:opsz,wght@18..144,700&display=swap" rel="stylesheet">
+    
+    <!--  LINKS: OTHER FILES-->
+    <link rel="stylesheet" href="styles/cake-options.css">
+    <link rel="stylesheet" href="styles/cakeproject-medium.css">  <!-- @media only screen and (min-width: 35rem) {} this is 560px -->
+    <link rel="stylesheet" href="styles/cakeproject-large.css"> <!-- @media only screen and (min-width: 64rem) {} this is 1028px -->
+    <script src="scripts/cake-dates.js" defer></script> <!--Dates for Footer-->   
+    <script src="scripts/cake-hamburger.js" defer></script>
+</head>
+<body>
+    <div class="wrapper"> <!--Wrap the whole page in this-->    
+        <header>
+           <div class="button">
+                <!--HAMBURGER MENU BUTTON...use the id  #menu in css and js-->
+                <!--ALSO use aria-label="Open menu" for accessibility--> 
+                <button type="button" id="menu" aria-label="Open menu"></button>  
+           </div>
+
+           <section class = "logo-header">
+                <div class="logo-box">
+                    <!-- LOGO ICON -->
+                    <!-- <img src="images/cakeslice-iconfinder-whitecherryonly.svg" alt="Cakelicious logo" class="logo"> -->
+                    <a href="cakeproject.html" class="logo">
+                        <img src="images/cakeslice-iconfinder-whitecherryonly.svg" alt="Logo" />
+                    </a>
+                </div>
+
+                <h1>Cakelicious</h1>
+            </section>
+            <nav>
+                <ul class="navigation" aria-label="Main navigation"> 
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Cakes</a></li>
+                    <li><a href="#">Order</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- END OF HEADER -->
+
+        <main>
+            <section class="cake-of-week">
+                <h2>Cake of the Week: </h2>
+            </section>
+
+            <section class="cake-options">
+                <h3>Check Out our Cakes!</h3>
+
+                <p>We have a variety of flavors and styles to choose from.</p>
+                <p>We are located in South Jordan, Utah.</p>
+                <div class="cake-1">
+                    <h4>Banana Cake</h4>
+                    <img src="images/bananaCake.webp" alt="image of Banana Cake" class="cake-image">
+                <p>Banana Cake is a moist and delicious cake made with ripe bananas, flour, sugar, eggs, and butter. It is often topped with cream cheese frosting or a simple glaze.</p>
+                </div>
+                <div class="cake-2">
+                    <h4>Brownie Biscoff Cake</h4>
+                    <img src="" alt="image of Brownie Biscoff Cake" class="cake-image">
+                    <p>Brownie Biscoff Cake is a decadent dessert that combines rich chocolate brownies with the unique flavor of Biscoff cookies. It is often layered with Biscoff frosting and topped with crushed cookies.</p>
+                </div>
+                <div class="cake-3">
+                    <h4>Chocolate Truffle Cake</h4>
+                    <img src="images/chocolateTruffle.webp" alt="image of Brownie Biscoff Cake" class="cake-image">
+                    <p>Chocolate Truffle Cake is a rich and indulgent dessert made with layers of chocolate cake, chocolate ganache, and truffle filling. It is often garnished with chocolate shavings or fresh berries.</p>
+                </div>
+                <div class="cake-4">
+                    <h4>Churro Cake</h4>
+                    <img src="" alt="image of Churro Cake" class="cake-image">
+                    <p>Churro Cake is a delightful dessert that combines the flavors of churros with a moist cake. It is often topped with cinnamon sugar and served with chocolate or caramel sauce.</p>
+                </div>
+                <div class="cake-5">
+                    <h4>Disneyland Chocolate Smash Cake</h4>
+                    <img src="" alt="image of Disneyland Chocolate Smash Cake" class="cake-image">
+                    <p>Disneyland Chocolate Smash Cake is a fun and interactive dessert that features a chocolate cake covered in a hard chocolate shell. When smashed, it reveals a delicious filling of candies or treats inside.</p>
+                </div>
+                <div class="cake-6">
+                    <h4>Ultimate Smores Cake</h4>
+                    <img src="" alt="image of Ultimate Smores Cake" class="cake-image">
+                    <p>Ultimate Smores Cake is a decadent dessert that combines layers of chocolate cake, graham cracker crumbs, and marshmallow frosting. It is often topped with toasted marshmallows and chocolate drizzle.</p>
+                </div>
+                <div class="cake-7">
+                    <h4>Biscoff Bunt Cake</h4>
+                    <img src="" alt="image of Biscoff Bunt Cake" class="cake-image">
+                    <p>Biscoff Bunt Cake is a moist and flavorful cake made with Biscoff cookies and spices. It is often topped with a Biscoff glaze or frosting.</p>
+                </div>
+                <div class="cake-8">
+                    <h4>Dark Chocolate Bunt Cake</h4>
+                    <img src="" alt="image of Dark Chocolate Bunt Cake" class="cake-image">
+                    <p>Dark Chocolate Bunt Cake is a rich and indulgent dessert made with dark chocolate and cocoa powder. It is often topped with chocolate ganache or a dusting of powdered sugar.</p>
+                </div>
+                <div class="cake-9">
+                    <h4>Raspberry Bunt Cake</h4>
+                    <img src="" alt="image of Raspberry Bunt Cake" class="cake-image">
+                    <p>Raspberry Bunt Cake is a moist and fruity dessert made with fresh raspberries and a light cake batter. It is often topped with raspberry glaze or whipped cream.</p> 
+                </div>
+            </section> <!-- end of cake options section -->
+
+            <!-- WHAT SHOULD I DO WITH THESE SECTIONS? -->
+            <section class="cake-review">
+                <h4>Get 10% off your next order</h4>
+                <p>Leave us a review and receive 10% off your next order.</p>
+                <a href="cake-form.html">Review Form</a>    
+            </section> <!-- end of cake review section -->
+            <section class="order">
+                <h4>Place your order today!</h4>
+                <p>We have a "Cake of the Week" each week.  Check our calendar to see which cake is made each week for the current month and next month.</p>
+                <p>Place your order anytime before Tuesdays and your cake will be ready for pick up on Thursdays.</p>
+                <a href="cake-order.html">Order Now</a>
+            
+        </main>
+        <!-- END OF MAIN -->
+        <footer>
+            <p>&copy;<span id="currentYear"></span> ~ Chanda Frey ~ Utah</p>
+            <p><span id="lastModified"></span></p>
+        </footer>
+    </div> <!-- end of wrapper div -->  
+
+</body>
+</html> 

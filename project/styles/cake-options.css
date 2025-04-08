@@ -1,0 +1,165 @@
+/* MOBILE VIEWS */
+
+
+/* MARGINS/PADDING/WIDTHS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header, footer {
+    background-color: #525a49;
+    color:#fefffd;
+    box-shadow: 0 0 30px gray;
+}
+body {
+    background-color: #fefffd;
+    color: #303030;
+}
+.wrapper {
+    max-width: 95%;
+    margin: 0 auto; 
+    padding: 1rem;
+}
+main {
+    /* STYLING */
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+h2, h3 {
+    line-height: 1.2;
+}
+
+p {
+    line-height: 1.5;
+}
+/* HEADER CONTAINER - MOBILE VIEW */
+/* child elements - .button, .logo-box, h1, .navigation */
+header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    /* gap: 1rem; Space between logo and h1 */
+    /* STYLING */
+    background-color: #525a49;
+    color: #fefffd; 
+    box-shadow: 0 0 30px gray;
+}
+
+/* HAMBURGER BUTTON NEEDS FUNCTION/STYLE */
+/* Use #menu → styles for the hamburger button (color, size, hover, etc.) */
+#menu {
+    display: block; /* Show the hamburger button */
+    margin-right: .5rem;
+    /* STYLING */
+    background: none;
+    border: none;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #eeece0;
+    cursor: pointer;  
+}
+#menu::before {
+    content: "☰";
+}
+#menu.open::before {
+    content: "✖";
+    font-size: 24px;
+}
+/* Use .button → layout or position of the container that holds the button */
+.button {
+    position: absolute;
+    top: .2rem;
+    left: 1rem;
+}
+
+/* NAVIGATION MENU */
+/* Navigation still needs styled here to open in menu button */
+.navigation {
+    position: absolute; /* Position the navigation absolutely within the header */
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+    top: 100%; /* Position below the header */
+    left: 0; /* Align to the left of the screen */
+    width: 100%; /* Full width of the screen */
+    z-index: 10; /* Ensure it appears above other elements */
+    display: none;
+    /* STYLING */
+    border-left: 3px solid #303030; /* Left border for styling */
+    background-color: #525a49; /* Background color of the navigation */
+    color: #eeece0;
+}
+
+.navigation.open {
+    display: flex; /* Show the navigation when open */
+}
+
+.navigation li {
+    text-align: left;
+    width: 100%;
+}
+
+.navigation a {
+    display: block; /* Make links block elements and take full width */
+    padding: 1rem; /* Padding for clickable area */
+    /* STYLING */
+    text-decoration: none; /* Remove underline from links */
+    color: #eeece0; /* Text color */
+    transition: .5s; /*USE THIS IF YOU HOVER over a link: Background color changes and Font Size increases
+    The transition: .5s; makes that happen gradually, giving a smooth, polished effect*/
+    font-size: clamp(1rem, 3vmin, 1.5rem); /*This is a responsive font size rule using clamp(). It's super handy and flexible.
+    clamp(min, preferred, max) means:
+    min: the smallest allowed size
+    preferred: the flexible size based on the screen (like viewport width)
+    max: the largest allowed size */
+    font-weight: 700;
+}
+
+.navigation a:hover, 
+.navigation a:active {
+    background-color: #3d403b; /* Background color on hover */
+    color: #eeece0; /* Text color on hover */
+    text-decoration: none; /* Remove underline on hover */
+    font-size: 1.2rem; /* Font size on hover */
+}
+
+
+
+/* LOGO HEADER CONTAINER*/
+.logo-header {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    gap: 1rem; /* Space between logo and title */
+}
+/* .logo-box and h1 inside .logo-header CONTAINER */
+.logo-box {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    height: 100%; /* Maintain aspect ratio */
+    
+}
+.logo-box img {
+    display: block; /* Ensure the image is a block element */
+    width: auto; /* Make the image responsive */
+    height: 2.5em; /* Maintain aspect ratio */
+}
+/* .logo-box img:hover { */
+/* can i make it so if you click it takes you back to home page? */
+
+.logo-header h1 {
+    flex: 1; /* Allow the title to grow and take available space */
+    margin: 0;
+    padding: 0;
+    /* STYLING */
+    font-family: "Bodoni Moda", serif;
+    font-size: clamp(1rem, 4vw, 2rem); /*Responsive font size*/
+    font-weight: 600;
+    letter-spacing: clamp(.2rem, 1vw, .75rem);
+    transform: scaleY(2); /* Scale the text vertically */
+    color: #eeece0; 
+    text-shadow:#303030 7px 7px 10px;
+}

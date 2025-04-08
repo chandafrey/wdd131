@@ -1,0 +1,50 @@
+<!-- This file is the cake form Review Confirmation page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Cake Review Form page">
+    <meta name="author" content="Chanda Frey">    
+    <title>Cake Review Confirmation</title>
+    
+    <!-- FONT LINKS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,600&family=DM+Serif+Display:ital@0;1&family=Lato:ital,wght@0,400;1,300;1,400&family=Merriweather:opsz,wght@18..144,700&display=swap" rel="stylesheet">
+    
+    <!--  LINKS: OTHER FILES-->
+    <link rel="stylesheet" href="styles/cake-form.css">
+    <link rel="stylesheet" href="styles/cake-form-medium.css">  <!-- @media only screen and (min-width: 35rem) {} this is 560px -->
+    <link rel="stylesheet" href="styles/cake-form-large.css"> <!-- @media only screen and (min-width: 64rem) {} this is 1028px -->
+    <script src="scripts/cake-form-review.js" defer></script> <!-- Counter for Reviews-->
+    <script src="scripts/cake-dates.js" defer></script> <!--Dates for Footer-->
+</head>
+
+
+<body>
+    <!-- HEADER HERE -->
+        <header>
+            <h1>Cakelicous Review</h1>
+        </header>
+    
+    
+<!-- CONTENT HERE -->
+<main>
+    <h1>Review Confirmation</h1>
+        <p>Thank you for taking the time to review our cakes.  We want to give you the best service possible  Please use this PROMO code for 10% off your next order. Cakelicious10.</p>
+        <li><a href="cake-form.html">Return to Review</a></li>   
+        <li><a href="cake.html">Return to Home</a></li>
+
+        <p><span id="reviewCounter">Reviews Completed: 0</span></p>
+        
+    </main>
+    
+    
+    <footer>
+        <p>&copy;<span id="currentYear"></span> ~ Chanda Frey ~ Utah</p>
+        <p><span id="lastModified"></span></p>
+    </footer> 
+
+</body>
+</html>
