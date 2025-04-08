@@ -16,10 +16,11 @@
     
     <!--  LINKS: OTHER FILES-->
     <link rel="stylesheet" href="styles/cake-options.css">
-    <link rel="stylesheet" href="styles/cakeproject-medium.css">  <!-- @media only screen and (min-width: 35rem) {} this is 560px -->
-    <link rel="stylesheet" href="styles/cakeproject-large.css"> <!-- @media only screen and (min-width: 64rem) {} this is 1028px -->
-    <script src="scripts/cake-dates.js" defer></script> <!--Dates for Footer-->   
+    <link rel="stylesheet" href="styles/cake-options-medium.css">  <!-- @media only screen and (min-width: 35rem) {} this is 560px -->
+    <link rel="stylesheet" href="styles/cake-options-large.css"> <!-- @media only screen and (min-width: 64rem) {} this is 1028px -->
     <script src="scripts/cake-hamburger.js" defer></script>
+    <script src="scripts/filtered-cakes.js" defer></script>
+    <script src="scripts/cake-dates.js" defer></script> <!--Dates for Footer-->   
 </head>
 <body>
     <div class="wrapper"> <!--Wrap the whole page in this-->    
@@ -43,9 +44,9 @@
             </section>
             <nav>
                 <ul class="navigation" aria-label="Main navigation"> 
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">Cakes</a></li>
-                    <li><a href="#">Order</a></li>
+                    <li><a href="cakeproject.html" class="active">Home</a></li>
+                    <li><a href="cake-options.html">Cakes</a></li>
+                    <li><a href="cake-order.html">Order</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
@@ -54,7 +55,7 @@
 
         <main>
             <section class="cake-of-week">
-                <h2>Cake of the Week: </h2>
+                <h2>Cake of the Week: Chocolate Truffle Cake </h2>
             </section>
 
             <section class="cake-options">
@@ -62,20 +63,39 @@
 
                 <p>We have a variety of flavors and styles to choose from.</p>
                 <p>We are located in South Jordan, Utah.</p>
-                <div class="cake-1">
-                    <h4>Banana Cake</h4>
-                    <img src="images/bananaCake.webp" alt="image of Banana Cake" class="cake-image">
-                <p>Banana Cake is a moist and delicious cake made with ripe bananas, flour, sugar, eggs, and butter. It is often topped with cream cheese frosting or a simple glaze.</p>
-                </div>
-                <div class="cake-2">
+            </section>
+
+            <div class="cake-filters">
+                <ul class="cake-filter-nav">
+                    <li><a href="#" id="allCakes" class="active">All Cakes</a></li>
+                    <li><a href="#" id="bundt">Bundt Cakes</a></li>
+                    <li><a href="#" id="layer">Layer Cakes</a></li>
+                    <li><a href="#" id="24-servings">24 Servings</a></li>
+                    <li><a href="#" id="12plus-servings">12-16 Servings</a></li>
+                    <li><a href="#" id="8-servings">8 Servings</a></li>
+                </ul>
+            </div>
+            <div id="cakesContainer"> <!--This has to be id not class here-->
+               <!-- cake cards here -->
+            </div>
+     
+
+            <!-- <section class="cake-options"> -->
+
+                <!-- <div class="cake-1"> -->
+                    <!-- <h4>Banana Cake</h4> -->
+                    <!-- <img src="images/bananaCake.webp" alt="image of Banana Cake" class="cake-image"> -->
+                <!-- <p>Banana Cake is a moist and delicious cake made with ripe bananas, flour, sugar, eggs, and butter. It is often topped with cream cheese frosting or a simple glaze.</p> -->
+                <!-- </div> -->
+                <!-- <div class="cake-2">
                     <h4>Brownie Biscoff Cake</h4>
                     <img src="" alt="image of Brownie Biscoff Cake" class="cake-image">
                     <p>Brownie Biscoff Cake is a decadent dessert that combines rich chocolate brownies with the unique flavor of Biscoff cookies. It is often layered with Biscoff frosting and topped with crushed cookies.</p>
                 </div>
                 <div class="cake-3">
-                    <h4>Chocolate Truffle Cake</h4>
-                    <img src="images/chocolateTruffle.webp" alt="image of Brownie Biscoff Cake" class="cake-image">
-                    <p>Chocolate Truffle Cake is a rich and indulgent dessert made with layers of chocolate cake, chocolate ganache, and truffle filling. It is often garnished with chocolate shavings or fresh berries.</p>
+                    <h4>Chocolate Truffle Cake</h4> -->
+                    <!-- <img src="images/chocolateTruffle.webp" alt="image of Brownie Biscoff Cake" class="cake-image"> -->
+                    <!-- <p>Chocolate Truffle Cake is a rich and indulgent dessert made with layers of chocolate cake, chocolate ganache, and truffle filling. It is often garnished with chocolate shavings or fresh berries.</p>
                 </div>
                 <div class="cake-4">
                     <h4>Churro Cake</h4>
@@ -106,8 +126,8 @@
                     <h4>Raspberry Bunt Cake</h4>
                     <img src="" alt="image of Raspberry Bunt Cake" class="cake-image">
                     <p>Raspberry Bunt Cake is a moist and fruity dessert made with fresh raspberries and a light cake batter. It is often topped with raspberry glaze or whipped cream.</p> 
-                </div>
-            </section> <!-- end of cake options section -->
+                </div> -->
+            <!-- </section> -->
 
             <!-- WHAT SHOULD I DO WITH THESE SECTIONS? -->
             <section class="cake-review">
@@ -120,7 +140,8 @@
                 <p>We have a "Cake of the Week" each week.  Check our calendar to see which cake is made each week for the current month and next month.</p>
                 <p>Place your order anytime before Tuesdays and your cake will be ready for pick up on Thursdays.</p>
                 <a href="cake-order.html">Order Now</a>
-            
+            </section>
+        
         </main>
         <!-- END OF MAIN -->
         <footer>

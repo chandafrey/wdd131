@@ -1,0 +1,74 @@
+<!-- This file is my CAKE OPTIONS page -->
+<!-- This page is linked to the HOME PAGE and the CAKE FORM PAGE  -->
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Week 6 Project(Build a Website for a Cake business) - Chanda Frey, Cakes for every occasion">
+    <meta name="author" content="Chanda Frey"> 
+    <title>Cakelicious</title>
+
+    <!-- FONT LINKS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,600&family=DM+Serif+Display:ital@0;1&family=Lato:ital,wght@0,400;1,300;1,400&family=Merriweather:opsz,wght@18..144,700&display=swap" rel="stylesheet">
+    
+    <!--  LINKS: OTHER FILES-->
+    <link rel="stylesheet" href="styles/cake-options.css">
+    <link rel="stylesheet" href="styles/cake-options-medium.css">  <!-- @media only screen and (min-width: 35rem) {} this is 560px -->
+    <link rel="stylesheet" href="styles/cake-options-large.css"> <!-- @media only screen and (min-width: 64rem) {} this is 1028px -->
+    <script src="scripts/cake-hamburger.js" defer></script>
+    <script src="scripts/filtered-cakes.js" defer></script>
+    <script src="scripts/cake-dates.js" defer></script> <!--Dates for Footer-->   
+</head>
+<body>
+    <div class="wrapper"> <!--Wrap the whole page in this-->    
+        <header>
+           <div class="button">
+                <!--HAMBURGER MENU BUTTON...use the id  #menu in css and js-->
+                <!--ALSO use aria-label="Open menu" for accessibility--> 
+                <button type="button" id="menu" aria-label="Open menu"></button>  
+           </div>
+
+           <section class = "logo-header">
+                <div class="logo-box">
+                    <!-- LOGO ICON -->
+                    <!-- <img src="images/cakeslice-iconfinder-whitecherryonly.svg" alt="Cakelicious logo" class="logo"> -->
+                    <a href="cakeproject.html" class="logo">
+                        <img src="images/cakeslice-iconfinder-whitecherryonly.svg" alt="Logo" />
+                    </a>
+                </div>
+
+                <h1>Cakelicious</h1>
+            </section>
+            <nav>
+                <ul class="navigation" aria-label="Main navigation"> 
+                    <li><a href="cakeproject.html" class="active">Home</a></li>
+                    <li><a href="cake-options.html">Cakes</a></li>
+                    <li><a href="cake-order.html">Order</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- END OF HEADER -->
+
+        <main>
+            <section class="cake-of-week">
+                <h2>Cake of the Week: Chocolate Truffle Cake </h2>
+            </section>
+
+            <form>
+                <fieldset>
+                    
+                </fieldset>
+            </form>
+        </main>
+        <footer>
+            <p>&copy;<span id="currentYear"></span> ~ Chanda Frey ~ Utah</p>
+            <p><span id="lastModified"></span></p>
+        </footer>
+    </div> <!-- end of wrapper div -->  
+    
+    </body>
+    </html> 

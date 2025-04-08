@@ -14,33 +14,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,600&family=DM+Serif+Display:ital@0;1&family=Lato:ital,wght@0,400;1,300;1,400&family=Merriweather:opsz,wght@18..144,700&display=swap" rel="stylesheet">
     
     <!--  LINKS: OTHER FILES-->
-    <link rel="stylesheet" href="styles/cakeproject.css">
+    <link rel="stylesheet" href="styles/cake-options.css">
     <link rel="stylesheet" href="styles/cakeproject-medium.css">  <!-- @media only screen and (min-width: 35rem) {} this is 560px -->
     <link rel="stylesheet" href="styles/cakeproject-large.css"> <!-- @media only screen and (min-width: 64rem) {} this is 1028px -->
+    <script src="scripts/cake-hamburger.js" defer></script>
     <script src="scripts/cake-dates.js" defer></script> <!--Dates for Footer-->   
 </head>
 
  <body>
     <div class="wrapper"> <!--Wrap the whole page in this-->    
         <header>
-            <div class="button">
+           <div class="button">
                 <!--HAMBURGER MENU BUTTON...use the id  #menu in css and js-->
                 <!--ALSO use aria-label="Open menu" for accessibility--> 
                 <button type="button" id="menu" aria-label="Open menu"></button>  
-            </div>
+           </div>
 
-            <div class="logo-box">
-                <!-- LOGO ICON -->
-                <img src="images/cakeslice-iconfinder-whitecherryonly.svg" alt="Cakelicious logo" class="logo">
-            </div>
+           <section class = "logo-header">
+                <div class="logo-box">
+                    <!-- LOGO ICON -->
+                    <!-- <img src="images/cakeslice-iconfinder-whitecherryonly.svg" alt="Cakelicious logo" class="logo"> -->
+                    <a href="cakeproject.html" class="logo">
+                        <img src="images/cakeslice-iconfinder-whitecherryonly.svg" alt="Logo" />
+                    </a>
+                </div>
 
-            <h1>Cakelicious</h1>
-            
+                <h1>Cakelicious</h1>
+            </section>
             <nav>
-                <ul class="navigation"> 
-                    <li><a href="#" class="active">Home</a></li>
+                <ul class="navigation" aria-label="Main navigation"> 
+                    <li><a href="cakeproject.html" class="active">Home</a></li>
                     <li><a href="cake-options.html">Cakes</a></li>
-                    <li><a href="#">Order</a></li>
+                    <li><a href="cake-order.html">Order</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
@@ -48,7 +53,7 @@
         <!-- END OF HEADER -->
     <main>
         <section class="cake-of-week">
-            <h2>Cake of the Week: </h2>
+            <h2>Cake of the Week: Chocolate Truffle Cake</h2>
         </section>
 
         <section class="about-us">

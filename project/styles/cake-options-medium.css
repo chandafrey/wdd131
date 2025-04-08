@@ -1,0 +1,28 @@
+@media (min-width: 37.5em) { /* 600px */
+
+/* Cake filters Horizontal View */
+.cake-filter-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+.cake-filters li {
+    list-style: none;
+    background-color:#3d403b;   
+    border-radius: 10px;
+}
+.cake-filter-nav li a {
+    text-decoration: none;
+    color: #fefffd;
+    padding: .5rem 1rem;
+}
+
+.cake-filter-nav li a:hover, 
+.cake-filter-nav li a:active {
+    background: #b49378;
+    color: white;
+    border-radius: 10px;
+
+}
+}

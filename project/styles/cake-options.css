@@ -163,3 +163,32 @@ header {
     color: #eeece0; 
     text-shadow:#303030 7px 7px 10px;
 }
+
+.cake-of-week {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    padding: .5rem 1rem;
+    background-color: #303030;
+    color: #fefffd;
+    justify-self: center;
+}
+
+
+
+/* FOOTER - child(p), child(p)----------------------------------- */
+/* if time available...fancy this up with media logos and contact info */
+footer {
+    /* box size, space and placement*/
+    text-align: center;
+    /* style (border-color-font)*/
+ 
+}
+
+footer p {
+    text-align: center;
+}
+
+#lastModified {
+    font-size: 1rem;
+}
