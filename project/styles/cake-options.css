@@ -27,12 +27,18 @@ main {
     font-weight: 400;
     font-size: 16px;
 }
-h2, h3 {
+h2, h3, h4 {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-size: 1.5rem;
     line-height: 1.2;
+    letter-spacing: .5px;
 }
 
 p {
+    font-size: 1rem;
     line-height: 1.5;
+    letter-spacing: .75px;
 }
 /* HEADER CONTAINER - MOBILE VIEW */
 /* child elements - .button, .logo-box, h1, .navigation */
@@ -176,26 +182,35 @@ header {
     color: #fefffd;
     justify-self: center;
 }
+.cake-banner {
+    width: 100%;
+    height: auto;
+}
 /* End BANNER ---------------------------------------------- */
 
 /* HOME PAGE MOILE VIEWS------------------------------------- */
 main {
     display: grid;
-    grid-template-columns: 1fr(minmax(600px));
+    grid-template-columns: 1fr;
     padding-bottom: 1rem;
 }
-.bottom-half {
+/* .bottom-half {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
-}
+} */
 
 .cake-image img {
-    max-height: 250px;
+    display: block;
+    justify-self: center;
+       
+    /* max-height: 200px; */
     width: auto;
-    box-shadow:  4px 4px 6px #303030;
-
+    box-shadow:  4px 4px 30px #303030;
+    border-radius: 10px;
+    
 }
+
 
 .about-us, 
 .cake-image, 
@@ -204,10 +219,10 @@ main {
 .review,
 .form-review {
     justify-content: center;
-    background-color: #e5e7eb;
-    border: 1px solid #303030;
+    /* background-color: #e5e7eb; */
+    /* border: 1px solid #303030; */
     padding: 1rem;
-    box-shadow:  4px 4px 6px#3a3838;
+    /* box-shadow:  4px 4px 6px#3a3838; */
 
     /* box-shadow:
         inset 2px 2px 3px rgba(255, 255, 255, 0.6),
@@ -218,7 +233,6 @@ main {
 main section a,
 main div a {
     margin: auto;
-    text-justify: center;
     line-height: 2.5;
     font-size: 1.2rem;
     padding: 5px 10px;
@@ -255,7 +269,7 @@ main div a {
 #cakeCalendar.open {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: .75;
+    gap: .75px;
 }
 .calendar h4 {
     padding-top: 1rem;
@@ -263,7 +277,6 @@ main div a {
 
 .calendar div p{
     margin: auto;
-    text-justify: center;
     /* line-height: 2.5; */
     font-size: 1rem;
     padding: 5px;

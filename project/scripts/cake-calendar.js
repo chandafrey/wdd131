@@ -2,11 +2,11 @@
 // start with making an array for cakeWeeks
 // UPDATE MANUALLY
 const cakeWeeks = [
-    { week: "Mar 30-Apr 5", cakeName: "Chocolate Truffle Cake"},
+    { week: "Mar 30-Apr 5", cakeName: "Churro Cake"},
     { week: "Apr 6-12", cakeName: "Brownie Biscoff Cake"},
     { week: "Apr 13-19", cakeName: "Raspberry Bundt Cake"},
     { week: "Apr 20-26", cakeName: "Ultimate Smores Cake"},
-    { week: "Apr 27-May 3", cakeName: "Churro Cake"},
+    { week: "Apr 27-May 3", cakeName: "Chocoate Truffle Cake"},
     { week: "May 18-24", cakeName: "Banana Cake"},
     { week: "May 25-31", cakeName: "Dark Chocolate Bundt Cake"},
     { week: "June 1-7", cakeName: "Disneyland Chocolate Smash Cake"},
