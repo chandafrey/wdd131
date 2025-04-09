@@ -164,17 +164,117 @@ header {
     text-shadow:#303030 7px 7px 10px;
 }
 
-.cake-of-week {
+/* End HEADER ----------------------------------------------- */
+
+/* Cake of the week Banner */
+.cake-banner {
     display: block;
     width: 100%;
-    margin-top: 1rem;
+    margin: 1rem 0;
     padding: .5rem 1rem;
     background-color: #303030;
     color: #fefffd;
     justify-self: center;
 }
+/* End BANNER ---------------------------------------------- */
+
+/* HOME PAGE MOILE VIEWS------------------------------------- */
+main {
+    display: grid;
+    grid-template-columns: 1fr(minmax(600px));
+    padding-bottom: 1rem;
+}
+.bottom-half {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.cake-image img {
+    max-height: 250px;
+    width: auto;
+    box-shadow:  4px 4px 6px #303030;
+
+}
+
+.about-us, 
+.cake-image, 
+.cake-of-week,
+.order-now, 
+.review,
+.form-review {
+    justify-content: center;
+    background-color: #e5e7eb;
+    border: 1px solid #303030;
+    padding: 1rem;
+    box-shadow:  4px 4px 6px#3a3838;
+
+    /* box-shadow:
+        inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+        inset -2px -2px 3px rgba(0, 0, 0, 0.6); */
+}
+
+.about-us a,
+main section a,
+main div a {
+    margin: auto;
+    text-justify: center;
+    line-height: 2.5;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    background-color: #525a49;
+    color: #eeece0;
+    text-decoration: none;
+    border-radius: 6px;
+    box-shadow:
+        inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+        inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
 
 
+
+
+/* CAKE OF THE WEEK ARRAY in JavaScript, .calendar in HTML */
+.calendar {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border: 3px solid #525a49;
+    box-shadow: 4px 4px 6px #3a3838;
+}
+#cakeCalendarToggle {
+    background-color:  #303030;
+    color: #fefffd;
+    font-weight: bold;
+    padding: 1rem;
+
+}
+#cakeCalendar.closed {
+    display: none;
+}
+#cakeCalendar.open {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: .75;
+}
+.calendar h4 {
+    padding-top: 1rem;
+}
+
+.calendar div p{
+    margin: auto;
+    text-justify: center;
+    /* line-height: 2.5; */
+    font-size: 1rem;
+    padding: 5px;
+    background-color: #525a493a;
+    color: #303030;
+    text-decoration: none;
+    border-radius: 2px;
+    box-shadow:
+        inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+        inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
 
 /* FOOTER - child(p), child(p)----------------------------------- */
 /* if time available...fancy this up with media logos and contact info */

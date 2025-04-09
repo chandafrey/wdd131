@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="styles/cakeproject-medium.css">  <!-- @media only screen and (min-width: 35rem) {} this is 560px -->
     <link rel="stylesheet" href="styles/cakeproject-large.css"> <!-- @media only screen and (min-width: 64rem) {} this is 1028px -->
     <script src="scripts/cake-hamburger.js" defer></script>
+    <script src="scripts/cake-calendar.js" defer></script>
     <script src="scripts/cake-dates.js" defer></script> <!--Dates for Footer-->   
 </head>
 
@@ -51,60 +52,93 @@
             </nav>
         </header>
         <!-- END OF HEADER -->
+
     <main>
-        <section class="cake-of-week">
+        <section class="cake-banner">
             <h2>Cake of the Week: Chocolate Truffle Cake</h2>
         </section>
 
         <section class="about-us">
-            <h3>About Us:</h3>
-            <p>Cakelicious is a small family business specialize in providing you with cakes for any occasion.</p>
-            <p>We have a variety of flavors and styles to choose from.</p>
-            <p>We are located in South Jordan, Utah.</p>
-            <p>We are unique because we make only a "Cake of the Week" each week.</p>
-            <p>Check our Calendar to see which cake is made each week for the current month and next month.</p>
-            <p>Place your order anytime before Tuesdays and your cake will be ready for pick up on Thursdays.</p>
-            <p>Place an <a href="order.html">order</a> with us today.</p>
->        </section>
+            <h3>Delicious Cakes for any occasion:</h3>
+            <p>It all began with a cookbook...well and its pretty pictures.
+                A love of cake and a family gathering was all it took to 
+                create a yummy desert and make any occasion a special occasion.<p>
 
-        <section class="cake-image">
-            <h3>Check out our cakes:</h3>
-            <img src="images/cake-slice.jpg" alt="Cake slice" class="cake-slice">
-            <p>We have a variety of flavors and styles to choose from.</p>
+            <p>Cakelicious is a unique small business specializing in providing you with 
+                cakes for any occasion. </p>
+        
+            <p>Located in South Jordan, Utah, .</p>
+            <p>We have many cakes to offer, but what sets us apart
+                is that we only make a "Cake of the Week" cake each week.</p>
+
+            <p>Check our Calendar to see which cake is made each week 
+                for the current month and next month.</p>
+            <p>Place your order anytime before Tuesdays and your cake will 
+                be ready for pick up on Thursdays.</p>
+            <a href="cake-order.html">Get your cake</a>
         </section>
+        <div class="bottom-half">
+            <div class="left-side">
+            <section class="cake-image">
+                <h3>Check out our cakes:</h3>
+                <p>We have a variety of flavors and styles to choose from.</p>
+                <img src="images/Churro-cake.webp" alt="image of a Churro Cake with drizzle" loading="lazy" width="200" height="265" class="cake-slice">
+            <!-- Do I need to lazy load here? -->
+                <a href="cake-options.html">Cakes</a>
+            </section>
+        
+            <section class="cake-of-week">
+                <h3>Check out our Calendar:</h3>
+                <p>We have a "Cake of the Week" each week.  
+                    Check our calendar to see which cake is 
+                    made each week for the current month and next month.</p>
+            <!-- DROPDOWN CALENDAR -->
+                <div class="calendar">
+                    <div id="cakeCalendarToggle"></div>
+                    <div id="cakeCalendar" class="closed"></div>
+                    <!-- cake calendar here generated in JavaScript -->
+                    <!-- <div>
+                        <p>week:cakeName</p> 
+                    </div>-->
+                </div>
+            </section>
 
-        <section>
-            <h4>Check out our Calendar:</h4>
-            <p>Calendar HERE</p>
-            <p>We have a "Cake of the Week" each week.  Check our calendar to see which cake is made each week for the current month and next month.</p>
-            <p>Place your order anytime before Tuesdays and your cake will be ready for pick up on Thursdays.</p>
-            <a href="cake-order.html">Order Now</a> 
-        </section>
-
-        <section class="cake-review">
-            <h4>Get 10% off your next order</h4>
-            <p>Leave us a review and receive 10% off your next order.</p>
-            <a href="cake-form.html">Review Form</a>
-        </section>
-
-
-
-
-            <!-- This probably belongs on the Order page? -->
-            <h1>Welcome to Cakelicious</h1>
-
-            <div class="review-form">
-                <p>We would love your feedback.</p>
-                <p>Please take a moment to fill out our review form and recieve 10% your next order</p>
-                <li><a href="cake-form.html">Review Form</a></li>
+            <section class="order-now">
+                <p>Place your order anytime before Tuesdays and your cake will be 
+                    ready for pick up on Thursdays.</p>
+                <a href="cake-order.html">Order Now</a> 
+            </section>
             </div>
 
+            <div class="right-side">
+            <section class="review">
+                <h3>Client Favorites:</h3>
+                <ul>
+                    <li><p>Cakelicious has been the perfect treat to celebrate 
+                        our daughter's birthday.  The Disneyland Chocolate 
+                        Smash Cake was a hit...Avery P.</p></li>
+
+                    <li><p>If you are obsessed with churros, you will love the 
+                        Churro Cake.  It is so pretty!  And Yummy!  It was just 
+                        what we wanted for our wedding cake....Brittnee R.</p></li>
+                
+                    <li><p>My husband ordered the Ultimate Smores Cake for Mother's Day...
+                        I must have eaten half of it myself.  So good!...Tory K.</p></li>
+                </ul>
+            </section>
+
+            <section class="form-review">
+                <h4>Get 10% off your next order</h4>
+                <p>Leave us a review and receive 10% off your next order.</p>
+                <a href="cake-form.html">Review</a>
+            </section>
+            </div>
+        </div>
+    </main>
         <footer>
             <p>&copy;<span id="currentYear"></span> ~ Chanda Frey ~ Utah</p>
             <p><span id="lastModified"></span></p>
         </footer>
-
-    </div>
     
  </body>
  </html>

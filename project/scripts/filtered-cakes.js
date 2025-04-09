@@ -15,15 +15,15 @@ const cakes = [
       style: "layer",
       servings: 12,
       imageUrl:
-      "images/bananaCake.webp"
+      "images/brownie-biscoff.webp"
       },
     {
       cakeName: "Chocolate Truffle Cake",
       description: "Chocolate Truffle Cake is a rich and indulgent dessert made with layers of chocolate cake, chocolate ganache, and truffle filling. It is often garnished with chocolate shavings or fresh berries.",
-      style: "bundt",
+      style: "layer",
       servings: 8,
       imageUrl:
-      "images/bananaCake.webp"
+      "images/Chocolate-truffle.webp"
       },
     {
         cakeName: "Churro Cake",
@@ -31,7 +31,7 @@ const cakes = [
         style: "layer",
         servings: 16,
         imageUrl:
-        "images/chocolateTruffle.webp"   
+        "images/Churro-cake.webp"   
     },
     {
       cakeName: "Disneyland Chocolate Smash Cake",
@@ -39,7 +39,7 @@ const cakes = [
       style: "layer",
       servings: 12,
       imageUrl:
-      "images/chocolateTruffle.webp"   
+      "images/Disneyland-smash.webp"   
   },
   {
     cakeName: "Ultimate Smores Cake",
@@ -47,31 +47,31 @@ const cakes = [
     style: "layer",
     servings: 12,
     imageUrl:
-    "images/chocolateTruffle.webp"   
+    "images/Ultimate-smores.webp"   
 },
 {
   cakeName: "Biscoff Bunt Cake",
   description: "San Diego, California, United States",
-  style: "layer",
+  style: "bundt",
   servings: 12,
   imageUrl:
-  "images/chocolateTruffle.webp"   
+  "images/Biscoff-bundt.webp"   
 },
 {
   cakeName: "Dark Chocolate Bunt Cake",
   description: "San Diego, California, United States",
-  style: "layer",
+  style: "bundt",
   servings: 12,
   imageUrl:
-  "images/chocolateTruffle.webp"   
+  "images/Dark-chocolate-bundt.webp"   
 },
 {
   cakeName: "Raspberry Bunt Cake",
   description: "San Diego, California, United States",
-  style: "layer",
+  style: "bundt",
   servings: 12,
   imageUrl:
-  "images/chocolateTruffle.webp"   
+  "images/Raspberry-bundt.webp"   
 },
 
 
