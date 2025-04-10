@@ -85,7 +85,7 @@ header {
     text-decoration: none;
     /* font-size: 1.5rem; */
     font-size: 1.8rem;
-    font-weight: 700;
+    /* font-weight: 700; */
     color: #eeece0;
     cursor: pointer;  
 }
@@ -193,6 +193,7 @@ header {
     /* STYLING */
     font-family: "Bodoni Moda", serif;
     font-size: clamp(1rem, 4vw, 2rem); /*Responsive font size*/
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
     font-weight: 600;
     letter-spacing: clamp(.2rem, 1vw, .75rem);
     transform: scaleY(2); /* Scale the text vertically */
@@ -210,6 +211,7 @@ header {
 }
 
 .cake-banner h2 {
+    font-size: clamp(1rem, 3vmin, 1.5rem);
     padding: 2rem 0;
 }
 .cake-banner img {
@@ -230,6 +232,11 @@ header {
 
 main section {
     text-align: center;
+}
+
+main section h3 {
+    text-align: left;
+    font-size: clamp(.5rem, 3vmin, 1.5rem);
 }
 main section p {
     text-align: left;
