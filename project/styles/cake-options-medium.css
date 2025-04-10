@@ -1,4 +1,10 @@
-@media (min-width: 37.5em) { /* 600px */
+@media (min-width: 48em) { /* 768px and up */
+    main {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 2rem;
+    }
 
 /* Cake filters Horizontal View */
 .cake-filter-nav {
@@ -23,6 +29,12 @@
     background: #b49378;
     color: white;
     border-radius: 10px;
+
+}
+
+#cakeCalendar.open {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+
 
 }
 }

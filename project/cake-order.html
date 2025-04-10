@@ -56,7 +56,7 @@
 
         <main>
             <section class="cake-of-week">
-                <h2>Cake of the Week: Chocolate Truffle Cake </h2>
+                <h2>Cake of the Week: Churro Cake </h2>
             </section>
         
         <div class="calendar">
@@ -69,11 +69,41 @@
         </div>
 
 
-            <form>
-                <fieldset>
+           
+        <form>
+            <fieldset>
+                <legend>Contact information:</legend>
+                <div class="form-item column2">
+                    <label for="fullname">Full Name:</label> 
+                    <input type="text" id="fullname" name="fullname">
+                </div>
+                <div class="form-item column2">
+                    <label for="useremail">Email:</label> 
+                    <input type="email" id="useremail" name="useremail">    
+                </div>                
+            </fieldset>
+            <fieldset>
+                <legend>Message us for: </legend>
+                <div class="form-item column1">
+                    <input type="radio" id="inquiry" name="topic" value="i"> 
+                    <label for="inquiry">General Inquiry</label><br>
+
+                    <input type="radio" id="reservation" name="topic" value="r"> 
+                    <label for="reservation">Reservation Question</label><br> 
                     
-                </fieldset>
-            </form>
+                    <input type="radio" id="website" name="topic" value="w"> 
+                    <label for="website">Website Suggestion</label>
+                    
+                </div>
+                <div class="form-item column1">
+                    <label for="newsletter">Please subscribe me to the monthly newsletter.</label>
+                    <input type="checkbox" name="newsletter" id="newsletter">
+                </div>
+                <label for="feedback"></label>
+                    <textarea name="feedback" id="feedback" rows="4" placeholder="Message us for more details."></textarea>
+            </fieldset>
+            <button type="submit">Inquire Now</button>
+        </form>
         </main>
         <footer>
             <p>&copy;<span id="currentYear"></span> ~ Chanda Frey ~ Utah</p>

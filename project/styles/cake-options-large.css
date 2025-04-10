@@ -1,0 +1,13 @@
+/* Large screens (desktops, ~1024px and up) */
+@media (min-width: 1024px) {
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+}

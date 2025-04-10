@@ -121,11 +121,11 @@ mediumLink.addEventListener("click", () => {
 });
 
 // Function to filter cake list SMALL:---------------------------------
-// const smallLink = document.querySelector('#8-servings');
-// smallLink.addEventListener("click", () => {
-//     document.querySelector("#cakesContainer").innerHTML = "";
-//     createCakeCard(cakes.filter(cake => cake.servings === 8));
-// });
+const smallLink = document.querySelector('#small');
+smallLink.addEventListener("click", () => {
+    document.querySelector("#cakesContainer").innerHTML = "";
+    createCakeCard(cakes.filter(cake => cake.servings === 8));
+});
 
   //   FUNCTION TO CREATE CAKE CARDS--------------------------------------
 //Start with the word function, then name of the function, then the parameters
@@ -151,10 +151,11 @@ function createCakeCard(filteredCakes) {
         // called name and make it a new element('h2') to go 
         // inside the cakeCard div in the HTML
         const name = document.createElement('h3');
+        const image = document.createElement('img');
+
         const description = document.createElement('p');
         const style = document.createElement('p');
         const servings = document.createElement('p');       
-        const image = document.createElement('img');
 
         // Set the inner HTML for the cake card
         // Set the text content for each element
@@ -178,10 +179,10 @@ function createCakeCard(filteredCakes) {
 
         // Append the elements to the card
         card.appendChild(name);
+        card.appendChild(image); 
         card.appendChild(description);
         card.appendChild(style);    
         card.appendChild(servings);
-        card.appendChild(image); 
 
         // Append the card to the cakesContainer
         container.appendChild(card); //this appends the card to the container
