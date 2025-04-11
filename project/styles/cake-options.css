@@ -139,7 +139,9 @@ header {
 
 .navigation a {
     display: block; /* Make links block elements and take full width */
-    padding: 1.2rem; /* Padding for clickable area */
+    padding: 1.2em; /* Padding for clickable area */
+    /* min-width: 44px; */
+    /* min-height: 44px; */
     /* STYLING */
     text-decoration: none; /* Remove underline from links */
     color: #eeece0; /* Text color */
@@ -179,8 +181,8 @@ header {
 }
 .logo-box img {
     display: block; /* Ensure the image is a block element */
-    width: auto; /* Make the image responsive */
-    height: 2.5em; /* Maintain aspect ratio */
+    width: clamp(2.5rem, 6vw, 5rem);
+    height: auto;
 }
 
 @media (max-width: 400px) {
@@ -194,7 +196,7 @@ header {
     padding: 0;
     /* STYLING */
     font-family: "Bodoni Moda", serif;
-    font-size: clamp(1rem, 4vw, 2rem); /*Responsive font size*/
+    /* font-size: clamp(1rem, 4vw, 2rem);  */
     font-size: clamp(1.5rem, 5vw, 2.5rem);
     font-weight: 600;
     letter-spacing: clamp(.2rem, 1vw, .75rem);
@@ -202,6 +204,19 @@ header {
     color: #eeece0; 
     text-shadow:#303030 7px 7px 10px;
 }
+
+/* @media (max-width: 375px) {
+    .logo-header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    #menu {
+      align-self: flex-end;
+    }
+  } */
+  
 
 /* End HEADER ----------------------------------------------- */
 
@@ -302,7 +317,8 @@ main section a {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     grid-template-columns: 1fr;
-    /* gap: 10px; */
+    gap: 1rem;
+    padding: 1rem;
     box-shadow: 4px 4px 20px #525a49;
 }
 
