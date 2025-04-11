@@ -1,12 +1,10 @@
-@media (min-width: 48em) { /* 768px and up */
-    main {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 2rem;
-    }
-
-/* Cake filters Horizontal View */
+@media (min-width: 37.5em) { /* 600px -Tablet and up */
+    /* .wrapper {
+        max-width: 90%;
+    } */
+   
+/* CAKE OPTIONS PAGE */
+/* CAKE FILTERS Horizontal View */
 .cake-filter-nav {
     display: flex;
     justify-content: center;
@@ -33,8 +31,128 @@
 }
 
 #cakeCalendar.open {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
 
 }
+
+
 }
+
+
+/* Trying to figure out my tablet/laptop views */
+@media (min-width: 768px) {
+    .wrapper {
+        max-width: 90%;
+    }
+    
+    #menu {
+        display: none;
+    }
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        border-top: 2px solid #3d403b;
+    }
+
+/* CAKE IMAGE AS BANNER BACKGROUND */
+    .cake-banner-background {
+        position: absolute;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        opacity: .3;
+        overflow: hidden;
+        padding: 1rem;
+        /* display: none; */
+    }
+    .cake-banner-background img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .cake-banner {
+        text-align: center;
+        border-bottom: 2px solid #3d403b;
+       }
+    .cake-banner h2 {
+        padding-top: 4rem;
+       }
+
+       
+       p {
+        font-size: 1rem;
+        line-height: 1.1;
+        letter-spacing: 1px;
+        padding: 0 1rem .5rem 1rem;
+       }
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(200px, 500px));
+        /* grid-template-columns: repeat(3, fit-content(300px)); */
+
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: repeat(5, minmax(200px, 200px));
+        row-gap: 2rem;
+        /* padding: 2rem; */
+      }
+     
+        .cake-of-week-calendar {
+         grid-column: 1/3;
+         grid-row: 2/3;
+         border: 1px solid #3d403b;
+        
+        }
+        
+        .cake-options {
+            grid-column: 1/3;
+            grid-row: 1/2;  
+            border: 1px solid #3d403b;
+
+        }
+       
+        .order-now {
+            grid-column: 3/4;
+            grid-row: 1/3;
+            border: 1px solid #3d403b;
+
+        }
+
+        .about-us {
+            grid-column: 1/3;
+            display: none;
+ 
+        }
+        .about-us p {
+            font-size: 1rem;
+            padding: .5rem;
+        }
+
+        .review {
+          grid-column: 1/4;
+          grid-row: 4/5;
+          display: flex;
+          flex-direction: row;
+          border: 1px solid #3d403b;
+
+        }
+        .review p {
+            font-size: 16px;
+            padding: 0;
+            margin: 0 auto;
+        }
+        
+        .form-review {
+            grid-column: 1/4;
+            grid-row: 3/4;
+            border: 1px solid #3d403b;
+
+            
+        }
+      }
+
