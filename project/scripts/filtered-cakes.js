@@ -4,7 +4,7 @@ const cakes = [
     {
       cakeName: "Banana Cake",
       description: "Banana Cake is a moist and delicious cake made with ripe bananas, flour, sugar, eggs, and butter. It is often topped with cream cheese frosting or a simple glaze.",
-      style: "sheet",
+      style: "Deep Dish",
       servings: 24,
       imageUrl:
       "images/bananaCake.webp" 
@@ -12,7 +12,7 @@ const cakes = [
     {
       cakeName: "Brownie Biscoff Cake",
       description: "Brownie Biscoff Cake is a decadent dessert that combines rich chocolate brownies with the unique flavor of Biscoff cookies. It is often layered with Biscoff frosting and topped with crushed cookies.",
-      style: "layer",
+      style: "Roll",
       servings: 12,
       imageUrl:
       "images/brownie-biscoff.webp"
@@ -20,7 +20,7 @@ const cakes = [
     {
       cakeName: "Chocolate Truffle Cake",
       description: "Chocolate Truffle Cake is a rich and indulgent dessert made with layers of chocolate cake, chocolate ganache, and truffle filling. It is often garnished with chocolate shavings or fresh berries.",
-      style: "layer",
+      style: "Layer",
       servings: 8,
       imageUrl:
       "images/Chocolate-truffle.webp"
@@ -28,7 +28,7 @@ const cakes = [
     {
         cakeName: "Churro Cake",
         description: "San Diego, California, United States",
-        style: "layer",
+        style: "Layer",
         servings: 16,
         imageUrl:
         "images/Churro-cake.webp"   
@@ -36,7 +36,7 @@ const cakes = [
     {
       cakeName: "Disneyland Chocolate Smash Cake",
       description: "San Diego, California, United States",
-      style: "layer",
+      style: "Layer",
       servings: 12,
       imageUrl:
       "images/Disneyland-smash.webp"   
@@ -44,31 +44,31 @@ const cakes = [
   {
     cakeName: "Ultimate Smores Cake",
     description: "San Diego, California, United States",
-    style: "layer",
+    style: "Roll",
     servings: 12,
     imageUrl:
     "images/Ultimate-smores.webp"   
 },
 {
-  cakeName: "Biscoff Bunt Cake",
+  cakeName: "Biscoff Bundt Cake",
   description: "San Diego, California, United States",
-  style: "bundt",
+  style: "Bundt",
   servings: 12,
   imageUrl:
   "images/Biscoff-bundt.webp"   
 },
 {
-  cakeName: "Dark Chocolate Bunt Cake",
+  cakeName: "Dark Chocolate Bundt Cake",
   description: "San Diego, California, United States",
-  style: "bundt",
+  style: "Bundt",
   servings: 12,
   imageUrl:
   "images/Dark-chocolate-bundt.webp"   
 },
 {
-  cakeName: "Raspberry Bunt Cake",
+  cakeName: "Raspberry Bundt Cake",
   description: "San Diego, California, United States",
-  style: "bundt",
+  style: "Bundt",
   servings: 12,
   imageUrl:
   "images/Raspberry-bundt.webp"   
@@ -95,37 +95,42 @@ allCakesLink.addEventListener("click", () => {
 const bundtLink = document.querySelector('#bundt');
 bundtLink.addEventListener("click", () => {
     document.querySelector("#cakesContainer").innerHTML = "";
-    createCakeCard(cakes.filter(cake => (cake.style === "bundt")));
+    createCakeCard(cakes.filter(cake => (cake.style === "Bundt")));
 });
 
 // Function to filter temple list NEW:---------------------------------
 const layerLink = document.querySelector('#layer');
 layerLink.addEventListener("click", () => {
     document.querySelector("#cakesContainer").innerHTML = "";
-    createCakeCard(cakes.filter(cake => (cake.style === "layer")));
+    createCakeCard(cakes.filter(cake => (cake.style === "Layer")));
 });
 
-// Function to filter cake list LARGE:---------------------------------
-// const largeLink = document.querySelector('#24-servings');
-// largeLink.addEventListener("click", () => {
-//     document.querySelector("#cakesContainer").innerHTML = "";
-//     createCakeCard(cakes.filter(cake => cake.servings === 24));
+const rollLink = document.querySelector('#roll');
+rollLink.addEventListener("click", () => {
+    document.querySelector("#cakesContainer").innerHTML = "";
+    createCakeCard(cakes.filter(cake => (cake.style === "Roll")));
+});
+
+const dishLink = document.querySelector('#dish');
+dishLink.addEventListener("click", () => {
+    document.querySelector("#cakesContainer").innerHTML = "";
+    createCakeCard(cakes.filter(cake => (cake.style === "Deep Dish")));
+});
+
+
+// const mediumLink = document.querySelector('#12plus-servings');
+// mediumLink.addEventListener("click", (event) => {
+//     event.preventDefault();
+//     // document.querySelector("#cakesContainer").innerHTML = "";
+//     createCakeCard(cakes.filter(cake => cake.servings >= 12 && cake.servings <= 16));
 // });
 
-// Function to filter cake list MEDIUM:---------------------------------
-const mediumLink = document.querySelector('#12plus-servings');
-mediumLink.addEventListener("click", () => {
-    document.querySelector("#cakesContainer").innerHTML = "";
-    // createCakeCard(cakes.filter(cake => cake.servings >= 12 && cake.servings <= 16));
-    createCakeCard(cakes.filter(cake => cake.servings === 12));
-});
-
 // Function to filter cake list SMALL:---------------------------------
-const smallLink = document.querySelector('#small');
-smallLink.addEventListener("click", () => {
-    document.querySelector("#cakesContainer").innerHTML = "";
-    createCakeCard(cakes.filter(cake => cake.servings === 8));
-});
+// const smallLink = document.querySelector('#small');
+// smallLink.addEventListener("click", () => {
+//     document.querySelector("#cakesContainer").innerHTML = "";
+//     createCakeCard(cakes.filter(cake => cake.servings === 8));
+// });
 
   //   FUNCTION TO CREATE CAKE CARDS--------------------------------------
 //Start with the word function, then name of the function, then the parameters
@@ -150,12 +155,16 @@ function createCakeCard(filteredCakes) {
         // for example we are saying create a variable
         // called name and make it a new element('h2') to go 
         // inside the cakeCard div in the HTML
-        const name = document.createElement('h3');
+        const name = document.createElement('h4');
         const image = document.createElement('img');
 
         const description = document.createElement('p');
+        // if you want to add a class name to an element use it with .classList.add()
+        description.classList.add('description');
         const style = document.createElement('p');
-        const servings = document.createElement('p');       
+        style.classList.add('style');
+        const servings = document.createElement('p');  
+        servings.classList.add('servings');     
 
         // Set the inner HTML for the cake card
         // Set the text content for each element

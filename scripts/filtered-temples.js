@@ -180,7 +180,7 @@ function createTempleCard(filteredTemples) {
         // for example we are saying create a variable
         // called name and make it a new element('h2') to go 
         // inside the templeCard div in the HTML
-        const name = document.createElement('h3');
+        const name = document.createElement('h4');
         const location = document.createElement('p');
         const dedicated = document.createElement('p');
         const area = document.createElement('p');       

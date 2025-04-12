@@ -352,7 +352,7 @@ main section a {
 }
 
 /* CLIENT FAVORITES REVIEW Cards on Home Page */
-.review li {
+.favorites-review li {
     /* padding: 4rem; */
     padding: 2rem 1rem;
     margin-bottom: 2rem;
@@ -364,6 +364,88 @@ main section a {
 .form-review {
     padding-bottom: 3rem;
 }
+
+/* CAKE-OPTIONS PAGE MOBILE VIEW -----------------------------*/
+.cake-filter-nav {
+    display: flex;
+    flex-direction: column;
+    /* padding-bottom: 1rem; */
+    padding: 2rem;
+    justify-self: center;
+    list-style: none;
+    gap: 1rem;
+    width: 80%;
+}
+.cake-filter-nav li {
+    /* font-size: 1.2rem; */
+    font-size: clamp(.9rem, 1vw + .6rem, 1.5rem);
+    padding: 1rem;
+    box-shadow: 4px 4px 6px #3d403b;
+    background-color: #525a49;
+    color: #eeece0;
+    border: 2px solid #3d403b;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.cake-filter-nav a {
+    text-decoration: none;
+    color: #3d403b;
+    color: #eeece0;
+    /* font-size: clamp(.9rem, 1vw + .6rem, 1.5rem); */
+}
+
+
+/* CAKE CARD CONTAINER */
+#cakesContainer {
+    /* Layout the main column figure elements using CSS Grid. 
+    There should only be 1 column for mobile view*/
+    /* box size, space and placement*/
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* 250px is a good px for smaller screens */
+    /* auto-fit, minmax(250px, 1fr) → Ensures a responsive grid that adjusts based on available space. */
+    /* On mobile, it will stack into a single column. */
+    /* On larger screens, it expands into multiple columns automatically. */
+    gap: 1rem;
+    padding: 1rem;
+    /* place-items: center; */
+    /* border: 2px solid gray; */
+    /* style (border-color-font)*/
+
+}
+
+.cake-card {
+    border: 2px solid gray;
+    box-shadow: 4px 4px 10px gray;
+    justify-items: center;
+    padding: 1.2rem;
+    border-radius: 6px;
+}
+
+.cake-card h4 {
+    font-size: clamp(.9rem, 2.5vmin, 1.75rem);
+
+    margin-bottom: .5rem;
+}   
+.cake-card img {
+    width: 250px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 6px 6px 20px #525a49;
+    border-radius: 6px;
+}
+
+.cake-card .description {
+    padding-top: 1rem;
+}
+
+/* CAKE SALES CONTAINER - Cake Calendar, Order Now, 10%off */
+/* .cake-sales {
+    padding: 1rem;
+    border: 1px solid gray;
+
+} */
 
 /* FOOTER - child(p), child(p)----------------------------------- */
 /* if time available...fancy this up with media logos and contact info */

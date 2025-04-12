@@ -2,7 +2,7 @@
 /* @media (min-width:  80rem) { */
 @media (min-width: 56.25rem) {
     .wrapper {
-        max-width: 1200px;
+        max-width: 1500px;
         margin: 0 auto;
         padding: 1rem;
     }
@@ -17,11 +17,11 @@
 
     .navigation {
       display: flex;
-      flex-direction: row;
+      /* flex-direction: row; */
       position: static;
       width: auto;
-      background-color: transparent;
-      box-shadow: none;
+      /* background-color: transparent; */
+      /* box-shadow: none; */
     }
 
     #menu {

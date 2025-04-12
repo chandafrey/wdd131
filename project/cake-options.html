@@ -1,69 +1,75 @@
 <!-- This file is my CAKE OPTIONS page -->
 <!-- This page is linked to the HOME PAGE and the CAKE FORM PAGE  -->
 <!DOCTYPE html>
- <html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Week 6 Project(Build a Website for a Cake business) - Chanda Frey, Cakes for every occasion">
-    <meta name="author" content="Chanda Frey"> 
-    <title>Cakelicious</title>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Week 6 Project(Build a Website for a Cake business) - Chanda Frey, Cakes for every occasion">
+   <meta name="author" content="Chanda Frey"> 
+   <title>Cakelicious</title>
 
-    <!-- FONT LINKS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,600&family=DM+Serif+Display:ital@0;1&family=Lato:ital,wght@0,400;1,300;1,400&family=Merriweather:opsz,wght@18..144,700&display=swap" rel="stylesheet">
-    
-    <!--  LINKS: OTHER FILES-->
-    <link rel="stylesheet" href="styles/cake-options.css">
-    <link rel="stylesheet" href="styles/cake-options-medium.css">  <!-- @media only screen and (min-width: 35rem) {} this is 560px -->
-    <link rel="stylesheet" href="styles/cake-options-large.css"> <!-- @media only screen and (min-width: 64rem) {} this is 1028px -->
-    <script src="scripts/cake-hamburger.js" defer></script>
-    <script src="scripts/filtered-cakes.js" defer></script>
-    <script src="scripts/cake-dates.js" defer></script> <!--Dates for Footer-->   
+   <!-- FONT LINKS -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,600&family=DM+Serif+Display:ital@0;1&family=Lato:ital,wght@0,400;1,300;1,400&family=Merriweather:opsz,wght@18..144,700&display=swap" rel="stylesheet">
+   
+   <!--  LINKS: OTHER FILES-->
+   <link rel="stylesheet" href="styles/cake-options.css">
+   <link rel="stylesheet" href="styles/cake-options-medium.css">  <!-- @media (min-width: 35rem) {} this is 560px -->
+   <link rel="stylesheet" href="styles/cake-options-large.css"> <!-- @media  (min-width: 64rem) {} this is 1028px -->
+   <script src="scripts/cake-hamburger.js" defer></script>
+   <script src="scripts/cake-calendar.js" defer></script>
+   <script src="scripts/cake-dates.js" defer></script> <!--Dates for Footer-->   
+   <script src="scripts/filtered-cakes.js" defer></script>
+
 </head>
+
 <body>
-    <div class="wrapper"> <!--Wrap the whole page in this-->    
-        <header>
-           <div class="button">
-                <!--HAMBURGER MENU BUTTON...use the id  #menu in css and js-->
-                <!--ALSO use aria-label="Open menu" for accessibility--> 
-                <button type="button" id="menu" aria-label="Open menu"></button>  
-           </div>
+   <div class="wrapper"> <!--Wrap the whole page in this-->    
+       <header>
+          <div class="button">
+               <!--HAMBURGER MENU BUTTON...use the id  #menu in css and js-->
+               <!--ALSO use aria-label="Open menu" for accessibility--> 
+               <button type="button" id="menu" aria-label="Open menu"></button>  
+          </div>
 
-           <section class = "logo-header">
-                <div class="logo-box">
-                    <!-- LOGO ICON -->
-                    <!-- <img src="images/cakeslice-iconfinder-whitecherryonly.svg" alt="Cakelicious logo" class="logo"> -->
-                    <a href="cakeproject.html" class="logo">
-                        <img src="images/cakeslice-iconfinder-whitecherryonly.svg" alt="Logo" />
-                    </a>
-                </div>
+          <section class = "logo-header">
+               <div class="logo-box">
+                   <!-- LOGO ICON -->
+                   <!-- <img src="images/cakeslice-iconfinder-whitecherryonly.svg" alt="Cakelicious logo" class="logo"> -->
+                   <a href="cakeproject.html" class="logo">
+                       <img src="images/cakeslice-iconfinder-whitecherryonly.svg" alt="Logo of a cake slice with a cherry on top">
+                   </a>
+               </div>
 
-                <h1>Cakelicious</h1>
-            </section>
-            <nav>
-                <ul class="navigation" aria-label="Main navigation"> 
-                    <li><a href="cakeproject.html" class="active">Home</a></li>
-                    <li><a href="cake-options.html">Cakes</a></li>
-                    <li><a href="cake-order.html">Order</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        <!-- END OF HEADER -->
+               <h1>Cakelicious</h1>
+           </section>
 
-        <main>
-            <section class="cake-banner">
-                <h2>Cake of the Week: Churro Cake</h2>
-                <!-- <img src="images/Churro-cake-square.webp" width="400" height="400" alt="image of a Churro Drip Cake" loading="lazy"> -->
-            </section>
+           <nav>
+               <ul class="navigation" aria-label="Main navigation"> 
+                   <li><a href="cakeproject.html" class="active">Home</a></li>
+                   <li><a href="cake-options.html">Cakes</a></li>
+                   <li><a href="cake-order.html">Order</a></li>
+                   <li><a href="#">Contact</a></li>
+               </ul>
+           </nav>
+       </header>
+       <!-- END OF HEADER -->
+
+       <main>
+        <section class="cake-banner">
+            <h2>Cake of the Week: Churro Cake</h2>
+            <div class="cake-banner-background">
+                <img src="images/Churro-cake-square.webp" width="400" height="400" alt="image of a Churro Drip Cake">
+            </div>
+        </section>
 
             <section class="cake-options">
                 <h3>Check Out our Cakes!</h3>
-
                 <p>We have a variety of flavors and styles to choose from.</p>
-                <p>We are located in South Jordan, Utah.</p>
+                <p>Click to filter cakes by style...and to see description and 
+                    approximate serving sizes.</p>
             </section>
 
             <div class="cake-filters">
@@ -71,9 +77,8 @@
                     <li><a href="#" id="allCakes" class="active">All Cakes</a></li>
                     <li><a href="#" id="bundt">Bundt Cakes</a></li>
                     <li><a href="#" id="layer">Layer Cakes</a></li>
-                    <li><a href="#" id="24-servings">24 Servings</a></li>
-                    <li><a href="#" id="12plus-servings">12-16 Servings</a></li>
-                    <li><a href="#" id="small">8 Servings</a></li>
+                    <li><a href="#" id="roll">Roll Cakes</a></li>
+                    <li><a href="#" id="dish">Deep Dish Cakes</a></li>
                 </ul>
             </div>
             <div id="cakesContainer"> <!--This has to be id not class here-->
@@ -81,31 +86,50 @@
             </div>
      
 
-            <!-- <section class="cake-options"> -->
-
-                <!-- <div> -->
+            <!-- <section class="cake-card"> -->
                     <!-- <h3>Banana Cake</h3> -->
                     <!-- <img src="images/bananaCake.webp" alt="image of Banana Cake" class="cake-image"> -->
-                    <!-- <p>description</p> -->
-                    <!-- <p>style</p> -->
-                    <!-- <p>servings</p> -->
-                <!-- </div> -->
+                    <!-- <p class="description">description</p> -->
+                    <!-- <p class="style">style</p> -->
+                    <!-- <p class="servings">servings</p> -->
+            <!-- </section> -->
      
-
+            <div class="cake-sales">
             <!-- WHAT SHOULD I DO WITH THESE SECTIONS? -->
-            <section class="cake-review">
-                <h4>Get 10% off your next order</h4>
-                <p>Leave us a review and receive 10% off your next order.</p>
-                <a href="cake-form.html">Review Form</a>    
-            </section> <!-- end of cake review section -->
-            <section class="order">
-                <h4>Place your order today!</h4>
-                <p>We have a "Cake of the Week" each week.  Check our calendar to see which cake is made each week for the current month and next month.</p>
-                <p>Place your order anytime before Tuesdays and your cake will be ready for pick up on Thursdays.</p>
-                <a href="cake-order.html">Order Now</a>
-            </section>
-        
-        </main>
+                <section class="cake-of-week-calendar">
+                    <h3>Cake Calendar:</h3>
+                    <!-- <p>We have a "Cake of the Week" each week.  
+                        Check our calendar to see which cake is 
+                        made each week for this month and next month.</p> -->
+                    <p>This week's flavor—and next—is just a click away.</p>
+                    <!-- DROPDOWN CALENDAR -->
+                    <div class="calendar">
+                        <div id="cakeCalendarToggle"></div>
+                        <div id="cakeCalendar" class="closed"></div>
+                        <!-- cake calendar here generated in JavaScript -->
+                        <!-- <div>
+                            <p>week:cakeName</p> 
+                        </div>-->
+                    </div>
+                </section>
+            
+                <section class="order">
+                    <h3>Place your order today!</h3>
+                    <p>We have a "Cake of the Week" each week.  
+                        Check our calendar to see which cake is made each week for the current month and next month.</p>
+                    <p>Place your order anytime before Tuesdays and your cake will be ready for pick up on Thursdays.</p>
+                    <a href="cake-order.html">Order Now</a>
+                </section>
+            
+                <section class="form-review">
+                    <h3>Love Cake?  Tell Us Why!</h3>
+                    <p>We really want to hear from you!
+                        Drop us a sweet review and we'll send you a 10% off PROMO code for your next Cakelicious order.</p>
+                    <a href="cake-form.html">Review</a>
+                </section>
+            </div>
+        </div>
+    </main>
         <!-- END OF MAIN -->
         <footer>
             <p>&copy;<span id="currentYear"></span> ~ Chanda Frey ~ Utah</p>
