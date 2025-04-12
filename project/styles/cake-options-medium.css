@@ -7,7 +7,7 @@
 /* TABLETS 768-1023px */
 
 /* HOME PAGE---------------------------------- */
-@media (min-width: 768px) {
+@media (min-width: 320px) {
     .wrapper {
         max-width: 90%;
         margin: 0 auto;

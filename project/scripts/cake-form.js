@@ -101,10 +101,12 @@ const starInputs = document.querySelectorAll('input[name="stars"]');
 starInputs.forEach(input => {
     input.addEventListener("change", () => {
         const selectedValue = parseInt(input.value);
+      
         if (selectedValue <= 2 ) {
         alert("We're sorry you are not 100% satisfied.  Please tell us how we can improve.");
         }
         });
     });
 });
+
 

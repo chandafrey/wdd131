@@ -192,10 +192,15 @@ header {
     height: 100%; /* Maintain aspect ratio */
     
 }
+/* I set both width and height here because DevTools
+said my performance would be better if I set both 
+width and heights explicitly...in this instance my 
+image is square i think so this should work, otherwise 
+set height to auto */
 .logo-box img {
     display: block; /* Ensure the image is a block element */
     width: clamp(2.5rem, 6vw, 5rem);
-    height: auto;
+    height: clamp(2.5rem, 6vw, 5rem);
 }
 
 @media (max-width: 400px) {
@@ -262,7 +267,9 @@ main section p {
 
 
 /* STYLE LINK BUTTONS -Purchase Cake, Cakelicious Cakes, Order Now, Review */
-main section a {
+main section a,
+/* promo-code-order is a button on the REVIEW CONFIRMATION PAGE */
+.promo-code-order a {
     font-size: 1.2rem;
     line-height: 2.5;
     padding: 5px 10px;
@@ -298,15 +305,12 @@ main section a {
     font-size: 1.1rem;
     transform: scaleY(1.3); /* Scale the text vertically */
     letter-spacing: 2px;
-    cursor: pointer;    
-    box-shadow:
-    inset 2px 2px 3px rgba(255, 255, 255, 0.6),
-    inset -2px -2px 3px rgba(0, 0, 0, 0.6);
-
-    /* box-shadow: 4px 4px 30px #3a3838; */
-    /* box-shadow: 6px 6px 10px #525a49;
-    box-shadow: 4px 4px 10px  rgba(0, 0, 0, 0.6); */
+    cursor: pointer;   
     border-radius: 6px;
+    box-shadow:
+        inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+        inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+
 }
 
 #cakeCalendarToggle.open {
@@ -360,7 +364,7 @@ main section a {
     margin-bottom: 2rem;
     list-style: none;
     background-color: #3a383817;
-    box-shadow: 10px 10px 10px;
+    box-shadow: 10px 10px 10px #303030;
 }
 
 .form-review {
@@ -412,7 +416,6 @@ main section a {
     padding: 1rem;
     /* place-items: center; */
     /* border: 2px solid gray; */
-    /* style (border-color-font)*/
 
 }
 
@@ -426,7 +429,6 @@ main section a {
 
 .cake-card h4 {
     font-size: clamp(.9rem, 2.5vmin, 1.75rem);
-
     margin-bottom: .5rem;
 }   
 .cake-card img {
@@ -442,12 +444,6 @@ main section a {
     padding-top: 1rem;
 }
 
-/* CAKE SALES CONTAINER - Cake Calendar, Order Now, 10%off */
-/* .cake-sales {
-    padding: 1rem;
-    border: 1px solid gray;
-
-} */
 
 
 /* FORM STYLING------------------------ */
@@ -466,7 +462,7 @@ main .promo-heading {
     width: 100%;
     max-width: 100%;
 }
-@media(min-width: 768) {
+@media(min-width: 768px) {
     .wf1 {
         max-width: 600px;
     }
@@ -548,6 +544,8 @@ font-size: .9rem;
     /* This was for ease of seeing all the boxes, you may not need to 
     do this in the future and just make them gray to begin with */
 }
+
+
     
 
 
@@ -555,18 +553,26 @@ font-size: .9rem;
 .wf1 .rating {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: start; /*or start if you want left justify*/
-    gap: 4px;
-    padding-top: .75rem;
-   
+    /*justify-content: start; /*or start if you want left justify*/
+    /* gap: 4px; */
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 1rem;
+    max-width: 600px;
+
 }
 
 
 .wf1 .rating label { /*This targets all the STARS(stars1-stars5)*/
-    font-size: clamp(1.25rem, 2.5vw 5rem);
+    /* font-size: clamp(1.25rem, 2.5vw 5rem); */
+    font-size: 2rem;
     cursor: pointer;
-    color: #555
+    color: #555;
+    
 }
+/* .rating input {
+    display: none;
+} */
 
 /* Change color when Hover and Clicked */
 /* you need both these lines to hover all the stars you want */
@@ -617,7 +623,22 @@ font-size: .9rem;
     color: #9c2c13;
 }
 /* -------------------------------------------------------------------------- */
-
+/* REVIEW CONFIRMATION-PROMO CODE PAGE */
+.promo-code {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    margin: 0 auto;
+    margin-top: 2rem;
+    /* margin-bottom: 1rem; */
+    /* text-align: center; */
+}
+/* Link BUTTON is styled with main  */
+.promo-code-order a {
+    margin: 0 auto;
+    margin-left: 1rem;
+}
+/* .counter {
+    text-align: center; 
+}*/
 
 
 

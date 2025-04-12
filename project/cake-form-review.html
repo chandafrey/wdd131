@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Cake Review Form page">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Week 6 Project(Build a Website for a Cake business) - Chanda Frey - Review Confirmation 10% off PROMO PAGE">
     <meta name="author" content="Chanda Frey">    
     <title>Cake Review Confirmation</title>
     
@@ -12,6 +12,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,600&family=DM+Serif+Display:ital@0;1&family=Lato:ital,wght@0,400;1,300;1,400&family=Merriweather:opsz,wght@18..144,700&display=swap" rel="stylesheet">
+    
+    
+      <!--  LINKS: OTHER FILES-->
+   <link rel="stylesheet" href="styles/cake-options.css">
+   <link rel="stylesheet" href="styles/cake-options-medium.css">  <!-- @media (min-width: 35rem) {} this is 560px -->
+   <link rel="stylesheet" href="styles/cake-options-large.css"> <!-- @media  (min-width: 64rem) {} this is 1028px -->
+   <script src="scripts/cake-hamburger.js" defer></script>
+   <!-- <script src="scripts/cake-calendar.js" defer></script> -->
+   <script src="scripts/cake-dates.js" defer></script> <!--Dates for Footer-->   
+   <!-- <script src="scripts/filtered-cakes.js" defer></script> -->
+   <script src="scripts/cake-form.js" defer></script> 
+    
+    
+    
+    
     
     <!--  LINKS: OTHER FILES-->
     <link rel="stylesheet" href="styles/cake-form.css">
@@ -22,24 +37,68 @@
 </head>
 
 
-<body>
-    <!-- HEADER HERE -->
-        <header>
-            <h1>Cakelicous Review</h1>
-        </header>
-    
-    
-<!-- CONTENT HERE -->
-<main>
-    <h1>Review Confirmation</h1>
-        <p>Thank you for taking the time to review our cakes.  We want to give you the best service possible  Please use this PROMO code for 10% off your next order. Cakelicious10.</p>
-        <li><a href="cake-form.html">Return to Review</a></li>   
-        <li><a href="cake.html">Return to Home</a></li>
 
-        <p><span id="reviewCounter">Reviews Completed: 0</span></p>
-        
-    </main>
-    
+
+
+</head>
+
+<body>
+   <div class="wrapper"> <!--Wrap the whole page in this-->    
+       <header>
+          <div class="button">
+               <!--HAMBURGER MENU BUTTON...use the id  #menu in css and js-->
+               <!--ALSO use aria-label="Open menu" for accessibility--> 
+               <button type="button" id="menu" aria-label="Open menu"></button>  
+          </div>
+
+          <section class = "logo-header">
+               <div class="logo-box">
+                   <!-- LOGO ICON -->
+                   <!-- <img src="images/cakeslice-iconfinder-whitecherryonly.svg" alt="Cakelicious logo" class="logo"> -->
+                   <a href="cakeproject.html" class="logo">
+                       <img src="images/cakeslice-iconfinder-whitecherryonly.svg" alt="Logo of a cake slice with a cherry on top">
+                   </a>
+               </div>
+
+               <h1>Cakelicious</h1>
+           </section>
+
+           <nav>
+               <ul class="navigation" aria-label="Main navigation"> 
+                   <li><a href="cakeproject.html" class="active">Home</a></li>
+                   <li><a href="cake-options.html">Cakes</a></li>
+                   <li><a href="cake-order.html">Order</a></li>
+                   <li><a href="#">Contact</a></li>
+               </ul>
+           </nav>
+       </header>
+       <!-- END OF HEADER -->
+
+       <!-- <main> -->
+        <!-- <section class="cake-banner">-->
+            <!-- <h2>Cake of the Week: Churro Cake</h2> -->
+            <!-- <div class="cake-banner-background">
+                <img src="images/Churro-cake-square.webp" width="400" height="400" alt="image of a Churro Drip Cake">
+            </div> -->
+        <!-- </section>  -->
+
+      
+    <!-- CONTENT HERE -->
+        <main>
+            <div class="promo-code">
+                <h2>Review Confirmation</h2> </h2>
+                <p>Thank you for taking the time to review our cakes.  We want to give you the best service possible  Please use this PROMO code for 10% off your next order. Cakelicious10.</p>
+            </div>
+
+            <div class="promo-code-order">
+                <h2>Ready to order?</h2> </h2>
+                <p>Use your PROMO Code and try our Cakelicious 'Cake of the Week'.</p>
+                <a href="cake-order.html">Order Now</a>   
+            </div>
+
+            <p class="counter"><span id="reviewCounter">Reviews Completed: 0</span></p>
+        </main>
+    </div>
     
     <footer>
         <p>&copy;<span id="currentYear"></span> ~ Chanda Frey ~ Utah</p>
