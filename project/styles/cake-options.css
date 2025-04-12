@@ -1,5 +1,18 @@
 /* MOBILE VIEWS */
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+:root {
+    --primary-color-green: #525a49; 
+    /* --accent-color-greekVilla: #f0ece1; /*Greek Villa SW7551 */
+    --secondary-color-cream: #fefffd; 
+    /* --accent-color-cadet: #91999c; Cadet SW9143 */
+    /* --accent-color-rockCandy: #dfe1e0; Rock Candy SW6231 */
+    /* --accent-color-blackFox:#4f4842; Black Fox SW7020 (with Greek Villa, Rock Candy) */
+} 
 
 /* MARGINS/PADDING/WIDTHS */
 * {
@@ -205,17 +218,6 @@ header {
     text-shadow:#303030 7px 7px 10px;
 }
 
-/* @media (max-width: 375px) {
-    .logo-header {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-  
-    #menu {
-      align-self: flex-end;
-    }
-  } */
   
 
 /* End HEADER ----------------------------------------------- */
@@ -233,7 +235,7 @@ header {
     padding: 2rem 0;
 }
 .cake-banner img {
-    width: 400;
+    width: 400px;
     max-width: 100%;
     height: auto;
     display: block;
@@ -446,6 +448,178 @@ main section a {
     border: 1px solid gray;
 
 } */
+
+
+/* FORM STYLING------------------------ */
+main .promo-heading {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.form-wrapper {
+    max-width: 100%;
+}
+.wf1 {
+    margin: 0 auto;
+    padding: 1rem;
+    width: 100%;
+    max-width: 100%;
+}
+@media(min-width: 768) {
+    .wf1 {
+        max-width: 600px;
+    }
+}
+.wf1 fieldset {
+    margin: 2rem 0; /*OUTSIDE BOX Top/Bottom 2rem, Left/Right 0*/
+    border: 1.5px solid #ddd; /*changes border to light gray*/
+    border-radius: 6px; /*rounds the corners of the box*/
+    padding: 1rem; /*INSIDE BOX Top/Bottom .5rem, Left/Right 2%*/
+    
+}
+
+
+.wf1 legend {
+    color: #525a49;
+    /* color: #3d403b;  */
+    padding: 0 .5rem; /*Top/Bottom 0, Left/Right .5rem(gives breathing
+    space on either side of the legend name like "Applicant Information */
+    font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+    font-weight: 500;
+}
+
+
+.wf1 label {
+    display: block; /*STACKS all the elements */
+    padding-top: 1rem; /*Gives elements BREATHING Room */
+    color: #525a49; /*Change label color: */
+    color: #3d403b;
+    /* font-size: .9rem; Change Font-size a bit SMALLER */
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    
+}
+
+.wf1 .features,
+.wf1 .stars {
+    font-weight: 400;
+    font-size: 1.05rem;
+    margin-bottom: -1rem;
+    /* color: #1c3897; */
+    color: #526911;
+}
+
+.wf1 .optional {
+color: #864304;
+/* color: #9c2c13; */
+font-size: .9rem;
+}
+
+.wf1 .options {
+    margin-top: .5rem; /*scooched checkbox list closer to it's label heading*/
+    margin-bottom: 1rem; /*scooched checkbox list farther away from next category*/
+}
+
+
+.wf1 select, 
+.wf1 textarea,
+.wf1 input[type="date"],
+.wf1 input[type="text"],
+.wf1 input[type="email"] {
+    /* START with background-color: Pink, and TURN Off Gray*/
+    /* background-color: pink; */
+    background-color: #eee;
+    display: block; /* This stacks the Label on Top of the Box */
+    border: solid 1px #999; 
+    border-radius: 6px; /*same radius as fieldset*/
+    padding: .75rem; /*I don't know the math, but This bubble Box 
+    needs to be at least 44 px Tall so that it's Big Enough for 
+    a finger to click on, on a MOBILE DEVICE */
+    color: #555; /* Make the user TEXT gray */
+    width: 100%; /*This is ideal for phones */
+    max-width: 600px; /*Restrict the max-width so that it will not
+    fill the whole screen on a larger screen */
+    appearance: none; /*this will override the browser styling DropArrow
+    and allow us to use our Drop Arrow added in HTML &#9662 - A mobile Device Issue */
+    /* And ACTUALLY - it shows correctly on Safari, but not on Chrome on my phone */
+    
+    /* Finally go back and TURN OFF background color pink 
+    and Change it to a light gray #eee */
+    /* This was for ease of seeing all the boxes, you may not need to 
+    do this in the future and just make them gray to begin with */
+}
+    
+
+
+/* Star Rating */
+.wf1 .rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start; /*or start if you want left justify*/
+    gap: 4px;
+    padding-top: .75rem;
+   
+}
+
+
+.wf1 .rating label { /*This targets all the STARS(stars1-stars5)*/
+    font-size: clamp(1.25rem, 2.5vw 5rem);
+    cursor: pointer;
+    color: #555
+}
+
+/* Change color when Hover and Clicked */
+/* you need both these lines to hover all the stars you want */
+/*if you only do the first line you can only select 1 star at a time*/
+/*if you only have the second line you can only select all stars minus the last one you hover over*/
+.rating label:hover, 
+.rating label:hover ~ label,
+
+.rating input:checked ~ label {
+    color: #cc8202;
+    color: #efb909;
+
+}
+
+/* .wf1 input[type="radio"],  */
+.wf1 input[type="checkbox"] {
+    margin-right: 6px; /*Give BREATHING room to Radio/Checkbox BUTTONS */
+}
+
+/* SUBMIT BUTTON */
+.wf1 input[type="submit"] {
+    width: 96%;
+    max-width: 600px;
+    padding: .8rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #525a49;
+    color: #fefffd;
+    box-shadow: 1px 1px 4px #999;
+    font-size: 1.3rem;
+    margin: -1rem 2% 2rem 2%;
+}
+
+/* this is how you target the pseudo class "required"  */
+/* .wf1 select:required,
+.wf1 input:required {
+    border-bottom: solid 4px #9c2c13;
+} */
+/* add :valid and change the color status when the box is filled correctly */
+.wf1 select:required:valid,
+.wf1 input:required:valid 
+{
+    border-bottom: solid 4px #526911;
+}
+
+.wf1 .required {
+    font-weight: bold;
+    color: #9c2c13;
+}
+/* -------------------------------------------------------------------------- */
+
+
+
 
 /* FOOTER - child(p), child(p)----------------------------------- */
 /* if time available...fancy this up with media logos and contact info */

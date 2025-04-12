@@ -1,4 +1,5 @@
-<!-- This file is my "index" file....My HOME PAGE for Cakelicous -->
+<!-- This file is my FORM REVIEW 10% OFF page -->
+<!-- This page is linked to the HOME PAGE and the CAKE OPTIONS PAGE  -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,11 +16,15 @@
    
    <!--  LINKS: OTHER FILES-->
    <link rel="stylesheet" href="styles/cake-options.css">
-   <link rel="stylesheet" href="styles/cakeproject-medium.css">  <!-- @media only screen and (min-width: 35rem) {} this is 560px -->
-   <link rel="stylesheet" href="styles/cakeproject-large.css"> <!-- @media only screen and (min-width: 64rem) {} this is 1028px -->
+   <link rel="stylesheet" href="styles/cake-options-medium.css">  <!-- @media (min-width: 35rem) {} this is 560px -->
+   <link rel="stylesheet" href="styles/cake-options-large.css"> <!-- @media  (min-width: 64rem) {} this is 1028px -->
    <script src="scripts/cake-hamburger.js" defer></script>
-   <script src="scripts/cake-calendar.js" defer></script>
+   <!-- <script src="scripts/cake-calendar.js" defer></script> -->
    <script src="scripts/cake-dates.js" defer></script> <!--Dates for Footer-->   
+   <!-- <script src="scripts/filtered-cakes.js" defer></script> -->
+   <script src="scripts/cake-form.js" defer></script>
+
+
 </head>
 
 <body>
@@ -54,55 +59,128 @@
        </header>
        <!-- END OF HEADER -->
 
-  
+       <!-- <main> -->
+        <!-- <section class="cake-banner">-->
+            <!-- <h2>Cake of the Week: Churro Cake</h2> -->
+            <!-- <div class="cake-banner-background">
+                <img src="images/Churro-cake-square.webp" width="400" height="400" alt="image of a Churro Drip Cake">
+            </div> -->
+        <!-- </section>  -->
 
-    <main>
-
-               <!-- This probably belongs on the Order page? -->
-               <h1>Welcome to Cakelicious</h1>
-
-               <div class="review-form">
-                   <p>We would love your feedback.</p>
-                   <p>Please take a moment to fill out our review form and recieve 10% your next order</p>
-                   <li><a href="cake-form.html">Review</a></li>
-               </div>
+      
     <!-- CONTENT HERE -->
-     <!-- action="file that you want to come as a result of hitting submit button" -->
-    <!-- add a class="wf1" for WebForm1 -->
-    <form method="get" action="cake-form-review.html" class="wf1">
-        <!-- fieldset will CHUNK your form into sections -->
-        <fieldset>
-            <legend>Product Review</legend>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required placeholder="Enter your name here">
-            <br><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required placeholder="Enter your email here">
-            <br><br>
-            <label for="product">Product:</label>
-            <select id="product" name="product" required>
-                <option value="">Select a product</option>
-                <option value="cake">Cake</option>
-                <option value="cupcake">Cupcake</option>
-                <option value="cookie">Cookie</option>
-                <option value="brownie">Brownie</option>
-            </select>
-            <br><br>
-            <label for="rating">Rating:</label>
-            <input type="number" id="rating" name="rating" min="1" max="5" required placeholder="Rate from 1 to 5">
-            <br><br>
-            <label for="comments">Comments:</label><br>
-            <textarea id="comments" name="comments" rows="4" cols="50" required placeholder="Enter your comments here"></textarea>
-
-
-    </main>
-
+        <main>
+            <h2 class="promo-heading">We want to hear from you..Leave us a review and 
+                get a 10% off PROMO code on your next Cakelicious Order. </h2>
+           
+           <div class="form-wrapper">
+                <!-- add a class="wf1" for WebForm1 -->
+                <form method="get" action="cake-form-review.html" class="wf1">
+                <!-- fieldset will CHUNK your form into sections -->
+                <fieldset>
+                    <legend>Product Information</legend>
+                    <div class="product">
+                        <label for="productChoice">Product Name <span class="required">*</span></label>
+                        <select id="productChoice" name="product" required>
+                            <option value="" disabled selected>Choose a Cake ...</option>
+                            <!-- Adding 'disabled' and 'selected': 
+                            When users open the dropdown, "Choose a Product ..." is displayed 
+                            but cannot be selected. They must choose one of the actual products. -->
+                        
+                    <!-- Dynamically created options will replace these static ones -->
+                            <!-- The remaining options are created dynamically using a provided product array. -->
+                            <!-- Each option must have a value attribute that is the product name -->
+                            <!-- <option value="software">Software Development</option>
+                            <option value="creative">Creative Professional</option>
+                            <option value="info">Information Technology</option>
+                            <option value="data">Data Professional</option>
+                            <option value="construction">Construction</option>
+                            <option value="manufacturing">Manufacturing</option>
+                            <option value="business">Business Professional</option>
+                            <option value="security">Cyber Security</option>        -->
+                        </select>
+                    </div>
+        
+                    <div class="installed">
+                        <label for="installation">Date of Pick-Up <span class="required">*</span>
+                            <input type="date" name="installation" id="installation" required></label>
+                    </div>
+                </fieldset>
+                    
+                <fieldset>
+                    <legend>Review and Rating</legend>
+                        <div class="feature-options">
+                            <label class="features">Which features did you appreciate?
+                                <span class="optional">(Check all that apply)</span>
+                            </label>
+                            <!-- <p>(Check all that apply)</p> -->
+                            <div class="options">
+                            <label><input type="checkbox" name="features[]" id="ease" value="ease-of-use">Ordering was easy</label>
+                            <label><input type="checkbox" name="features[]" id="scheduling" value="scheduling">Cakes were ready on schedule</label>
+                            <label><input type="checkbox" name="features[]" id="design" value="design">Cakes were tasty</label>
+                            <label><input type="checkbox" name="features[]" id="performance" value="performance">Customer Satisfaction was prioritized</label>
+                            <!-- Used name="features[]" for all checkboxes -->
+                            <!-- The [] makes it an array, so when submitted in a form, all selected values will be grouped together. -->
+                            <!-- Replace <label> for instructions with <p> → The instruction "(Check all that apply)" isn't a label for a form field, so <p> is better. -->
+                            <!-- value="durability" is better than value="yes"  sends clear values to database and it's easier to store, analyze and display meaningful results -->
+                            </div>  
+                        </div>
+                            
+                        <!-- If you want custom styling (e.g., hiding radio buttons and showing styled stars) → Use this option with CSS. -->
+                        <div class="rating-section">
+                            <label class="stars">Overall Rating <span class="required">*</span></label>
+                            <div class="rating">
+                                <input type="radio" name="stars" id="star5" value="5" required>
+                                <label for="star5">&#9733;</label>
+                            
+                                <input type="radio" name="stars" id="star4" value="4" required>
+                                <label for="star4">&#9733;</label>
+                            
+                                <input type="radio" name="stars" id="star3" value="3" required>
+                                <label for="star3">&#9733;</label>
+                            
+                                <input type="radio" name="stars" id="star2" value="2" required>
+                                <label for="star2">&#9733;</label>
+                            
+                                <input type="radio" name="stars" id="star1" value="1" required>
+                                <label for="star1">&#9733;</label>                  
+                            </div>
+                        </div>
+                    
+                </fieldset>
+        
+                <fieldset>
+                    <legend>Additional Information</legend>
+                        <label for="feedback">
+                        Written Review <span class="optional">(Optional)</span></label>
+                        <textarea name="feedback" id="feedback" rows="4"></textarea>
+        
+                        <label for="fullname">
+                            Your Name <span class="required">*</span>
+                            <input type="text" name="fullname" id="fullname" placeholder="First and Last Name" required>
+                        </label>
+                        <label for="email">
+                            Your Email <span class="required">*</span>
+                            <input type="email" name="email" id="email" placeholder="you@gmail.com" required>
+                        </label>
+                </fieldset>
+        
+                <input type="submit" value="Post Review">
+        
+                </form>   
+           </div>
+           <!-- End form-wrapper -->
+        
+        </main>
   
-   
-<footer>
-    <p>&copy;<span id="currentYear"></span> ~ Chanda Frey ~ Utah</p>
-    <p><span id="lastModified"></span></p>
-</footer> 
+        
+        <!-- END OF MAIN -->
+        <footer>
+            <p>&copy;<span id="currentYear"></span> ~ Chanda Frey ~ Utah</p>
+            <p><span id="lastModified"></span></p>
+        </footer>
+    </div> <!-- end of wrapper div -->  
 
 </body>
 </html>
+        
