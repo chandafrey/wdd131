@@ -69,13 +69,13 @@
         grid-template-columns: repeat(2, minmax(200px, 1fr));
         gap: 1rem;
         align-items: start;
-        /* padding: .5rem 1rem; */
+        padding: .5rem 1rem;
     }
 
-    .main-cake-container {
+    /* .main-cake-container {
         padding: .5rem 1rem;
         /* text-align: left; */
-    }
+    } */
  
     .about-us {
         grid-column: 1/3;

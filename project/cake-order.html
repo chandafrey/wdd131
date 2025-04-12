@@ -1,28 +1,35 @@
-<!-- This file is my CAKE OPTIONS page -->
+<!-- This file is my CAKE ORDER page -->
 <!-- This page is linked to the HOME PAGE and the CAKE FORM PAGE  -->
 <!DOCTYPE html>
  <html lang="en">
  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Week 6 Project(Build a Website for a Cake business) - Chanda Frey, Cakes for every occasion">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Week 6 Project(Build a Website for a Cake business) - Chanda Frey, Order page">
     <meta name="author" content="Chanda Frey"> 
-    <title>Cakelicious</title>
+    <title>Order</title>
 
     <!-- FONT LINKS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,600&family=DM+Serif+Display:ital@0;1&family=Lato:ital,wght@0,400;1,300;1,400&family=Merriweather:opsz,wght@18..144,700&display=swap" rel="stylesheet">
     
-    <!--  LINKS: OTHER FILES-->
+    <!--  LINKS: CSS FILES-->
     <link rel="stylesheet" href="styles/cake-options.css">
-    <link rel="stylesheet" href="styles/cake-options-medium.css">  <!-- @media only screen and (min-width: 35rem) {} this is 560px -->
-    <link rel="stylesheet" href="styles/cake-options-large.css"> <!-- @media only screen and (min-width: 64rem) {} this is 1028px -->
+    <link rel="stylesheet" href="styles/cake-options-medium.css">  <!-- @media (min-width: 35rem) {} this is 560px -->
+    <link rel="stylesheet" href="styles/cake-options-large.css"> <!-- @media  (min-width: 64rem) {} this is 1028px -->
+    
+    <!-- LINKS: JavaScript FILES -->
     <script src="scripts/cake-hamburger.js" defer></script>
-    <script src="scripts/cake-calendar.js" defer></script>
-    <script src="scripts/filtered-cakes.js" defer></script>
-    <script src="scripts/cake-dates.js" defer></script> <!--Dates for Footer-->   
+    <script src="scripts/cake-dates.js" defer></script>    
+    <!-- <script src="scripts/cake-calendar.js" defer></script> -->
+    <!-- <script src="scripts/filtered-cakes.js" defer></script> -->
+    <script src="scripts/cake-form.js" defer></script> 
+    <!-- <script src="scripts/cake-form-review.js" defer></script>  -->
+   <!--I probably would have a JavaScript for ordering here  -->
+
 </head>
+
 <body>
     <div class="wrapper"> <!--Wrap the whole page in this-->    
         <header>
@@ -37,7 +44,7 @@
                     <!-- LOGO ICON -->
                     <!-- <img src="images/cakeslice-iconfinder-whitecherryonly.svg" alt="Cakelicious logo" class="logo"> -->
                     <a href="cakeproject.html" class="logo">
-                        <img src="images/cakeslice-iconfinder-whitecherryonly.svg" alt="Logo" />
+                        <img src="images/cakeslice-iconfinder-whitecherryonly.svg" alt="Logo">
                     </a>
                 </div>
 
@@ -48,68 +55,94 @@
                     <li><a href="cakeproject.html" class="active">Home</a></li>
                     <li><a href="cake-options.html">Cakes</a></li>
                     <li><a href="cake-order.html">Order</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="cake-contact.html">Contact</a></li>
                 </ul>
             </nav>
         </header>
         <!-- END OF HEADER -->
 
         <main>
-            <section class="cake-of-week">
-                <h2>Cake of the Week: Churro Cake </h2>
-            </section>
+            <h2 class="promo-heading">Ready to Order</h2>
+            <p>Order anytime before Tuesdays at 5pm and your Cakelicious Cake will be ready for pickup on Thursday.</p>
+            
+            <div class="form-wrapper">
+                <!-- add a class="wf1" for WebForm1 -->
+                <form method="get" action="cake-form-review.html" class="wf1">
+                <!-- fieldset will CHUNK your form into sections -->
+                <fieldset>
+                    <legend>Cart</legend>
+                    <div class="product">
+                        <label for="productChoice">Product Name <span class="required">*</span></label>
+                        <select id="productChoice" name="product" required>
+                            <option value="" disabled selected>Choose a Cake ...</option>
+                            <!-- Adding 'disabled' and 'selected': 
+                            When users open the dropdown, "Choose a Product ..." is displayed 
+                            but cannot be selected. They must choose one of the actual products. -->
+                        
+                    <!-- Dynamically created options will replace these static ones -->
+                            <!-- The remaining options are created dynamically using a provided product array. -->
+                            <!-- Each option must have a value attribute that is the product name -->
+                            <!-- <option value="software">Software Development</option>
+                            <option value="creative">Creative Professional</option>
+                            <option value="info">Information Technology</option>
+                            <option value="data">Data Professional</option>
+                            <option value="construction">Construction</option>
+                            <option value="manufacturing">Manufacturing</option>
+                            <option value="business">Business Professional</option>
+                            <option value="security">Cyber Security</option>        -->
+                        </select>
+                    </div>           
         
-        <div class="calendar">
-            <div id="cakeCalendarToggle"></div>
-            <div id="cakeCalendar" class="closed"></div>
-            <!-- cake calendar here generated in JavaScript -->
-            <!-- <div>
-                <p>week:cakeName</p> 
-            </div>-->
-        </div>
+                    <div class="installed">
+                        <label for="installation">Date of Pick-Up <span class="required">*</span>
+                        <input type="date" name="installation" id="installation" required></label>            
+                    </div>
+                    <div>
+                        <label for="pickup-time">Preferred Pickup Time <span class="required">*</span>
+                        <input type="time" id="pickup-time" name="pickup-time" required>
+                        </label>
+                    </div>
+                </fieldset>
 
+                <fieldset>
+                    <legend>Contact</legend>     
+                        <label for="fullname">
+                            Your Name <span class="required">*</span>
+                            <input type="text" name="fullname" id="fullname" placeholder="First and Last Name" required>
+                        </label>
+                        <label for="email">
+                            Your Email <span class="required">*</span>
+                            <input type="email" name="email" id="email" placeholder="you@gmail.com" required>
+                        </label>
+                        <label for="phone">
+                            Your Phone Number <span class="required">*</span>
+                            <input type="tel" name="phone" id="phone" placeholder="123-456-7890" required>
+                        </label>
+                        <label for="feedback">
+                            Payment<span class="payment"></span></label>
+                            <textarea name="payment-instructions" id="payment-instructions" rows="4" placeholder="Please pay by Cash or Venmo, upon pickup"></textarea>      
+                        </label>
+                </fieldset>
 
-           
-        <form>
-            <fieldset>
-                <legend>Contact information:</legend>
-                <div class="form-item column2">
-                    <label for="fullname">Full Name:</label> 
-                    <input type="text" id="fullname" name="fullname">
-                </div>
-                <div class="form-item column2">
-                    <label for="useremail">Email:</label> 
-                    <input type="email" id="useremail" name="useremail">    
-                </div>                
-            </fieldset>
-            <fieldset>
-                <legend>Message us for: </legend>
-                <div class="form-item column1">
-                    <input type="radio" id="inquiry" name="topic" value="i"> 
-                    <label for="inquiry">General Inquiry</label><br>
-
-                    <input type="radio" id="reservation" name="topic" value="r"> 
-                    <label for="reservation">Reservation Question</label><br> 
-                    
-                    <input type="radio" id="website" name="topic" value="w"> 
-                    <label for="website">Website Suggestion</label>
-                    
-                </div>
-                <div class="form-item column1">
-                    <label for="newsletter">Please subscribe me to the monthly newsletter.</label>
-                    <input type="checkbox" name="newsletter" id="newsletter">
-                </div>
-                <label for="feedback"></label>
-                    <textarea name="feedback" id="feedback" rows="4" placeholder="Message us for more details."></textarea>
-            </fieldset>
-            <button type="submit">Inquire Now</button>
-        </form>
+               
+        <!-- this submit button would need a new JavaScript to take it to 
+         an ORDER CONFIRMATION PAGE-->
+                <input type="submit" value="Order">
+        
+                </form>   
+           </div>
+           <!-- End form-wrapper -->
+        
         </main>
+        <!-- END OF MAIN -->
+
         <footer>
             <p>&copy;<span id="currentYear"></span> ~ Chanda Frey ~ Utah</p>
             <p><span id="lastModified"></span></p>
         </footer>
     </div> <!-- end of wrapper div -->  
-    
+       
+
+   
     </body>
-    </html> 
+</html> 
