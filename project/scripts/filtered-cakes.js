@@ -15,7 +15,7 @@ const cakes = [
       style: "Roll",
       servings: 12,
       imageUrl:
-      "images/brownie-biscoff.webp"
+      "images/Brownie-biscoff.webp"
       },
     {
       cakeName: "Chocolate Truffle Cake",
