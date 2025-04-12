@@ -264,6 +264,16 @@ main section h3,
 main section p {
     text-align: left;
 }
+@media (min-width: 1024px) {
+    main section h3 {
+        text-align: center;
+    }
+    main section p {
+        text-align: center;
+    }
+  
+}
+
 
 
 /* STYLE LINK BUTTONS -Purchase Cake, Cakelicious Cakes, Order Now, Review */
