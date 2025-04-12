@@ -7,7 +7,7 @@
 /* TABLETS 768-1023px */
 
 /* HOME PAGE---------------------------------- */
-@media (min-width: 320px) {
+@media (min-width: 768px) {
     .wrapper {
         max-width: 90%;
         margin: 0 auto;
@@ -40,7 +40,7 @@
         width: 100vw;
         height: 100vh;
         z-index: -1;
-        opacity: .3;
+        opacity: .25;
         overflow: hidden;
         padding: 1rem;
         /* display: none; */
