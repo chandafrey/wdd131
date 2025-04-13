@@ -462,6 +462,10 @@ main .promo-heading {
     margin-top: 4rem;
     margin-bottom: 1rem;
     text-align: center;
+    
+}
+main .order-directions {
+    text-align: center;
 }
 .form-wrapper {
     max-width: 100%;
