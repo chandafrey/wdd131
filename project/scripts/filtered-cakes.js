@@ -3,73 +3,82 @@
 const cakes = [
     {
       cakeName: "Banana Cake",
-      description: "Banana Cake is a moist and delicious cake made with ripe bananas, flour, sugar, eggs, and butter. It is often topped with cream cheese frosting or a simple glaze.",
+      description: "Banana Cake is a flavorful banana cake with fluffy smooth cream cheese vanilla bean frosting.",
       style: "Deep Dish",
       servings: 24,
+      price: 20.00,
       imageUrl:
       "images/bananaCake.webp" 
       },
     {
-      cakeName: "Brownie Biscoff Cake",
-      description: "Brownie Biscoff Cake is a decadent dessert that combines rich chocolate brownies with the unique flavor of Biscoff cookies. It is often layered with Biscoff frosting and topped with crushed cookies.",
+      cakeName: "Brownie Biscoff Cheesecake Roll",
+      description: "Brownie Biscoff Cheesecake Roll is a brownie topped with ganache and melted biscoff cookie butter and a whipped cream cheese topping.  This dessert is Swiss rolled with a biscoff and ganache drizzle and a biscoff cookie crumble on top.",
       style: "Roll",
       servings: 12,
+      price: 20.00,
       imageUrl:
       "images/Brownie-biscoff.webp"
       },
     {
       cakeName: "Chocolate Truffle Cake",
-      description: "Chocolate Truffle Cake is a rich and indulgent dessert made with layers of chocolate cake, chocolate ganache, and truffle filling. It is often garnished with chocolate shavings or fresh berries.",
+      description: "Chocolate Truffle Cake is a rich chocolate cake layered with chocolate ganache, and a chocolate truffle filling.  This cake is topped with a chocolate ganache and chocolate buttercream frosting.",
       style: "Layer",
-      servings: 8,
+      servings: 12,
+      price: 25.00,
       imageUrl:
       "images/Chocolate-truffle.webp"
       },
     {
         cakeName: "Churro Cake",
-        description: "San Diego, California, United States",
+        description: "Churro Cake is a delicious cinnamon sugar swirled cake with a cinnamon sugar buttercream frosting and a cinnamon chip ganache drip.",
         style: "Layer",
-        servings: 16,
+        servings: 12,
+        price: 30.00,
         imageUrl:
         "images/Churro-cake.webp"   
     },
     {
       cakeName: "Disneyland Chocolate Smash Cake",
-      description: "San Diego, California, United States",
+      description: "Disneyland Chocolate Smash Cake is made with layers of brownie, peanut butter filling and vanilla cake with dulce de leche, chocolate crisp pearls and a chocolate buttercream frosting.",
       style: "Layer",
       servings: 12,
+      price: 20.00,
       imageUrl:
       "images/Disneyland-smash.webp"   
   },
   {
     cakeName: "Ultimate Smores Cake",
-    description: "San Diego, California, United States",
+    description: "Ultimate Smores Cake is a delicious chocolate cake with layers of graham cracker crust, chocolate cake, chocolate ganache and a toasted marshmallow filling. This cake is topped with a chocolate frosting and a toasted marshmallow fluff.",
     style: "Roll",
     servings: 12,
+    price: 35.00,
     imageUrl:
     "images/Ultimate-smores.webp"   
 },
 {
   cakeName: "Biscoff Bundt Cake",
-  description: "San Diego, California, United States",
+  description: "Biscoff Bundt Cake is a delicious cake with a white chocolate ganache drizzle on top.",
   style: "Bundt",
   servings: 12,
+  price: 20.00,
   imageUrl:
   "images/Biscoff-bundt.webp"   
 },
 {
   cakeName: "Dark Chocolate Bundt Cake",
-  description: "San Diego, California, United States",
+  description: "Dark Chocolate Bundt Cake is a rich chocolate cake with mini chocolate chips and a chocolate ganache.",
   style: "Bundt",
   servings: 12,
+  price: 20.00,
   imageUrl:
   "images/Dark-chocolate-bundt.webp"   
 },
 {
   cakeName: "Raspberry Bundt Cake",
-  description: "San Diego, California, United States",
+  description: "Raspberry Bundt Cake is a delicious vanilla bunt cake with a swirl of raspberry jelly filling, raspberry and cream cheese lemon glaze.",
   style: "Bundt",
   servings: 12,
+  price: 20.00,
   imageUrl:
   "images/Raspberry-bundt.webp"   
 },
@@ -165,6 +174,8 @@ function createCakeCard(filteredCakes) {
         style.classList.add('style');
         const servings = document.createElement('p');  
         servings.classList.add('servings');     
+        const price = document.createElement('p');  
+        price.classList.add('price'); 
 
         // Set the inner HTML for the cake card
         // Set the text content for each element
@@ -179,7 +190,7 @@ function createCakeCard(filteredCakes) {
         style.innerHTML = `<span class="label">Style:  </span>${cake.style}`;
         servings.innerHTML = `<span class="label">Servings:  </span>${cake.servings}`;
 
-       
+        price.innerHTML = `<span class="label">Price:  </span>$${cake.price.toFixed(2)}`; //toFixed(2) is for 2 decimal places
         // Set the image source and alt text and lazy loading
         image.src = cake.imageUrl;
         image.alt = `Image of ${cake.cakeName}`;
@@ -192,6 +203,7 @@ function createCakeCard(filteredCakes) {
         card.appendChild(description);
         card.appendChild(style);    
         card.appendChild(servings);
+        card.appendChild(price); //this appends the price to the card
 
         // Append the card to the cakesContainer
         container.appendChild(card); //this appends the card to the container
